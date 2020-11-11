@@ -91,3 +91,6 @@ C:\Users\datoc\source\repos\WebApplication3\RestAPI\bin\Ninject.Web.WebApi.xml
 C:\Users\datoc\source\repos\WebApplication3\RestAPI\bin\Ninject.Web.WebApi.WebHost.dll
 C:\Users\datoc\source\repos\WebApplication3\RestAPI\bin\Ninject.Web.WebApi.WebHost.xml
 C:\Users\datoc\source\repos\WebApplication3\RestAPI\bin\Swashbuckle.Core.dll
+C:\Users\datoc\source\repos\WebApplication3\RestAPI\bin\System.Web.Cors.dll
+C:\Users\datoc\source\repos\WebApplication3\RestAPI\bin\System.Web.Http.Cors.dll
+C:\Users\datoc\source\repos\WebApplication3\RestAPI\bin\System.Web.Http.Cors.xml
