@@ -24,6 +24,7 @@ namespace Core.Helpers
             }
             return new ValidationResult();
         }
+
         protected IResponse<TResponse> Fail<TResponse>(params string[] errorMessages)
         {
             var result = new AppServiceResponse<TResponse>();

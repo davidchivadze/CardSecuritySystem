@@ -10,6 +10,6 @@ namespace Domain.Interface
 {
     public interface IEmployeeRepository:IBaseRepository<Employee>
     {
-        IEnumerable<EmployeeDetails> GetActiveEmployee();
+        IEnumerable<Employee> GetActiveEmployee();
     }
 }

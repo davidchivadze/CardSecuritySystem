@@ -11,9 +11,9 @@ namespace Domain.Repository
 {
     public class EmployeeRepository : BaseRepository<Employee>, IEmployeeRepository
     {
-        public IEnumerable<EmployeeDetails> GetActiveEmployee()
+        public IEnumerable<Employee> GetActiveEmployee()
         {
-            return Database.EmployeeDetails;
+            return base.Get();
         }
     }
 }
