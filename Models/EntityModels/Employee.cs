@@ -14,6 +14,7 @@ namespace Models
     public partial class Employee : BaseModel
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]
         public int ID { get; set; }
 
         [Required]
@@ -55,7 +56,7 @@ namespace Models
         [StringLength(250)]
         public string Email { get; set; }
         
-
+        public virtual EmployeeDetails EmployeeDetails { get;set; }
         public virtual ICollection<EmployeeMobileNumbers> EmployeeMobileNumbers { get; set; }
     }
 }
