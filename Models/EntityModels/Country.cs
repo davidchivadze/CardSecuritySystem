@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Models.EntityModels
 {
-    public class Country
+    public class Country:BaseModel
     {
         [Key]
         [Required]

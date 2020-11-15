@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Models.EntityModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace Domain.Interface
 {
     public interface IUnitOfWork
     {
-        IBaseRepository<T> GetRepository<T>() where T : class;
+        IBaseRepository<T> GetRepository<T>() where T : BaseModel;
         IBranchRepository BranchRepository { get; }
         ICityRepository CityRepository { get; }
         ICountryRepository CountryRepository { get; }
