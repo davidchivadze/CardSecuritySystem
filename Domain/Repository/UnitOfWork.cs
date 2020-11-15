@@ -1,4 +1,5 @@
 ﻿using Domain.Interface;
+using Models.EntityModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -79,7 +80,7 @@ namespace Domain.Repository
             _database.SaveChanges();
         }
 
-        public IBaseRepository<T> GetRepository<T>() where T : class
+        public IBaseRepository<T> GetRepository<T>() where T : BaseModel
         {
             return new BaseRepository<T>(_database);
         }

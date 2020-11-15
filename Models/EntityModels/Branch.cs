@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Models.EntityModels
 {
-    public class Branch
+    public class Branch:BaseModel
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

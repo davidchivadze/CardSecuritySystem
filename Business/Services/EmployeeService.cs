@@ -13,10 +13,10 @@ namespace Business.Services
     {
         public IResponse<List<EmployeeViewModel>> GetAllEmployee()
         {
-            var result = EmployeeRepository.GetActiveEmployee().Select(m=>new EmployeeViewModel() { 
-             ID=m.ID,
-             FirstName=m.Employee.FirsName,
-             LastName=m.Employee.LastName
+            var result = UnitOfWork.EmployeeRepository.GetAll().ToList().Select(m=>new EmployeeViewModel() { 
+             FirstName=m.FirsName,
+              ID=m.ID,
+               LastName=m.LastName
             }).ToList();
             return Ok(result);
          
