@@ -52,10 +52,6 @@
       <Project>{5d86ce90-5de3-4a8a-ac74-7f434e5d1e2d}</Project>
       <Name>Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Domain\Domain.csproj">
-      <Project>{97e22dcd-97bc-4651-bde6-acb51156f3eb}</Project>
-      <Name>Domain</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{b2db8bdf-6b02-40ab-8263-03903c7e8740}</Project>
       <Name>Models</Name>
