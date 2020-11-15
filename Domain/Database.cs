@@ -5,14 +5,15 @@ namespace Domain
     using Models;
     using Models.EntityModels;
 
-    public partial class Data : DbContext
+    public partial class Database : DbContext
     {
-        public Data()
+        public Database()
             : base("name=Data")
         {
         }
 
         public virtual DbSet<Employee> Employees { get; set; }
+
         public virtual DbSet<Currency> Currencies { get; set; }
         public virtual DbSet<Departments> Departments { get; set; }
         public virtual DbSet<EmployeeDetails> EmployeeDetails { get; set; }

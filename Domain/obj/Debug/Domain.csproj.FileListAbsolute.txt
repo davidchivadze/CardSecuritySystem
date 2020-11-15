@@ -17,3 +17,4 @@ C:\Users\datoc\source\repos\WebApplication3\Domain\obj\Debug\Domain.csproj.Gener
 C:\Users\datoc\source\repos\WebApplication3\Domain\obj\Debug\Domain.Migrations.EmployeeDescriptionAdd.resources
 C:\Users\datoc\source\repos\WebApplication3\Domain\obj\Debug\Domain.Migrations.EmployeeDescription2.resources
 C:\Users\datoc\source\repos\WebApplication3\Domain\obj\Debug\Domain.Migrations.lastMigration.resources
+C:\Users\datoc\source\repos\WebApplication3\Domain\obj\Debug\Domain.Migrations.RemoveEmployeeDetailsID.resources

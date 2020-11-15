@@ -10,12 +10,12 @@ namespace Domain.Repository
 {
     public class BaseRepository<T> : IBaseRepository<T> where T : BaseModel
     {
-        private Data _database;
-        protected Data Database
+        private Database _database;
+        protected Database Database
         {
             get
             {
-                return _database = _database ?? new Data();
+                return _database = _database ?? new Database();
             }
         }
         public T Add(T entity)

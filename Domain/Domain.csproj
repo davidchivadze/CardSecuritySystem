@@ -53,7 +53,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data.cs" />
+    <Compile Include="Database.cs" />
     <Compile Include="Interface\IBaseRepository.cs" />
     <Compile Include="Interface\IEmployeeRepository.cs" />
     <Compile Include="Migrations\202010282106276_EmployeeMobileNumbers.cs" />
@@ -71,6 +71,10 @@
     <Compile Include="Migrations\202011032343369_lastMigration.cs" />
     <Compile Include="Migrations\202011032343369_lastMigration.designer.cs">
       <DependentUpon>202011032343369_lastMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202011132102046_RemoveEmployeeDetailsID.cs" />
+    <Compile Include="Migrations\202011132102046_RemoveEmployeeDetailsID.designer.cs">
+      <DependentUpon>202011132102046_RemoveEmployeeDetailsID.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -99,6 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202011032343369_lastMigration.resx">
       <DependentUpon>202011032343369_lastMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202011132102046_RemoveEmployeeDetailsID.resx">
+      <DependentUpon>202011132102046_RemoveEmployeeDetailsID.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

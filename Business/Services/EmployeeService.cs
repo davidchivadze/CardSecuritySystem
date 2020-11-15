@@ -15,8 +15,8 @@ namespace Business.Services
         {
             var result = EmployeeRepository.GetActiveEmployee().Select(m=>new EmployeeViewModel() { 
              ID=m.ID,
-             FirstName=m.Employee.FirsName,
-             LastName=m.Employee.LastName
+             //FirstName=m.Employee.FirsName,
+             //LastName=m.Employee.LastName
             }).ToList();
             return Ok(result);
          
