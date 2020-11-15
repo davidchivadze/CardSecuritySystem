@@ -4,3 +4,9 @@ C:\Users\datoc\source\repos\WebApplication3\Models\obj\Debug\Models.csprojAssemb
 C:\Users\datoc\source\repos\WebApplication3\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
 C:\Users\datoc\source\repos\WebApplication3\Models\obj\Debug\Models.dll
 C:\Users\datoc\source\repos\WebApplication3\Models\obj\Debug\Models.pdb
+D:\Alex\Projects\TimeAttendingSystem\Models\bin\Debug\Models.dll
+D:\Alex\Projects\TimeAttendingSystem\Models\bin\Debug\Models.pdb
+D:\Alex\Projects\TimeAttendingSystem\Models\obj\Debug\Models.csprojAssemblyReference.cache
+D:\Alex\Projects\TimeAttendingSystem\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+D:\Alex\Projects\TimeAttendingSystem\Models\obj\Debug\Models.dll
+D:\Alex\Projects\TimeAttendingSystem\Models\obj\Debug\Models.pdb

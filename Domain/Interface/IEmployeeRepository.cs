@@ -8,8 +8,8 @@ using System.Threading.Tasks;
 
 namespace Domain.Interface
 {
-    public interface IEmployeeRepository:IBaseRepository<Employee>
+    public interface IEmployeeRepository : IBaseRepository<Employee>
     {
-        IEnumerable<Employee> GetActiveEmployee();
+        IEnumerable<Employee> GetActiveEmployees();
     }
 }
