@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace Domain.Repository
 {
-    public class BaseRepository<Tentity> : IBaseRepository<Tentity> where Tentity : class
+    public class BaseRepository<Tentity> : IBaseRepository<Tentity> where Tentity : BaseModel
     {
         protected readonly Data _Database;
 
-        public BaseRepository(Data database)
+        public BaseRepository(Data data)
         {
-            _Database = database;
+            _Database =data;
         }
 
         public void Add(Tentity entity)

@@ -1,5 +1,6 @@
 ﻿using Business.Interface;
 using Core.Helpers;
+using Domain;
 using Domain.Interface;
 using Domain.Repository;
 using System;
@@ -12,14 +13,11 @@ namespace Business.Services
 {
    public class BaseService:ServiceHelper,IBaseService
     {
-        private IEmployeeRepository _EmployeeRepository { get; set; }
-
-        protected IEmployeeRepository EmployeeRepository
-        {
-            get
+        private IUnitOfWork _unitOfWork;
+        protected IUnitOfWork UnitOfWork { get
             {
-                return _EmployeeRepository = _EmployeeRepository ?? new EmployeeRepository();
-            }
+                return _unitOfWork = _unitOfWork ?? new UnitOfWork();
+            } 
         }
     }
 }
