@@ -23,7 +23,18 @@ namespace Domain.Repository
         private IEmployeeRepository _employeeRepository;
         private IEmpoyeeDetaisRepository _empoyeeDetaisRepository;
         private ISalaryRepository _salaryRepository;
+        #endregion
 
+        #region Constructors
+        public UnitOfWork(Data database)
+        {
+            _database = database;
+        }
+
+        public UnitOfWork() : this(new Data()) { }
+        #endregion
+
+        #region Interface Repositories Implementation    
         public IBranchRepository BranchRepository
         {
             get { return _branchRepository = _branchRepository ?? new BranchRepository(_database); }

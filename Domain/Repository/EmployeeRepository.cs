@@ -13,12 +13,26 @@ namespace Domain.Repository
     {
         public EmployeeRepository(Data database):base(database)
         {
-
         }
 
-        public IEnumerable<Employee> GetActiveEmployees()
+        public IEnumerable<Employee> GetActiveEmployees(bool isActive)
         {
-            return null;
+            return _database.Employees.Where(e => e.IsActive);
+        }
+
+        public IEnumerable<Employee> GetAllEmployees()
+        {
+            return _database.Employees;
+        }
+
+        public IEnumerable<Employee> GetEmployeesByBranch(int branchID)
+        {
+            return _database.Employees.Where(e => e.BranchID == branchID);
+        }
+
+        public IEnumerable<Employee> GetEmployeesByDepartment(int departmentID)
+        {
+            return _database.Employees.Where(e=>e.DepartmentID == departmentID);
         }
     }
 }

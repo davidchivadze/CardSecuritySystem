@@ -1,15 +1,10 @@
-﻿
-
-using Models.EntityModels;
+﻿using Models.EntityModels;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 namespace Models
 {
-
-
-
     [Table("Employee")]
     public partial class Employee : BaseModel
     {
@@ -20,10 +15,10 @@ namespace Models
         [StringLength(250)]
         public string FirsName { get; set; }
 
-
         [Required]
         [StringLength(250)]
         public string FirsName_ka { get; set; }
+
         [Required]
         [StringLength(250)]
         public string FirsName_ru { get; set; }
@@ -54,8 +49,21 @@ namespace Models
 
         [StringLength(250)]
         public string Email { get; set; }
-        
+
+        public bool IsActive { get; set; } = true;
+
+        [ForeignKey("Departments")]
+        public int DepartmentID { get; set; }
+
+        [ForeignKey("Branch")]
+        public int BranchID { get; set; }
+
+        public virtual Departments Department { get; set; }
+
+        public virtual Branch Branch { get; set; }
 
         public virtual ICollection<EmployeeMobileNumbers> EmployeeMobileNumbers { get; set; }
+
+
     }
 }

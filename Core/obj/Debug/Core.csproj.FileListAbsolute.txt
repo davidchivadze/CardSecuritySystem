@@ -9,3 +9,14 @@ C:\Users\datoc\source\repos\WebApplication3\Core\obj\Debug\Core.csproj.CoreCompi
 C:\Users\datoc\source\repos\WebApplication3\Core\obj\Debug\Core.csproj.CopyComplete
 C:\Users\datoc\source\repos\WebApplication3\Core\obj\Debug\Core.dll
 C:\Users\datoc\source\repos\WebApplication3\Core\obj\Debug\Core.pdb
+D:\Alex\Projects\TimeAttendingSystem\Core\bin\Debug\Core.dll
+D:\Alex\Projects\TimeAttendingSystem\Core\bin\Debug\Core.pdb
+D:\Alex\Projects\TimeAttendingSystem\Core\bin\Debug\FluentValidation.dll
+D:\Alex\Projects\TimeAttendingSystem\Core\bin\Debug\Models.dll
+D:\Alex\Projects\TimeAttendingSystem\Core\bin\Debug\Models.pdb
+D:\Alex\Projects\TimeAttendingSystem\Core\bin\Debug\FluentValidation.xml
+D:\Alex\Projects\TimeAttendingSystem\Core\obj\Debug\Core.csprojAssemblyReference.cache
+D:\Alex\Projects\TimeAttendingSystem\Core\obj\Debug\Core.csproj.CoreCompileInputs.cache
+D:\Alex\Projects\TimeAttendingSystem\Core\obj\Debug\Core.csproj.CopyComplete
+D:\Alex\Projects\TimeAttendingSystem\Core\obj\Debug\Core.dll
+D:\Alex\Projects\TimeAttendingSystem\Core\obj\Debug\Core.pdb

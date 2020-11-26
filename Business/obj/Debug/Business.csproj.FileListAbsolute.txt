@@ -16,3 +16,7 @@ C:\Users\datoc\source\repos\WebApplication3\Business\obj\Debug\Business.csproj.C
 C:\Users\datoc\source\repos\WebApplication3\Business\obj\Debug\Business.csproj.CopyComplete
 C:\Users\datoc\source\repos\WebApplication3\Business\obj\Debug\Business.dll
 C:\Users\datoc\source\repos\WebApplication3\Business\obj\Debug\Business.pdb
+D:\Alex\Projects\TimeAttendingSystem\Business\obj\Debug\Business.csprojAssemblyReference.cache
+D:\Alex\Projects\TimeAttendingSystem\Business\obj\Debug\Business.csproj.CoreCompileInputs.cache
+D:\Alex\Projects\TimeAttendingSystem\Business\obj\Debug\Business.dll
+D:\Alex\Projects\TimeAttendingSystem\Business\obj\Debug\Business.pdb

@@ -11,46 +11,46 @@ namespace Domain.Repository
 {
     public class BaseRepository<Tentity> : IBaseRepository<Tentity> where Tentity : BaseModel
     {
-        protected readonly Data _Database;
+        protected readonly Data _database;
 
         public BaseRepository(Data database)
         {
-            _Database = database;
+            _database = database;
         }
 
         public void Add(Tentity entity)
         {
-            _Database.Set<Tentity>().Add(entity);
+            _database.Set<Tentity>().Add(entity);
         }
 
         public void AddRange(IEnumerable<Tentity> entities)
         {
-            _Database.Set<Tentity>().AddRange(entities);
+            _database.Set<Tentity>().AddRange(entities);
         }
 
         public IEnumerable<Tentity> Find(Expression<Func<Tentity, bool>> predicate)
         {
-            return _Database.Set<Tentity>().Where(predicate);
+            return _database.Set<Tentity>().Where(predicate);
         }
 
         public Tentity Get(int ID)
         {
-            return _Database.Set<Tentity>().Find(ID);
+            return _database.Set<Tentity>().Find(ID);
         }
 
         public IEnumerable<Tentity> GetAll()
         {
-            return _Database.Set<Tentity>();
+            return _database.Set<Tentity>();
         }
 
         public void Remove(Tentity entity)
         {
-            _Database.Set<Tentity>().Remove(entity);
+            _database.Set<Tentity>().Remove(entity);
         }
 
         public void RemoveRange(IEnumerable<Tentity> entities)
         {
-            _Database.Set<Tentity>().RemoveRange(entities);
+            _database.Set<Tentity>().RemoveRange(entities);
         }
 
 

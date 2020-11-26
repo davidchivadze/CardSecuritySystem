@@ -19,7 +19,7 @@ namespace RestAPI.Controllers
         }
         public IResponse<List<EmployeeViewModel>> GetEmployeeList()
         {
-            return _employeeService.GetAllEmployee();
+            return null;//_employeeService.GetAllEmployee();
         }
     }
 }

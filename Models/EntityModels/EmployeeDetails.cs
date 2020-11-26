@@ -17,6 +17,7 @@ namespace Models.EntityModels
         
         [ForeignKey("Employee")]
         public int EmployeeID { get; set; }
+
         [ForeignKey("EmployeePosition")]
         public int EmployeePositionID { get; set; }
 
@@ -25,10 +26,13 @@ namespace Models.EntityModels
         
         [ForeignKey("Branch")]
         public int BranchID { get; set; }
+
         public virtual Employee Employee { get; set; }
+
         public virtual EmployeePosition EmployeePosition { get; set; }
 
         public virtual Salary Salary { get; set; }
+
         public virtual Branch Branch { get; set; }
         
     }
