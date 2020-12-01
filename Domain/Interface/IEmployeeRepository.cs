@@ -12,7 +12,7 @@ namespace Domain.Interface
     {
         IEnumerable<Employee> GetAllEmployees();
 
-        IEnumerable<Employee> GetActiveEmployees(bool isActive);
+        IEnumerable<Employee> GetActiveEmployees(bool? isActive);
 
         IEnumerable<Employee> GetEmployeesByDepartment(int departmentID);
 

@@ -52,18 +52,11 @@ namespace Models
 
         public bool IsActive { get; set; } = true;
 
-        [ForeignKey("Departments")]
-        public int DepartmentID { get; set; }
+        public int EmployeeDetailsID { get; set; }
 
-        [ForeignKey("Branch")]
-        public int BranchID { get; set; }
-
-        public virtual Departments Department { get; set; }
-
-        public virtual Branch Branch { get; set; }
+        public virtual EmployeeDetails EmployeeDetails { get; set; }
 
         public virtual ICollection<EmployeeMobileNumbers> EmployeeMobileNumbers { get; set; }
-
 
     }
 }

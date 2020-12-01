@@ -1,4 +1,5 @@
 ﻿using Domain.Interface;
+using Domain.RepositoryHelper;
 using Models;
 using Models.EntityModels;
 using System;
@@ -15,24 +16,31 @@ namespace Domain.Repository
         {
         }
 
-        public IEnumerable<Employee> GetActiveEmployees(bool isActive)
+        public IEnumerable<Employee> GetActiveEmployees(bool? isActive, int branchID, int departmentID)
         {
-            return _database.Employees.Where(e => e.IsActive);
+            return _database.Employees.Where(e => isActive.HasValue?e.IsActive==isActive.Value : e.IsActive==e.IsActive);
         }
 
-        public IEnumerable<Employee> GetAllEmployees()
+        public IEnumerable<Employee> GetActiveEmployees(EmployeeFilter filterModel)
         {
-            return _database.Employees;
+            return _database.Employees.Where(e => (filterModel.IsActive.HasValue ? e.IsActive == filterModel.IsActive.Value : e.IsActive == e.IsActive)
+                                                && (filterModel.BranchID.HasValue ? e.EmployeeDetails.BranchID == filterModel.BranchID.Value : e.EmployeeDetails.BranchID == e.EmployeeDetails.BranchID)
+                                                && (filterModel.DepartmentID.HasValue ? e.EmployeeDetails.BranchID == filterModel.DepartmentID.Value : e.EmployeeDetails.DepartmentID == e.EmployeeDetails.DepartmentID));
         }
 
-        public IEnumerable<Employee> GetEmployeesByBranch(int branchID)
-        {
-            return _database.Employees.Where(e => e.BranchID == branchID);
-        }
+        //public IEnumerable<Employee> GetAllEmployees()
+        //{
+        //    return _database.Employees;
+        //}
 
-        public IEnumerable<Employee> GetEmployeesByDepartment(int departmentID)
-        {
-            return _database.Employees.Where(e=>e.DepartmentID == departmentID);
-        }
+        //public IEnumerable<Employee> GetEmployeesByBranch(int branchID)
+        //{
+        //    return _database.Employees.Include();
+        //}
+
+        //public IEnumerable<Employee> GetEmployeesByDepartment(int departmentID)
+        //{
+        //    return _database.Employees.Where(e=>e.DepartmentID == departmentID);
+        //}
     }
 }

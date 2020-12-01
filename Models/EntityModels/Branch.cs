@@ -20,6 +20,7 @@ namespace Models.EntityModels
         public int CountryID { get; set; }
         public string Address { get; set; }
         public string BranchName { get; set; }
+
         public virtual City City { get; set; }
 
         public virtual Country Country { get; set; }

@@ -8,13 +8,13 @@ using System.Threading.Tasks;
 
 namespace Models.EntityModels
 {
-   public class EmployeeDetails : BaseModel
+    public class EmployeeDetails : BaseModel
     {
         [Key]
         [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
-        
+
         [ForeignKey("Employee")]
         public int EmployeeID { get; set; }
 
@@ -23,9 +23,12 @@ namespace Models.EntityModels
 
         [ForeignKey("Salary")]
         public int SalaryID { get; set; }
-        
+
         [ForeignKey("Branch")]
         public int BranchID { get; set; }
+
+        [ForeignKey("Department")]
+        public int DepartmentID { get; set; }
 
         public virtual Employee Employee { get; set; }
 
@@ -34,6 +37,10 @@ namespace Models.EntityModels
         public virtual Salary Salary { get; set; }
 
         public virtual Branch Branch { get; set; }
-        
+
+        public virtual Departments Department { get; set; }
+
+
+
     }
 }

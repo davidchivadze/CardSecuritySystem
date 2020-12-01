@@ -13,13 +13,19 @@ namespace Business.Services
     {
         public IResponse<List<EmployeeViewModel>> GetAllEmployee()
         {
-            var result = EmployeeRepository.GetActiveEmployee().Select(m=>new EmployeeViewModel() { 
+            var result = UnitOfWork.EmployeeRepository.GetActiveEmployees(true).Select(m=>new EmployeeViewModel() { 
              ID=m.ID,
-             FirstName=m.Employee.FirsName,
-             LastName=m.Employee.LastName
+             FirstName=m.FirsName_ka,
+             LastName=m.LastName_ka,
+             Country=m.Department.Description_ka,
             }).ToList();
             return Ok(result);
          
+        }
+
+        public void get()
+        {
+            
         }
     }
 }
