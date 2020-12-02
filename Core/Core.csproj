@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helper\RepositoryHelperClasses\EmployeeFilter.cs" />
     <Compile Include="Helper\ResponseHelper\AppServiceResponse.cs" />
     <Compile Include="Helper\ResponseHelper\IResponse.cs" />
     <Compile Include="Helper\ResponseHelper\ServiceHelper.cs" />

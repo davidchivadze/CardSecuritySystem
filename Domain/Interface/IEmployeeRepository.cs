@@ -1,4 +1,5 @@
-﻿using Models;
+﻿using Core.Helper.RepositoryHelperClasses;
+using Models;
 using Models.EntityModels;
 using System;
 using System.Collections.Generic;
@@ -10,12 +11,6 @@ namespace Domain.Interface
 {
     public interface IEmployeeRepository : IBaseRepository<Employee>
     {
-        IEnumerable<Employee> GetAllEmployees();
-
-        IEnumerable<Employee> GetActiveEmployees(bool? isActive);
-
-        IEnumerable<Employee> GetEmployeesByDepartment(int departmentID);
-
-        IEnumerable<Employee> GetEmployeesByBranch(int branchID);
+        IEnumerable<Employee> GetFilteredEmployees(EmployeeFilter filterModel);
     }
 }

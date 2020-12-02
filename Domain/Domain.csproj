@@ -84,7 +84,6 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RepositoryHelper\EmployeeFilter.cs" />
     <Compile Include="Repository\BaseRepository.cs" />
     <Compile Include="Repository\BranchRepository.cs" />
     <Compile Include="Repository\CityRepository.cs" />
@@ -103,6 +102,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{5D86CE90-5DE3-4A8A-AC74-7F434E5D1E2D}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{B2DB8BDF-6B02-40AB-8263-03903C7E8740}</Project>
       <Name>Models</Name>
@@ -121,6 +124,9 @@
     <EmbeddedResource Include="Migrations\202011032343369_lastMigration.resx">
       <DependentUpon>202011032343369_lastMigration.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="RepositoryHelper\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

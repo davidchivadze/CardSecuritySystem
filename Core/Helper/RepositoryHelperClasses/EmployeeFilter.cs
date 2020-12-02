@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Domain.RepositoryHelper
+namespace Core.Helper.RepositoryHelperClasses
 {
     public class EmployeeFilter
     {

@@ -1,4 +1,6 @@
 ﻿using Business.Interface;
+using Core.Helper;
+using Core.Helper.RepositoryHelperClasses;
 using Core.Helpers;
 using Models.ViewModels;
 using System;
@@ -9,16 +11,11 @@ using System.Threading.Tasks;
 
 namespace Business.Services
 {
-    public class EmployeeService :BaseService, IEmployeeService
+    public class EmployeeService : BaseService, IEmployeeService
     {
-        public IResponse<List<EmployeeViewModel>> GetAllEmployee()
+        public IResponse<List<EmployeeViewModel>> GetFilteredEmployees()
         {
-            var result = UnitOfWork.EmployeeRepository.GetActiveEmployees(true).Select(m=>new EmployeeViewModel() { 
-             ID=m.ID,
-             FirstName=m.FirsName_ka,
-             LastName=m.LastName_ka,
-             Country=m.Department.Description_ka,
-            }).ToList();
+            var result = UnitOfWork.EmployeeRepository.GetFilteredEmployees(new EmployeeFilter() { }).Select(m=> Transformer.EmployeeAsViewModel(m)).ToList();
             return Ok(result);
          
         }
