@@ -11,7 +11,7 @@ namespace Core.Helper
 {
     public static class Transformer
     {
-        public static Employee EmployeeAsDatabaseModel(this EmployeeViewModel model)
+        public static Employee AsDatabaseModel(this EmployeeViewModel model)
         {
             return new Employee
             {
@@ -30,7 +30,7 @@ namespace Core.Helper
                 IsActive = model.IsActive,
             };
         }
-        public static EmployeeViewModel EmployeeAsViewModel(this Employee model)
+        public static EmployeeViewModel AsViewModel(this Employee model)
         {
             return new EmployeeViewModel
             {
@@ -49,6 +49,35 @@ namespace Core.Helper
                 IsActive = model.IsActive,
             };
         }
+
+        public static Employee AsDatabaseModel(this AddEmployeeRequestModel model)
+        {
+            return new Employee()
+            {
+                Address = model.Address,
+                Address_ka = model.Address_ka,
+                Address_ru = model.Address_ru,
+                DateOfBirth = model.DateOfBirth,
+                Email = model.Email,
+                FirsName = model.FirsName,
+                FirsName_ka = model.FirsName_ka,
+                FirsName_ru = model.FirsName_ru,
+                IsActive = true,
+                LastName = model.LastName,
+                LastName_ka = model.LastName_ka,
+                LastName_ru = model.LastName_ru,
+                EmployeeDetails = new EmployeeDetails()
+                {
+                    BranchID = model.BranchID,
+                    DepartmentID = model.DepartmentID,
+                    EmployeePositionID = model.EmployeePositionID,
+                    SalaryID = model.SalaryID,
+
+                },
+                EmployeeMobileNumbers = model.MobileNumbers.Select(m => new EmployeeMobileNumbers() { PhoneNumber = m, IsActive = true }).ToList()
+            };
+        }
+
 
         //public static Employee AsDatabaseModel(this EmployeeViewModel model)
         //{

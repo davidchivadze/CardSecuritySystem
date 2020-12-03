@@ -54,15 +54,16 @@
     <Compile Include="EntityModels\EmployeePosition.cs" />
     <Compile Include="EntityModels\Salary.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\Employee\AddEmployee.cs" />
     <Compile Include="ViewModels\BranchViewModel.cs" />
     <Compile Include="ViewModels\CityViewModel.cs" />
     <Compile Include="ViewModels\CountryViewModel.cs" />
     <Compile Include="ViewModels\CurrencyViewModel.cs" />
     <Compile Include="ViewModels\DepartmentsViewModel.cs" />
-    <Compile Include="ViewModels\EmployeeDetailsViewModel.cs" />
-    <Compile Include="ViewModels\EmployeeMobileNumbersViewModel.cs" />
-    <Compile Include="ViewModels\EmployeePositionViewModel.cs" />
-    <Compile Include="ViewModels\EmployeeViewModel.cs" />
+    <Compile Include="ViewModels\Employee\EmployeeDetailsViewModel.cs" />
+    <Compile Include="ViewModels\Employee\EmployeeMobileNumbersViewModel.cs" />
+    <Compile Include="ViewModels\Employee\EmployeePositionViewModel.cs" />
+    <Compile Include="ViewModels\Employee\EmployeeViewModel.cs" />
     <Compile Include="ViewModels\SalaryViewModel.cs" />
   </ItemGroup>
   <ItemGroup />
