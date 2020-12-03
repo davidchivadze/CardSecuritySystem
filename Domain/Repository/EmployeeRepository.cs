@@ -20,5 +20,11 @@ namespace Domain.Repository
                                                && (filterModel.BranchID.HasValue ? e.EmployeeDetails.BranchID == filterModel.BranchID.Value : e.EmployeeDetails.BranchID == e.EmployeeDetails.BranchID)
                                                && (filterModel.DepartmentID.HasValue ? e.EmployeeDetails.BranchID == filterModel.DepartmentID.Value : e.EmployeeDetails.DepartmentID == e.EmployeeDetails.DepartmentID));
         }
+        public Employee AddEmployee(Employee addModel)
+        {
+            var result= _database.Employees.Add(addModel);
+            _database.SaveChanges();
+            return result;
+        }
     }
 }

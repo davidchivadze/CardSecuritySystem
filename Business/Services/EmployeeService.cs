@@ -15,9 +15,19 @@ namespace Business.Services
     {
         public IResponse<List<EmployeeViewModel>> GetFilteredEmployees()
         {
-            var result = UnitOfWork.EmployeeRepository.GetFilteredEmployees(new EmployeeFilter() { }).Select(m=> Transformer.EmployeeAsViewModel(m)).ToList();
+            var result = UnitOfWork.EmployeeRepository.GetFilteredEmployees(new EmployeeFilter() { }).Select(m=> m.AsViewModel()).ToList();
             return Ok(result);
          
+        }
+        public IResponse<AddEmployeeResposeModel> AddEmployee(AddEmployeeRequestModel request)
+        {
+            try { 
+            var result = UnitOfWork.EmployeeRepository.AddEmployee(request.AsDatabaseModel());
+            return Ok(new AddEmployeeResposeModel() { });
+            }catch(Exception ex)
+            {
+                return Fail<AddEmployeeResposeModel>(ex.Message);
+            }
         }
 
         public void get()

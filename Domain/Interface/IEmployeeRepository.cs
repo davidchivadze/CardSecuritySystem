@@ -12,5 +12,6 @@ namespace Domain.Interface
     public interface IEmployeeRepository : IBaseRepository<Employee>
     {
         IEnumerable<Employee> GetFilteredEmployees(EmployeeFilter filterModel);
+        Employee AddEmployee(Employee addModel);
     }
 }

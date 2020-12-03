@@ -10,6 +10,7 @@ namespace Business.Interface
 {
     public interface IEmployeeService
     {
-        IResponse<List<EmployeeViewModel>> GetAllEmployee();
+        IResponse<List<EmployeeViewModel>> GetFilteredEmployees();
+        IResponse<AddEmployeeResposeModel> AddEmployee(AddEmployeeRequestModel request);
     }
 }
