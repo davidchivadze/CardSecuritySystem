@@ -8,7 +8,6 @@ namespace Models.ViewModels
 {
     public class AddEmployeeRequestModel
     {
-        public int ID { get; set; }
 
         public string FirsName { get; set; }
 

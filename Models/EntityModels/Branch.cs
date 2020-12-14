@@ -24,5 +24,6 @@ namespace Models.EntityModels
         public virtual City City { get; set; }
 
         public virtual Country Country { get; set; }
+        public IEnumerable<Device> Devices { get; set; }
     }
 }

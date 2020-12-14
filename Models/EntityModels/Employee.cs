@@ -52,11 +52,14 @@ namespace Models
 
         public bool IsActive { get; set; } = true;
 
-        public int EmployeeDetailsID { get; set; }
+
+        [ForeignKey("Schedule")]
+        public int ScheduleID { get; set; }
 
         public virtual EmployeeDetails EmployeeDetails { get; set; }
 
         public virtual ICollection<EmployeeMobileNumbers> EmployeeMobileNumbers { get; set; }
+        public virtual Schedule Schedule { get; set; }
 
     }
 }

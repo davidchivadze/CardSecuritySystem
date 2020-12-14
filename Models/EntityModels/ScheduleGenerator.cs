@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Models.ViewModels
+namespace Models.EntityModels
 {
-    public class EmployeePositionViewModel
+    class ScheduleGenerator
     {
-
-
     }
 }
