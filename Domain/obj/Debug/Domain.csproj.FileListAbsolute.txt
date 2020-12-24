@@ -36,3 +36,7 @@ D:\Alex\Projects\TimeAttendingSystem\Domain\bin\Debug\Models.pdb
 D:\Alex\Projects\TimeAttendingSystem\Domain\bin\Debug\EntityFramework.xml
 D:\Alex\Projects\TimeAttendingSystem\Domain\bin\Debug\EntityFramework.SqlServer.xml
 D:\Alex\Projects\TimeAttendingSystem\Domain\obj\Debug\Domain.csproj.CopyComplete
+D:\Alex\Projects\TimeAttendingSystem\Domain\bin\Debug\Core.dll
+D:\Alex\Projects\TimeAttendingSystem\Domain\bin\Debug\FluentValidation.dll
+D:\Alex\Projects\TimeAttendingSystem\Domain\bin\Debug\Core.pdb
+D:\Alex\Projects\TimeAttendingSystem\Domain\bin\Debug\FluentValidation.xml

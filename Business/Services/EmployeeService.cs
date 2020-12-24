@@ -13,7 +13,7 @@ namespace Business.Services
 {
     public class EmployeeService : BaseService, IEmployeeService
     {
-        public IResponse<List<EmployeeViewModel>> GetFilteredEmployees()
+        public IResponse<List<AddEmployeeRequestModel>> GetFilteredEmployees()
         {
             var result = UnitOfWork.EmployeeRepository.GetFilteredEmployees(new EmployeeFilter() { }).Select(m=> m.AsViewModel()).ToList();
             return Ok(result);

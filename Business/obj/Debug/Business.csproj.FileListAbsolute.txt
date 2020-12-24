@@ -20,3 +20,16 @@ D:\Alex\Projects\TimeAttendingSystem\Business\obj\Debug\Business.csprojAssemblyR
 D:\Alex\Projects\TimeAttendingSystem\Business\obj\Debug\Business.csproj.CoreCompileInputs.cache
 D:\Alex\Projects\TimeAttendingSystem\Business\obj\Debug\Business.dll
 D:\Alex\Projects\TimeAttendingSystem\Business\obj\Debug\Business.pdb
+D:\Alex\Projects\TimeAttendingSystem\Business\bin\Debug\Business.dll
+D:\Alex\Projects\TimeAttendingSystem\Business\bin\Debug\Business.pdb
+D:\Alex\Projects\TimeAttendingSystem\Business\bin\Debug\Core.dll
+D:\Alex\Projects\TimeAttendingSystem\Business\bin\Debug\Domain.dll
+D:\Alex\Projects\TimeAttendingSystem\Business\bin\Debug\Models.dll
+D:\Alex\Projects\TimeAttendingSystem\Business\bin\Debug\EntityFramework.dll
+D:\Alex\Projects\TimeAttendingSystem\Business\bin\Debug\Core.pdb
+D:\Alex\Projects\TimeAttendingSystem\Business\bin\Debug\Domain.pdb
+D:\Alex\Projects\TimeAttendingSystem\Business\bin\Debug\Domain.dll.config
+D:\Alex\Projects\TimeAttendingSystem\Business\bin\Debug\Models.pdb
+D:\Alex\Projects\TimeAttendingSystem\Business\bin\Debug\FluentValidation.xml
+D:\Alex\Projects\TimeAttendingSystem\Business\bin\Debug\EntityFramework.xml
+D:\Alex\Projects\TimeAttendingSystem\Business\obj\Debug\Business.csproj.CopyComplete

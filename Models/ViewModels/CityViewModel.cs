@@ -8,5 +8,13 @@ namespace Models.ViewModels
 {
     public class CityViewModel
     {
+        public string Description { get; set; }
+        public string Description_ka { get; set; }
+        public string Description_ru { get; set; }
+    }
+
+    public class CityResposeModel
+    {
+
     }
 }

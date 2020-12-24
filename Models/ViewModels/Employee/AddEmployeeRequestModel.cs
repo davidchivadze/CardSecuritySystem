@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace Models.ViewModels
 {
-   public class EmployeeViewModel
+    public class AddEmployeeRequestModel
     {
-        public int ID { get; set; }
-
         public string FirsName { get; set; }
 
         public string FirsName_ka { get; set; }
@@ -35,7 +33,18 @@ namespace Models.ViewModels
         public string Email { get; set; }
 
         public bool IsActive { get; set; } = true;
+        public int EmployeePositionID { get; set; }
 
-        public virtual EmployeeDetailsViewModel EmployeeDetails { get; set; }
+        public int  SalaryID { get; set; }
+
+        public int BranchID { get; set; }
+
+        public int DepartmentID { get; set; }
+
+        public string[] MobileNumbers { get; set; }
+    }
+    public class AddEmployeeResposeModel
+    {
+
     }
 }
