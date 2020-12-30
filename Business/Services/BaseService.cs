@@ -21,7 +21,7 @@ namespace Business.Services
         {
             get
             {
-                return _unitOfWork ?? new UnitOfWork();
+                return this._unitOfWork=this._unitOfWork ?? new UnitOfWork();
             }
         }
 

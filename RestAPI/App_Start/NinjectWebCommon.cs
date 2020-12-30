@@ -63,6 +63,7 @@ namespace RestAPI.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind<IEmployeeService>().To<EmployeeService>();
+            kernel.Bind<IParametersService>().To<PerametersService>();
         }
     }
 }

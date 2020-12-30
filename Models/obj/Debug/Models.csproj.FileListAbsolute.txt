@@ -10,3 +10,9 @@ D:\Alex\Projects\TimeAttendingSystem\Models\obj\Debug\Models.csprojAssemblyRefer
 D:\Alex\Projects\TimeAttendingSystem\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
 D:\Alex\Projects\TimeAttendingSystem\Models\obj\Debug\Models.dll
 D:\Alex\Projects\TimeAttendingSystem\Models\obj\Debug\Models.pdb
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Models\obj\Debug\Models.dll
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Models\obj\Debug\Models.pdb
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Models\bin\Debug\Models.dll
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Models\bin\Debug\Models.pdb
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Models\obj\Debug\Models.csprojAssemblyReference.cache

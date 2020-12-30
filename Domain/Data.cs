@@ -12,6 +12,7 @@ namespace Domain
         {
         }
 
+        public virtual DbSet<Branch> Branches { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<Currency> Currencies { get; set; }
         public virtual DbSet<Departments> Departments { get; set; }
@@ -19,8 +20,19 @@ namespace Domain
         public virtual DbSet<EmployeePosition> EmployeePositions { get; set; }
         public virtual DbSet<Salary> Salaries { get; set; }
         public virtual DbSet<EmployeeMobileNumbers> EmployeeMobileNumbers { get; set; }
+        public virtual DbSet<Schedule> Schedules { get; set; }
+        public virtual DbSet<ScheduleDetails> ScheduleDetails { get; set; }
+       // public virtual DbSet<ScheduleGenerator> ScheduleGenerators { get; set; }
+        public virtual DbSet<ScheduleType> ScheduleTypes { get; set; }
+        public virtual DbSet<Country> Countries { get; set; }
+        public virtual DbSet<City> Cities { get; set; }
+        public virtual DbSet<Device> Devices { get; set; }
+        public virtual DbSet<DeviceType> DeviceTypes { get; set; }
+        public virtual DbSet<DeviceLocationInBranch> DeviceLocationInBranches { get; set; }
+        public virtual DbSet<Gender> Genders { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+
         }
     }
 }

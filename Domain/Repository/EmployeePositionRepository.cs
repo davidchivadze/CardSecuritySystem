@@ -14,5 +14,10 @@ namespace Domain.Repository
         {
                 
         }
+
+        public IEnumerable<EmployeePosition> GetEmployeePositions()
+        {
+           return _database.EmployeePositions;
+        }
     }
 }

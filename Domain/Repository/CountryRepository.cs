@@ -14,5 +14,10 @@ namespace Domain.Repository
         {
                 
         }
+
+        public IEnumerable<Country> GetCountries()
+        {
+            return _database.Countries;
+        }
     }
 }

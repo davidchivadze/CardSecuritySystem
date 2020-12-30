@@ -10,6 +10,6 @@ namespace Models.EntityModels
     {
         public int ID { get; set; }
         public string Description { get; set; }
-        public IEnumerable<Device> Devices { get; set; }
+        public ICollection<Device> Devices { get; set; }
     }
 }

@@ -8,11 +8,16 @@ using Models.EntityModels;
 
 namespace Domain.Repository
 {
-    class DepartmentsRepository : BaseRepository<Departments>, IDepartmentsRepository
+    public class DepartmentsRepository : BaseRepository<Departments>, IDepartmentsRepository
     {
         public DepartmentsRepository(Data database) : base(database)
         {
 
+        }
+
+        public IEnumerable<Departments> GetDepartments()
+        {
+            return _database.Departments;
         }
     }
 }

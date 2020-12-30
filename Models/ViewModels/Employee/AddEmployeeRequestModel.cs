@@ -40,6 +40,7 @@ namespace Models.ViewModels
         public int BranchID { get; set; }
 
         public int DepartmentID { get; set; }
+        public int GenderID { get; set; }
 
         public string[] MobileNumbers { get; set; }
     }

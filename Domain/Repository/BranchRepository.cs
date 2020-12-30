@@ -14,5 +14,10 @@ namespace Domain.Repository
         {
 
         }
+
+        public IEnumerable<Branch> GetBranches()
+        {
+            return _database.Branches;
+        }
     }
 }

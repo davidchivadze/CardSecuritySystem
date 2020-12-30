@@ -20,6 +20,7 @@ namespace Domain.Interface
         IEmployeeRepository EmployeeRepository { get; }
         IEmpoyeeDetaisRepository EmpoyeeDetaisRepository { get; }
         ISalaryRepository SalaryRepository { get; }
+        IGenderRepository GenderRepository { get; }
 
 
         void Commit();

@@ -9,5 +9,6 @@ namespace Domain.Interface
 {
     public interface ICountryRepository : IBaseRepository<Country>
     {
+        IEnumerable<Country> GetCountries();
     }
 }

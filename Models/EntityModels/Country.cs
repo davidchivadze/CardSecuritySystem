@@ -15,5 +15,7 @@ namespace Models.EntityModels
         public string Description { get; set; }
         public string Description_ka { get; set; }
         public string Description_ru { get; set; }
+        public virtual ICollection<City> Cities { get; set; }
     }
+    
 }

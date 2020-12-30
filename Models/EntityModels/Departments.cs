@@ -10,14 +10,13 @@ namespace Models.EntityModels
 {
    public class Departments : BaseModel
     {
+
         [Key]
         [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
-
-        [Required]
-        [ForeignKey("Department")]
-        public int ParentDepartmentID { get; set; }
+        [ForeignKey("ParentDepartment")]
+        public int? ParentDepartmentID { get; set; }
 
         [StringLength(250)]
         public string Description { get; set; }
@@ -28,10 +27,15 @@ namespace Models.EntityModels
         [StringLength(250)]
         public string Description_ru { get; set; }
 
-        public virtual Departments Department { get; set; }
+
+
+
+        //relations
+
+        public virtual ICollection<Departments> ParentDepartment { get; set; }
 
         public virtual ICollection<Employee> Employees { get; set; }
 
-        public virtual ICollection<Branch> Branches { get; set; }
+        //public virtual ICollection<Branch> Branches { get; set; }
     }
 }

@@ -7,13 +7,13 @@ namespace Domain.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class lastMigration : IMigrationMetadata
+    public sealed partial class UPDATECityRelation : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(lastMigration));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(UPDATECityRelation));
         
         string IMigrationMetadata.Id
         {
-            get { return "202011032343369_lastMigration"; }
+            get { return "202012271948131_UPDATECityRelation"; }
         }
         
         string IMigrationMetadata.Source

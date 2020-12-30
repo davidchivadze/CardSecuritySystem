@@ -55,6 +55,9 @@ namespace Models
 
         [ForeignKey("Schedule")]
         public int ScheduleID { get; set; }
+        [ForeignKey("Gender")]
+        public int GenderID { get; set; }
+        public Gender Gender { get; set; }
 
         public virtual EmployeeDetails EmployeeDetails { get; set; }
 

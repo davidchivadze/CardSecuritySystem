@@ -16,7 +16,6 @@ namespace Models.ViewModels
 
         public string Description_ru { get; set; }
 
-        public List<string>
     }
 
 

@@ -23,6 +23,7 @@ namespace Domain.Repository
         private IEmployeeRepository _employeeRepository;
         private IEmpoyeeDetaisRepository _empoyeeDetaisRepository;
         private ISalaryRepository _salaryRepository;
+        private IGenderRepository _genderRepository;
         #endregion
 
         #region Constructors
@@ -83,6 +84,10 @@ namespace Domain.Repository
         public ISalaryRepository SalaryRepository
         {
             get { return _salaryRepository = _salaryRepository ?? new SalaryRepository(_database); }
+        }
+        public IGenderRepository GenderRepository
+        {
+            get { return _genderRepository = _genderRepository ?? new GenderRepository(_database); }
         }
         #endregion
 

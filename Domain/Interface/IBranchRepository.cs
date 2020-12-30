@@ -9,5 +9,6 @@ namespace Domain.Interface
 {
     public interface IBranchRepository : IBaseRepository<Branch>
     {
+        IEnumerable<Branch> GetBranches();
     }
 }

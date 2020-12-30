@@ -14,9 +14,6 @@ namespace Models.EntityModels
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
-        [Required]
-        [ForeignKey("Departments")]
-        public int DepartmentID { get; set; }
 
         [StringLength(250)]
         public string Description { get; set; }
@@ -27,6 +24,5 @@ namespace Models.EntityModels
         [StringLength(250)]
         public string Description_ru { get; set; }
 
-        public virtual Departments Departments { get; set; }
     }
 }
