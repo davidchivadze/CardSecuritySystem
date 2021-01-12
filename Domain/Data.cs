@@ -19,6 +19,7 @@ namespace Domain
         public virtual DbSet<EmployeeDetails> EmployeeDetails { get; set; }
         public virtual DbSet<EmployeePosition> EmployeePositions { get; set; }
         public virtual DbSet<Salary> Salaries { get; set; }
+        public virtual DbSet<SalaryType> SalaryTypes { get; set; }
         public virtual DbSet<EmployeeMobileNumbers> EmployeeMobileNumbers { get; set; }
         public virtual DbSet<Schedule> Schedules { get; set; }
         public virtual DbSet<ScheduleDetails> ScheduleDetails { get; set; }

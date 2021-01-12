@@ -66,3 +66,4 @@ C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.branchesChange.resources
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.ADDCountryCityRelation.resources
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.UPDATECityRelation.resources
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.AddSalaryType.resources

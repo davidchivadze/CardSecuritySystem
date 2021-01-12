@@ -16,8 +16,11 @@ namespace Models.EntityModels
         public decimal Amount { get; set; }
         [ForeignKey("Currency")]
         public int CurrencyID { get; set; }
+        [ForeignKey("SalaryType")]
+        public int SalaryTypeID { get; set; }
         public bool? IsHourly { get; set; }
 
+        public virtual SalaryType SalaryType { get; set; }
         public virtual Currency Currency { get; set; }
     }
 }

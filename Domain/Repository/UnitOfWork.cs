@@ -13,10 +13,11 @@ namespace Domain.Repository
         private readonly Data _database;
 
         #region variables For Lazey Loading
-        private IBranchRepository _branchRepository ;
+  
         private ICityRepository _cityRepository;
         private ICountryRepository _countryRepository;
         private ICurrencyRepository _currencyRepository;
+        private ISalaryTypeRepository _salaryTypeRepository;
         private IDepartmentsRepository _departmentsRepository;
         private IEmployeeMobileNumbersRepository _employeeMobileNumbersRepository;
         private IEmployeePositionRepositoy _employeePositionRepositoy;
@@ -24,6 +25,7 @@ namespace Domain.Repository
         private IEmpoyeeDetaisRepository _empoyeeDetaisRepository;
         private ISalaryRepository _salaryRepository;
         private IGenderRepository _genderRepository;
+        private IBranchRepository _branchRepository;
         #endregion
 
         #region Constructors
@@ -40,7 +42,10 @@ namespace Domain.Repository
         {
             get { return _branchRepository = _branchRepository ?? new BranchRepository(_database); }
         }
-
+        public ISalaryTypeRepository SalaryTypeRepository
+        {
+            get { return _salaryTypeRepository = _salaryTypeRepository ?? new SalaryTypeRepository(_database); }
+        }
         public ICityRepository CityRepository
         {
             get { return _cityRepository = _cityRepository ?? new CityRepository(_database); }

@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Helper\EmployeeTransformer.cs" />
     <Compile Include="Helper\ParametersTransformer.cs" />
     <Compile Include="Helper\RepositoryHelperClasses\EmployeeFilter.cs" />
     <Compile Include="Helper\ResponseHelper\AppServiceResponse.cs" />

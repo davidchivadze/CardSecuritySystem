@@ -65,5 +65,14 @@ namespace Business.Services
                 CitiesList = result
             });
         }
+
+        public IResponse<GetSalaryTypeListResponse> GetSalaryTypeList()
+        {
+            var result = UnitOfWork.SalaryTypeRepository.GetSalarieTypes().Select(m=>m.AsViewModel());
+            return Ok(new GetSalaryTypeListResponse()
+            {
+                SalaryTypes = result.ToList()
+            }); ;
+        }
     }
 }

@@ -57,6 +57,7 @@
     <Compile Include="EntityModels\EmployeePosition.cs" />
     <Compile Include="EntityModels\Gender.cs" />
     <Compile Include="EntityModels\Salary.cs" />
+    <Compile Include="EntityModels\SalaryType.cs" />
     <Compile Include="EntityModels\Schedule.cs" />
     <Compile Include="EntityModels\ScheduleDetails.cs" />
     <Compile Include="EntityModels\ScheduleGenerator.cs" />
@@ -70,12 +71,14 @@
     <Compile Include="ViewModels\DepartmentsViewModel.cs" />
     <Compile Include="ViewModels\Employee\EmployeeDetailsViewModel.cs" />
     <Compile Include="ViewModels\Employee\EmployeePositionViewModel.cs" />
+    <Compile Include="ViewModels\Employee\GetEmployeeHolidayList.cs" />
     <Compile Include="ViewModels\Parameters\GetBranchList.cs" />
     <Compile Include="ViewModels\Parameters\GetCitiesListByCountryID.cs" />
     <Compile Include="ViewModels\Parameters\GetCountryList.cs" />
     <Compile Include="ViewModels\Parameters\GetDepartmentsList.cs" />
     <Compile Include="ViewModels\Parameters\GetEmployeePositions.cs" />
     <Compile Include="ViewModels\Parameters\GetGenderList.cs" />
+    <Compile Include="ViewModels\Parameters\GetSalaryTypeList.cs" />
     <Compile Include="ViewModels\SalaryViewModel.cs" />
   </ItemGroup>
   <ItemGroup />

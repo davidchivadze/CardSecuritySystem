@@ -12,6 +12,7 @@ namespace Domain.Interface
         IBaseRepository<T> GetRepository<T>() where T : BaseModel;
         IBranchRepository BranchRepository { get; }
         ICityRepository CityRepository { get; }
+        ISalaryTypeRepository SalaryTypeRepository { get; }
         ICountryRepository CountryRepository { get; }
         ICurrencyRepository CurrencyRepository { get; }
         IDepartmentsRepository DepartmentsRepository { get; }

@@ -58,5 +58,13 @@ namespace Core.Helper
                 Description = model.Description
             };
         }
+        public static GetSalaryTypeListItem AsViewModel(this SalaryType model)
+        {
+            return new GetSalaryTypeListItem()
+            {
+                ID = model.ID,
+                Description = model.Description
+            };
+        }
     }
 }

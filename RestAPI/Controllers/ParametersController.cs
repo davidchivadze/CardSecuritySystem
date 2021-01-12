@@ -33,6 +33,10 @@ namespace RestAPI.Controllers
         {
             return _parametersService.GetEmployeePositionsList();
         }
+        public IResponse<GetSalaryTypeListResponse> GetSalaryTypesList()
+        {
+            return _parametersService.GetSalaryTypeList();
+        }
         public IResponse<GetCountryListResponse> GetCountryList()
         {
             return _parametersService.GetCountryList();

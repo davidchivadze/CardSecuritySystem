@@ -3,6 +3,7 @@ using Core.Helper;
 using Core.Helper.RepositoryHelperClasses;
 using Core.Helpers;
 using Models.ViewModels;
+using Models.ViewModels.Employee;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,6 +34,11 @@ namespace Business.Services
         public void get()
         {
             
+        }
+
+        public IResponse<GetEmployeeHolidayListResponse> GetEmployeeHolidayList(GetEmployeeHolidayListRequest model)
+        {
+            throw new NotImplementedException();
         }
     }
 }

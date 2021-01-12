@@ -1,6 +1,7 @@
 ﻿using Business.Interface;
 using Core.Helpers;
 using Models.ViewModels;
+using Models.ViewModels.Employee;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,10 @@ namespace RestAPI.Controllers
         public IResponse<AddEmployeeResposeModel> AddEmployee(AddEmployeeRequestModel request)
         {
             return _employeeService.AddEmployee(request);
+        }
+        public IResponse<GetEmployeeHolidayListResponse> GetEmployeeHolidayList(GetEmployeeHolidayListRequest model)
+        {
+            return _employeeService.GetEmployeeHolidayList(model);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Core.Helpers;
 using Models.ViewModels;
+using Models.ViewModels.Employee;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,5 +13,6 @@ namespace Business.Interface
     {
         IResponse<List<AddEmployeeRequestModel>> GetFilteredEmployees();
         IResponse<AddEmployeeResposeModel> AddEmployee(AddEmployeeRequestModel request);
+        IResponse<GetEmployeeHolidayListResponse> GetEmployeeHolidayList(GetEmployeeHolidayListRequest model);
     }
 }

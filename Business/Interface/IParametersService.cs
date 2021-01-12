@@ -16,5 +16,6 @@ namespace Business.Interface
         IResponse<GetEmployeePositionsResponse> GetEmployeePositionsList();
         IResponse<GetCountryListResponse> GetCountryList();
         IResponse<GetCitiesListByCountryIDResponse> GetCitiesListByCountryID(int? countryID);
+        IResponse<GetSalaryTypeListResponse> GetSalaryTypeList();
     }
 }
