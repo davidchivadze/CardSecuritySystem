@@ -27,12 +27,15 @@ namespace Core.Helper
                 LastName = model.LastName,
                 LastName_ka = model.LastName_ka,
                 LastName_ru = model.LastName_ru,
+                
                 EmployeeDetails = new EmployeeDetails()
                 {
                     BranchID = model.BranchID,
                     DepartmentID = model.DepartmentID,
                     EmployeePositionID = model.EmployeePositionID,
                     SalaryID = model.SalaryID,
+                    Forgiveness = model.Forgiveness.AsDatabaseModel(),
+                    Fine=model.Fine.AsDatabaseModel()
                 },
                 EmployeeMobileNumbers = model.MobileNumbers.Select(m => new EmployeeMobileNumbers() { PhoneNumber = m, IsActive = true }).ToList()
             };
@@ -60,6 +63,25 @@ namespace Core.Helper
                 SalaryID = model.EmployeeDetails.SalaryID,
                 MobileNumbers = model.EmployeeMobileNumbers.Select(m => m.PhoneNumber.ToString()).ToArray(),
                 
+            };
+        }
+
+        public static Models.EntityModels.Forgiveness AsDatabaseModel(this Models.ViewModels.Forgiveness model) {
+            return new Models.EntityModels.Forgiveness()
+            {
+                Amount = model.Amount,
+                ForgivenessTypeID = model.ForgivenessTypeID
+
+            };
+        }
+        public static Models.EntityModels.Fine AsDatabaseModel(this Models.ViewModels.Fine model)
+        {
+            return new Models.EntityModels.Fine()
+            {
+                Amount = model.Amount,
+                FineTypeID = model.FineTypeID,
+                 CurrencyID=model.CurrencyID
+
             };
         }
 

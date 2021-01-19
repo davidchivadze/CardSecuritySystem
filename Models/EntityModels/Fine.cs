@@ -21,5 +21,6 @@ namespace Models.EntityModels
 
         public virtual FineType FineType { get; set; }
         public virtual Currency Currency { get; set; }
+        public virtual ICollection<EmployeeDetails> EmployeeDetail { get; set; }
     }
 }

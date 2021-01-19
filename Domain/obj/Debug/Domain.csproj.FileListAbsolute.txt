@@ -97,3 +97,7 @@ C:\Users\gigau\Source\Repos\CardSecuritySystem\Domain\obj\Debug\Domain.pdb
 C:\Users\gigau\source\repos\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.FinesAndFineTypes.resources
 C:\Users\gigau\source\repos\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.ForgivenessTypes.resources
 C:\Users\gigau\source\repos\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.ForgivenessANDHolidays.resources
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.FinesAndFineTypes.resources
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.ForgivenessTypes.resources
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.ForgivenessANDHolidays.resources
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.RelationEmployeeFINEforgiveness.resources

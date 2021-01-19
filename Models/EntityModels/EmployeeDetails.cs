@@ -29,7 +29,12 @@ namespace Models.EntityModels
 
         [ForeignKey("Department")]
         public int DepartmentID { get; set; }
-
+        [ForeignKey("Fine")]
+        public int FineID { get; set; }
+        [ForeignKey("Forgiveness")]
+        public int ForgivenessID { get; set; }
+        public virtual Fine Fine { get; set; }
+        public virtual Forgiveness Forgiveness { get; set; }
         public virtual ICollection<Employee> Employee { get; set; }
 
         public virtual EmployeePosition EmployeePosition { get; set; }

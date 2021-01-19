@@ -43,6 +43,20 @@ namespace Models.ViewModels
         public int GenderID { get; set; }
 
         public string[] MobileNumbers { get; set; }
+        public Forgiveness Forgiveness { get; set; }
+        public Fine Fine { get; set; }
+    }
+    public class Forgiveness
+    {
+        public int ForgivenessTypeID { get; set; }
+        public int Amount { get; set; }
+        
+    }
+    public class Fine
+    {
+        public int FineTypeID { get; set; }
+        public Decimal Amount { get; set; }
+        public int CurrencyID { get; set; }
     }
     public class AddEmployeeResposeModel
     {

@@ -17,6 +17,7 @@ namespace Models.EntityModels
         public int ForgivenessTypeID { get; set; }
 
         public virtual ForgivenessType ForgivenessType { get; set; }
+        public virtual ICollection<EmployeeDetails> EmployeeDetails { get; set; }
 
     }
 }
