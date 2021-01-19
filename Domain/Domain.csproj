@@ -58,6 +58,7 @@
     <Compile Include="Interface\ICityRepository.cs" />
     <Compile Include="Interface\ICountryRepository.cs" />
     <Compile Include="Interface\ICurrencyRepository.cs" />
+    <Compile Include="Interface\ICurrencyTypeRepository.cs" />
     <Compile Include="Interface\IDepartmentsRepository.cs" />
     <Compile Include="Interface\IEmployeeHolidayRepository.cs" />
     <Compile Include="Interface\IEmployeeMobileNumbersRepository.cs" />
@@ -121,6 +122,10 @@
     <Compile Include="Migrations\202101191932320_RelationEmployeeFINEforgiveness.designer.cs">
       <DependentUpon>202101191932320_RelationEmployeeFINEforgiveness.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101192111057_CurrencyType.cs" />
+    <Compile Include="Migrations\202101192111057_CurrencyType.designer.cs">
+      <DependentUpon>202101192111057_CurrencyType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\BaseRepository.cs" />
@@ -128,6 +133,7 @@
     <Compile Include="Repository\CityRepository.cs" />
     <Compile Include="Repository\CountryRepository.cs" />
     <Compile Include="Repository\CurrencyRepository.cs" />
+    <Compile Include="Repository\CurrencyTypeRespository.cs" />
     <Compile Include="Repository\DepartmentsRepository.cs" />
     <Compile Include="Repository\EmployeeDetailsRepository.cs" />
     <Compile Include="Repository\EmployeeHolidayRepository.cs" />
@@ -196,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101191932320_RelationEmployeeFINEforgiveness.resx">
       <DependentUpon>202101191932320_RelationEmployeeFINEforgiveness.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101192111057_CurrencyType.resx">
+      <DependentUpon>202101192111057_CurrencyType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -19,5 +19,6 @@ namespace Business.Interface
         IResponse<GetSalaryTypeListResponse> GetSalaryTypeList();
         IResponse<GetFineTypeListResponse> GetFineTypeList();
         IResponse<GetForgivenessTypeListResponse> GetForgivenessTypeList();
+        IResponse<GetCurrencyTypeListResponse> GetCurrencyTypeList();
     }
 }

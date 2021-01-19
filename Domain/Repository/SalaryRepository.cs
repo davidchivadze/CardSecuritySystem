@@ -8,7 +8,7 @@ using Domain.Interface;
 
 namespace Domain.Repository
 {
-    class SalaryRepository : BaseRepository<Salary>, ISalaryRepository
+    public class SalaryRepository : BaseRepository<Salary>, ISalaryRepository
     {
         public SalaryRepository(Data database) : base(database)
         {

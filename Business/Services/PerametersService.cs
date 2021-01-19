@@ -90,5 +90,14 @@ namespace Business.Services
                 ForgivenessTypes = result.ToList()
             });
         }
+
+        public IResponse<GetCurrencyTypeListResponse> GetCurrencyTypeList()
+        {
+            var result = UnitOfWork.CurrencyTypeRepository.GetCurrencyTypes().Select(m => m.AsViewModel());
+            return Ok(new GetCurrencyTypeListResponse()
+            {
+                CurrencyTypes = result.ToList()
+            });
+        }
     }
 }

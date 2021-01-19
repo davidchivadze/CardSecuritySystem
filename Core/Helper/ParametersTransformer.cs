@@ -82,5 +82,13 @@ namespace Core.Helper
                 Description = model.Description
             };
         }
+        public static GetCurrencyTypeListItem AsViewModel(this CurrencyType model)
+        {
+            return new GetCurrencyTypeListItem()
+            {
+                ID = model.ID,
+                Description = model.Description
+            };
+        }
     }
 }

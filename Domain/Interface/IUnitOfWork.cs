@@ -20,6 +20,7 @@ namespace Domain.Interface
         IForgivenessTypeRepository ForgivenessTypeRepository { get; }
         ICountryRepository CountryRepository { get; }
         ICurrencyRepository CurrencyRepository { get; }
+        ICurrencyTypeRepository CurrencyTypeRepository { get; }
         IDepartmentsRepository DepartmentsRepository { get; }
         IEmployeeHolidayRepository EmployeeHolidayRepository { get; }
         IEmployeeMobileNumbersRepository EmployeeMobileNumbersRepository { get; }
@@ -27,6 +28,7 @@ namespace Domain.Interface
         IEmployeeRepository EmployeeRepository { get; }
         IEmpoyeeDetaisRepository EmpoyeeDetaisRepository { get; }
         IGenderRepository GenderRepository { get; }
+
 
         void Commit();
     }

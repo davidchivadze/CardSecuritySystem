@@ -22,3 +22,9 @@ C:\Users\gigau\Source\Repos\CardSecuritySystem\Models\obj\Debug\Models.csprojAss
 C:\Users\gigau\Source\Repos\CardSecuritySystem\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
 C:\Users\gigau\Source\Repos\CardSecuritySystem\Models\obj\Debug\Models.dll
 C:\Users\gigau\Source\Repos\CardSecuritySystem\Models\obj\Debug\Models.pdb
+D:\P1\Models\bin\Debug\Models.dll
+D:\P1\Models\bin\Debug\Models.pdb
+D:\P1\Models\obj\Debug\Models.csprojAssemblyReference.cache
+D:\P1\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+D:\P1\Models\obj\Debug\Models.dll
+D:\P1\Models\obj\Debug\Models.pdb

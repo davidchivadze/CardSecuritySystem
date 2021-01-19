@@ -45,6 +45,10 @@ namespace RestAPI.Controllers
         {
             return _parametersService.GetForgivenessTypeList();
         }
+        public IResponse<GetCurrencyTypeListResponse> GetCurrencyTypesLIst()
+        {
+            return _parametersService.GetCurrencyTypeList();
+        }
         public IResponse<GetCountryListResponse> GetCountryList()
         {
             return _parametersService.GetCountryList();
