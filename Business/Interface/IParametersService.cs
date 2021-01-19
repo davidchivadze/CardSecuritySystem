@@ -17,5 +17,7 @@ namespace Business.Interface
         IResponse<GetCountryListResponse> GetCountryList();
         IResponse<GetCitiesListByCountryIDResponse> GetCitiesListByCountryID(int? countryID);
         IResponse<GetSalaryTypeListResponse> GetSalaryTypeList();
+        IResponse<GetFineTypeListResponse> GetFineTypeList();
+        IResponse<GetForgivenessTypeListResponse> GetForgivenessTypeList();
     }
 }

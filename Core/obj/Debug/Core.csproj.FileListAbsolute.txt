@@ -31,3 +31,14 @@ C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Core\bi
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Core\bin\Debug\Models.pdb
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Core\bin\Debug\FluentValidation.xml
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Core\obj\Debug\Core.csproj.CopyComplete
+C:\Users\gigau\Source\Repos\CardSecuritySystem\Core\bin\Debug\Core.dll
+C:\Users\gigau\Source\Repos\CardSecuritySystem\Core\bin\Debug\Core.pdb
+C:\Users\gigau\Source\Repos\CardSecuritySystem\Core\bin\Debug\FluentValidation.dll
+C:\Users\gigau\Source\Repos\CardSecuritySystem\Core\bin\Debug\Models.dll
+C:\Users\gigau\Source\Repos\CardSecuritySystem\Core\bin\Debug\Models.pdb
+C:\Users\gigau\Source\Repos\CardSecuritySystem\Core\bin\Debug\FluentValidation.xml
+C:\Users\gigau\Source\Repos\CardSecuritySystem\Core\obj\Debug\Core.csprojAssemblyReference.cache
+C:\Users\gigau\Source\Repos\CardSecuritySystem\Core\obj\Debug\Core.csproj.CoreCompileInputs.cache
+C:\Users\gigau\Source\Repos\CardSecuritySystem\Core\obj\Debug\Core.csproj.CopyComplete
+C:\Users\gigau\Source\Repos\CardSecuritySystem\Core\obj\Debug\Core.dll
+C:\Users\gigau\Source\Repos\CardSecuritySystem\Core\obj\Debug\Core.pdb

@@ -66,5 +66,21 @@ namespace Core.Helper
                 Description = model.Description
             };
         }
+        public static GetFineTypeListItem AsViewModel(this FineType model)
+        {
+            return new GetFineTypeListItem()
+            {
+                ID = model.ID,
+                Description = model.Description
+            };
+        }
+        public static GetForgivenessTypeListItem AsViewModel(this ForgivenessType model)
+        {
+            return new GetForgivenessTypeListItem()
+            {
+                ID = model.ID,
+                Description = model.Description
+            };
+        }
     }
 }

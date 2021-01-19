@@ -59,11 +59,16 @@
     <Compile Include="Interface\ICountryRepository.cs" />
     <Compile Include="Interface\ICurrencyRepository.cs" />
     <Compile Include="Interface\IDepartmentsRepository.cs" />
+    <Compile Include="Interface\IEmployeeHolidayRepository.cs" />
     <Compile Include="Interface\IEmployeeMobileNumbersRepository.cs" />
     <Compile Include="Interface\IEmployeePositionRepositoy.cs" />
     <Compile Include="Interface\IEmpoyeeDetaisRepository.cs" />
     <Compile Include="Interface\IBaseRepository.cs" />
     <Compile Include="Interface\IEmployeeRepository.cs" />
+    <Compile Include="Interface\IFineRepository.cs" />
+    <Compile Include="Interface\IFineTypeRepository.cs" />
+    <Compile Include="Interface\IForgivenessRepository.cs" />
+    <Compile Include="Interface\IForgivenessTypeRepository.cs" />
     <Compile Include="Interface\IGenderRepository.cs" />
     <Compile Include="Interface\ISalaryRepository.cs" />
     <Compile Include="Interface\ISalaryTypeRepository.cs" />
@@ -100,6 +105,18 @@
     <Compile Include="Migrations\202101122054312_AddSalaryType.designer.cs">
       <DependentUpon>202101122054312_AddSalaryType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101130906243_FinesAndFineTypes.cs" />
+    <Compile Include="Migrations\202101130906243_FinesAndFineTypes.designer.cs">
+      <DependentUpon>202101130906243_FinesAndFineTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101131106247_ForgivenessTypes.cs" />
+    <Compile Include="Migrations\202101131106247_ForgivenessTypes.designer.cs">
+      <DependentUpon>202101131106247_ForgivenessTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101131219123_ForgivenessANDHolidays.cs" />
+    <Compile Include="Migrations\202101131219123_ForgivenessANDHolidays.designer.cs">
+      <DependentUpon>202101131219123_ForgivenessANDHolidays.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\BaseRepository.cs" />
@@ -109,9 +126,14 @@
     <Compile Include="Repository\CurrencyRepository.cs" />
     <Compile Include="Repository\DepartmentsRepository.cs" />
     <Compile Include="Repository\EmployeeDetailsRepository.cs" />
+    <Compile Include="Repository\EmployeeHolidayRepository.cs" />
     <Compile Include="Repository\EmployeeMobileNumbersRepository.cs" />
     <Compile Include="Repository\EmployeePositionRepository.cs" />
     <Compile Include="Repository\EmployeeRepository.cs" />
+    <Compile Include="Repository\FineRepository.cs" />
+    <Compile Include="Repository\FineTypeRepository.cs" />
+    <Compile Include="Repository\ForgivenessRepository.cs" />
+    <Compile Include="Repository\ForgivenessTypeRepository.cs" />
     <Compile Include="Repository\GenderRepository.cs" />
     <Compile Include="Repository\SalaryRepository.cs" />
     <Compile Include="Repository\SalaryTypeRepository.cs" />
@@ -158,6 +180,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101122054312_AddSalaryType.resx">
       <DependentUpon>202101122054312_AddSalaryType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101130906243_FinesAndFineTypes.resx">
+      <DependentUpon>202101130906243_FinesAndFineTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101131106247_ForgivenessTypes.resx">
+      <DependentUpon>202101131106247_ForgivenessTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101131219123_ForgivenessANDHolidays.resx">
+      <DependentUpon>202101131219123_ForgivenessANDHolidays.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

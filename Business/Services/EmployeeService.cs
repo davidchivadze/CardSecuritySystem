@@ -38,7 +38,12 @@ namespace Business.Services
 
         public IResponse<GetEmployeeHolidayListResponse> GetEmployeeHolidayList(GetEmployeeHolidayListRequest model)
         {
-            throw new NotImplementedException();
+            var result = UnitOfWork.EmployeeHolidayRepository.GetHolidayByEmployee(model.EmployeeID).Select(m => m.AsViewModel());
+            return Ok(new GetEmployeeHolidayListResponse()
+            {
+                    
+            });
         }
+
     }
 }

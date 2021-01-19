@@ -62,3 +62,8 @@ C:\Users\datoc\source\repos\WebApplication3\WebApplication3\obj\Debug\WebApplica
 C:\Users\datoc\source\repos\WebApplication3\WebApplication3\obj\Debug\WebApplication3.csproj.CopyComplete
 C:\Users\datoc\source\repos\WebApplication3\WebApplication3\obj\Debug\WebApplication3.dll
 C:\Users\datoc\source\repos\WebApplication3\WebApplication3\obj\Debug\WebApplication3.pdb
+C:\Users\gigau\Source\Repos\CardSecuritySystem\WebApplication3\obj\Debug\WebApplication3.csprojAssemblyReference.cache
+C:\Users\gigau\Source\Repos\CardSecuritySystem\WebApplication3\obj\Debug\Interop.zkemkeeper.dll
+C:\Users\gigau\Source\Repos\CardSecuritySystem\WebApplication3\obj\Debug\WebApplication3.csproj.ResolveComReference.cache
+C:\Users\gigau\Source\Repos\CardSecuritySystem\WebApplication3\obj\Debug\WebApplication3.csproj.CoreCompileInputs.cache
+C:\Users\gigau\Source\Repos\CardSecuritySystem\WebApplication3\obj\Debug\WebApplication3.dll

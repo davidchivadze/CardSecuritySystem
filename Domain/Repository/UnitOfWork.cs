@@ -18,15 +18,21 @@ namespace Domain.Repository
         private ICountryRepository _countryRepository;
         private ICurrencyRepository _currencyRepository;
         private ISalaryTypeRepository _salaryTypeRepository;
+        private IFineTypeRepository _fineTypeRepository;
+        private IForgivenessTypeRepository _forgivenessTypeRepository;
         private IDepartmentsRepository _departmentsRepository;
+        private IEmployeeHolidayRepository _employeeHolidayRepository;
         private IEmployeeMobileNumbersRepository _employeeMobileNumbersRepository;
         private IEmployeePositionRepositoy _employeePositionRepositoy;
         private IEmployeeRepository _employeeRepository;
         private IEmpoyeeDetaisRepository _empoyeeDetaisRepository;
+        private IFineRepository _fineRepository;
+        private IForgivenessRepository _forgivenessRepository;
         private ISalaryRepository _salaryRepository;
         private IGenderRepository _genderRepository;
         private IBranchRepository _branchRepository;
         #endregion
+
 
         #region Constructors
         public UnitOfWork(Data database)
@@ -45,6 +51,22 @@ namespace Domain.Repository
         public ISalaryTypeRepository SalaryTypeRepository
         {
             get { return _salaryTypeRepository = _salaryTypeRepository ?? new SalaryTypeRepository(_database); }
+        }
+        public IFineRepository FineRepository
+        {
+            get { return _fineRepository = _fineRepository ?? new FineRepository(_database); }
+        }
+        public IFineTypeRepository FineTypeRepository
+        {
+            get { return _fineTypeRepository = _fineTypeRepository ?? new FineTypeRepository(_database); }
+        }
+        public IForgivenessRepository ForgivenessRepository
+        {
+            get { return _forgivenessRepository = _forgivenessRepository ?? new ForgivenessRepository(_database); }
+        }
+        public IForgivenessTypeRepository ForgivenessTypeRepository
+        {
+            get { return _forgivenessTypeRepository = _forgivenessTypeRepository ?? new ForgivenessTypeRepository(_database); }
         }
         public ICityRepository CityRepository
         {
@@ -69,6 +91,10 @@ namespace Domain.Repository
         public IEmployeeMobileNumbersRepository EmployeeMobileNumbersRepository
         {
             get { return _employeeMobileNumbersRepository = _employeeMobileNumbersRepository ?? new EmployeeMobileNumbersRepository(_database); }
+        }
+        public IEmployeeHolidayRepository EmployeeHolidayRepository
+        {
+            get { return _employeeHolidayRepository = _employeeHolidayRepository ?? new EmployeeHolidayRepository(_database); }
         }
 
         public IEmployeePositionRepositoy EmployeePositionRepositoy

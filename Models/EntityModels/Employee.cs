@@ -62,7 +62,9 @@ namespace Models
         public virtual EmployeeDetails EmployeeDetails { get; set; }
 
         public virtual ICollection<EmployeeMobileNumbers> EmployeeMobileNumbers { get; set; }
+        public virtual ICollection<EmployeeHolidays> EmployeeHolidays { get; set; }
         public virtual Schedule Schedule { get; set; }
+
 
     }
 }

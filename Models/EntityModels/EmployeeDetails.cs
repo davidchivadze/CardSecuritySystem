@@ -34,6 +34,7 @@ namespace Models.EntityModels
 
         public virtual EmployeePosition EmployeePosition { get; set; }
 
+
         public virtual Salary Salary { get; set; }
 
         public virtual Branch Branch { get; set; }

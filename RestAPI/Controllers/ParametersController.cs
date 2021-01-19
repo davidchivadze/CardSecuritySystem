@@ -37,6 +37,14 @@ namespace RestAPI.Controllers
         {
             return _parametersService.GetSalaryTypeList();
         }
+        public IResponse<GetFineTypeListResponse> GetFineTypesLIst()
+        {
+            return _parametersService.GetFineTypeList();
+        }
+        public IResponse<GetForgivenessTypeListResponse> GetForgivenessTypesLIst()
+        {
+            return _parametersService.GetForgivenessTypeList();
+        }
         public IResponse<GetCountryListResponse> GetCountryList()
         {
             return _parametersService.GetCountryList();
@@ -45,5 +53,6 @@ namespace RestAPI.Controllers
         {
             return _parametersService.GetCitiesListByCountryID(countryID);
         }
+
     }
 }

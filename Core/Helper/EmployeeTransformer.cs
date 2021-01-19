@@ -1,4 +1,5 @@
 ﻿using Models.EntityModels;
+using Models.ViewModels.Employee;
 using Models.ViewModels.Parameters;
 using System;
 using System.Collections.Generic;
@@ -6,17 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Core.Helper
 {
     public static class EmployeeTransformer
     {
-        public static GetCitiesListItem AsViewModel(this City model)
+        public static GetEmployeeHolidayListItem AsViewModel(this EmployeeHolidays model)
         {
-            return new GetCitiesListItem
+            return new GetEmployeeHolidayListItem
             {
                 ID = model.ID,
-                Description = model.Description
+                Name=model.Name,
+                AllWritten=model.AllWritten,
+                Used=model.Used,
+                Left=model.Left,
+                NumInYear=model.NumInYear,
+                LeftInYear=model.LeftInYear,
+                DeactivateDate=model.DeactivateDate,
+                IsActive=model.IsActive,
+                EmployeeID=model.EmployeeID
             };
         }
+        
     }
 }

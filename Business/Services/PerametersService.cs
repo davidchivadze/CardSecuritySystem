@@ -72,7 +72,23 @@ namespace Business.Services
             return Ok(new GetSalaryTypeListResponse()
             {
                 SalaryTypes = result.ToList()
-            }); ;
+            }); 
+        }
+        public IResponse<GetFineTypeListResponse> GetFineTypeList()
+        {
+            var result = UnitOfWork.FineTypeRepository.GetFineTypes().Select(m => m.AsViewModel());
+            return Ok(new GetFineTypeListResponse()
+            {
+                FineTypes = result.ToList()
+            }); 
+        }
+        public IResponse<GetForgivenessTypeListResponse> GetForgivenessTypeList()
+        {
+            var result = UnitOfWork.ForgivenessTypeRepository.GetForgivenessTypes().Select(m => m.AsViewModel());
+            return Ok(new GetForgivenessTypeListResponse()
+            {
+                ForgivenessTypes = result.ToList()
+            });
         }
     }
 }
