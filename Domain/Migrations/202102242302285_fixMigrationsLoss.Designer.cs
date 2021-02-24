@@ -7,13 +7,13 @@ namespace Domain.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class RelationEmployeeFINEforgiveness : IMigrationMetadata
+    public sealed partial class fixMigrationsLoss : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(RelationEmployeeFINEforgiveness));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(fixMigrationsLoss));
         
         string IMigrationMetadata.Id
         {
-            get { return "202101191932320_RelationEmployeeFINEforgiveness"; }
+            get { return "202102242302285_fixMigrationsLoss"; }
         }
         
         string IMigrationMetadata.Source
