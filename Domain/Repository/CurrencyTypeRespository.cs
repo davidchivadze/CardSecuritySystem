@@ -15,10 +15,10 @@ namespace Domain.Repository
 
         }
 
-        public IEnumerable<CurrencyType> GetCurrencyTypes()
-        {
-            return _database.CurrencyTypes;
-        }
+        //public IEnumerable<CurrencyType> GetCurrencyTypes()
+        //{
+        //    return _database.CurrencyTypes;
+        //}
 
     }
 }

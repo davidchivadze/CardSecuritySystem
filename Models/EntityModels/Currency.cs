@@ -13,6 +13,6 @@ namespace Models.EntityModels
         public string Description_ka { get; set; }
         public string Description_ru { get; set; }
 
-        public virtual CurrencyType CurrencyType { get; set; }
+        //public virtual CurrencyType CurrencyType { get; set; }
     }
 }

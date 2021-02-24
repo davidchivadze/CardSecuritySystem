@@ -15,7 +15,6 @@ C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Models\
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Models\obj\Debug\Models.pdb
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Models\bin\Debug\Models.dll
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Models\bin\Debug\Models.pdb
-C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Models\obj\Debug\Models.csprojAssemblyReference.cache
 C:\Users\gigau\Source\Repos\CardSecuritySystem\Models\bin\Debug\Models.dll
 C:\Users\gigau\Source\Repos\CardSecuritySystem\Models\bin\Debug\Models.pdb
 C:\Users\gigau\Source\Repos\CardSecuritySystem\Models\obj\Debug\Models.csprojAssemblyReference.cache

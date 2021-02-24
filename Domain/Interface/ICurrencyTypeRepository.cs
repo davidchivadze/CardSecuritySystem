@@ -10,7 +10,7 @@ namespace Domain.Interface
 {
     public interface ICurrencyTypeRepository:IBaseRepository<CurrencyType>
     {
-        IEnumerable<CurrencyType> GetCurrencyTypes();
+        //IEnumerable<CurrencyType> GetCurrencyTypes();
 
     }
 }
