@@ -42,3 +42,14 @@ C:\Users\gigau\Source\Repos\CardSecuritySystem\Core\obj\Debug\Core.csproj.CoreCo
 C:\Users\gigau\Source\Repos\CardSecuritySystem\Core\obj\Debug\Core.csproj.CopyComplete
 C:\Users\gigau\Source\Repos\CardSecuritySystem\Core\obj\Debug\Core.dll
 C:\Users\gigau\Source\Repos\CardSecuritySystem\Core\obj\Debug\Core.pdb
+D:\P1\Core\bin\Debug\Core.dll
+D:\P1\Core\bin\Debug\Core.pdb
+D:\P1\Core\bin\Debug\FluentValidation.dll
+D:\P1\Core\bin\Debug\Models.dll
+D:\P1\Core\bin\Debug\Models.pdb
+D:\P1\Core\bin\Debug\FluentValidation.xml
+D:\P1\Core\obj\Debug\Core.csprojAssemblyReference.cache
+D:\P1\Core\obj\Debug\Core.csproj.CoreCompileInputs.cache
+D:\P1\Core\obj\Debug\Core.csproj.CopyComplete
+D:\P1\Core\obj\Debug\Core.dll
+D:\P1\Core\obj\Debug\Core.pdb

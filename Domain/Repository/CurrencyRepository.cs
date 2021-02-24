@@ -10,7 +10,7 @@ namespace Domain.Repository
 {
     public class CurrencyRepository : BaseRepository<Currency>, ICurrencyRepository
     {
-        public CurrencyRepository(Data datrabase) : base(datrabase)
+        public CurrencyRepository(Data database) : base(database)
         {
 
         }

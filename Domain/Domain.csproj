@@ -60,6 +60,7 @@
     <Compile Include="Interface\ICityRepository.cs" />
     <Compile Include="Interface\ICountryRepository.cs" />
     <Compile Include="Interface\ICurrencyRepository.cs" />
+    <Compile Include="Interface\ICurrencyTypeRepository.cs" />
     <Compile Include="Interface\IDepartmentsRepository.cs" />
     <Compile Include="Interface\IDeviceLocationInBranchRepository.cs" />
     <Compile Include="Interface\IDeviceRepository.cs" />
@@ -145,6 +146,7 @@
     <Compile Include="Repository\CityRepository.cs" />
     <Compile Include="Repository\CountryRepository.cs" />
     <Compile Include="Repository\CurrencyRepository.cs" />
+    <Compile Include="Repository\CurrencyTypeRespository.cs" />
     <Compile Include="Repository\DepartmentsRepository.cs" />
     <Compile Include="Repository\DeviceLocationInBranchRepository.cs" />
     <Compile Include="Repository\DeviceRegistratedUsersRepository.cs" />
@@ -218,15 +220,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202101191932320_RelationEmployeeFINEforgiveness.resx">
       <DependentUpon>202101191932320_RelationEmployeeFINEforgiveness.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102222040246_DeviceUserLog.resx">
-      <DependentUpon>202102222040246_DeviceUserLog.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102222232512_DeviceRegistratedUser.resx">
-      <DependentUpon>202102222232512_DeviceRegistratedUser.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202102242040413_ScheduleDetailsChange.resx">
-      <DependentUpon>202102242040413_ScheduleDetailsChange.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

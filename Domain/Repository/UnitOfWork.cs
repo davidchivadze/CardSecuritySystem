@@ -20,6 +20,7 @@ namespace Domain.Repository
         private ISalaryTypeRepository _salaryTypeRepository;
         private IFineTypeRepository _fineTypeRepository;
         private IForgivenessTypeRepository _forgivenessTypeRepository;
+        private ICurrencyTypeRepository _currencyTypeRepository;
         private IDepartmentsRepository _departmentsRepository;
         private IEmployeeHolidayRepository _employeeHolidayRepository;
         private IEmployeeMobileNumbersRepository _employeeMobileNumbersRepository;
@@ -149,6 +150,10 @@ namespace Domain.Repository
             get { return _genderRepository = _genderRepository ?? new GenderRepository(_database); }
         }
 
+        public ICurrencyTypeRepository CurrencyTypeRepository
+        {
+            get { return _currencyTypeRepository = _currencyTypeRepository ?? new CurrencyTypeRespository(_database); }
+        }
         #endregion
 
         public void Commit()
