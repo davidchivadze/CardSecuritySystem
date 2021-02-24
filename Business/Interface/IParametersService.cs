@@ -19,5 +19,9 @@ namespace Business.Interface
         IResponse<GetSalaryTypeListResponse> GetSalaryTypeList();
         IResponse<GetFineTypeListResponse> GetFineTypeList();
         IResponse<GetForgivenessTypeListResponse> GetForgivenessTypeList();
+        IResponse<GetDeviceTypeListResponse> GetDeviceTypeList();
+   IResponse<GetDeviceLocationInBranchListResponse> GetDeviceLocationInBranchListResponse();
+        IResponse<AddForgivenessTypeResponse> AddForgivenessType(AddForgivenessTypeRequest model);
+        IResponse<EditForgivenessTypeResponse> EditForgivenessType(EditForgivenessTypeRequest model);
     }
 }

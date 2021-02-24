@@ -58,6 +58,39 @@ namespace Core.Helper
                 Description = model.Description
             };
         }
+
+        public static ForgivenessType AsDatabaseModel(this AddForgivenessTypeRequest model)
+        {
+            return new ForgivenessType()
+            {
+                Description = model.Description
+            };
+        }
+        public static ForgivenessType AsDatabaseModel(this EditForgivenessTypeRequest model)
+        {
+            return new ForgivenessType()
+            {
+                Description = model.Description
+                ,
+                ID = model.ID
+            };
+        }
+        public static GetDeviceTypeListItem AsViewModel(this DeviceType model)
+        {
+            return new GetDeviceTypeListItem()
+            {
+                ID = model.ID,
+                Description = model.Description
+            };
+        }
+        public static GetDeviceLocationInBranchListItem AsViewModel(this DeviceLocationInBranch model)
+        {
+            return new GetDeviceLocationInBranchListItem()
+            {
+                ID = model.ID,
+                Description = model.Description
+            };
+        }
         public static GetSalaryTypeListItem AsViewModel(this SalaryType model)
         {
             return new GetSalaryTypeListItem()

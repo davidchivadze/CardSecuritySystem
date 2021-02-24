@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Models.EntityModels
 {
-    public class DeviceType
+    public class DeviceType:BaseModel
     {
         public int ID { get; set;}
         public string Description { get; set; }

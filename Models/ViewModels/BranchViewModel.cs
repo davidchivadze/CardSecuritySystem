@@ -13,7 +13,7 @@ namespace Models.ViewModels
         public int CountryID { get; set; }
         public string Address { get; set; }
         public string BranchName { get; set; }
-        public List<Device> Devices { get; set; }
+        //public List<Device> Devices { get; set; }
     }
 
     public class BranchResponseModel { }

@@ -27,6 +27,11 @@ namespace Domain.Interface
         IEmployeeRepository EmployeeRepository { get; }
         IEmpoyeeDetaisRepository EmpoyeeDetaisRepository { get; }
         IGenderRepository GenderRepository { get; }
+        IDeviceTypeRepository DeviceTypeRepository { get; }
+        IDeviceRepository DeviceRepository { get; }
+        IDeviceLocationInBranchRepository DeviceLocationInBranchRepository { get; }
+        IDeviceUserLogRepository DeviceUserLogRepository { get; }
+        IDeviceRegistratedUsersRepository DeviceRegistratedUsersRepository { get; }
 
         void Commit();
     }

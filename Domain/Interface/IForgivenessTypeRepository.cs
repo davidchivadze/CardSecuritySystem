@@ -11,6 +11,8 @@ namespace Domain.Interface
     public interface IForgivenessTypeRepository:IBaseRepository<ForgivenessType>
     {
         IEnumerable<ForgivenessType> GetForgivenessTypes();
+        ForgivenessType AddForgivenessType(ForgivenessType model);
+        ForgivenessType EditForgivenessType(ForgivenessType model);
 
     }
 }

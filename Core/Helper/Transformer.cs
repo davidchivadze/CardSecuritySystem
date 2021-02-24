@@ -27,17 +27,35 @@ namespace Core.Helper
                 LastName = model.LastName,
                 LastName_ka = model.LastName_ka,
                 LastName_ru = model.LastName_ru,
-                
+                GenderID=1,
                 EmployeeDetails = new EmployeeDetails()
                 {
                     BranchID = model.BranchID,
                     DepartmentID = model.DepartmentID,
                     EmployeePositionID = model.EmployeePositionID,
-                    SalaryID = model.SalaryID,
+                    Salary=new Salary()
+                    {
+                         Amount=100,
+                          CurrencyID=1,
+                           IsHourly=false,
+                            SalaryTypeID=1
+                    },
                     Forgiveness = model.Forgiveness.AsDatabaseModel(),
                     Fine=model.Fine.AsDatabaseModel()
                 },
-                EmployeeMobileNumbers = model.MobileNumbers.Select(m => new EmployeeMobileNumbers() { PhoneNumber = m, IsActive = true }).ToList()
+                EmployeeMobileNumbers = model.MobileNumbers.Select(m => new EmployeeMobileNumbers() { PhoneNumber = m, IsActive = true }).ToList(),
+                Schedule=new Schedule() { 
+                    DaylyHouresAmount=8, 
+                    StartTime=DateTime.Now.TimeOfDay, 
+                    OnWorkingDaysOnly=true,
+                    OnWorkingHouresOnly=false,
+                     NotStandartSchedule=false,
+                      EndTime=DateTime.Now.TimeOfDay,
+                       WeekHouresAmount=40,
+                       ScheduleTypeID=1
+                }
+                
+            
             };
         }
 
@@ -62,6 +80,7 @@ namespace Core.Helper
                 IsActive = model.IsActive,
                 SalaryID = model.EmployeeDetails.SalaryID,
                 MobileNumbers = model.EmployeeMobileNumbers.Select(m => m.PhoneNumber.ToString()).ToArray(),
+               
                 
             };
         }
@@ -93,7 +112,7 @@ namespace Core.Helper
                 BranchName = model.BranchName,
                 CityID = model.CityID,
                 CountryID = model.CountryID,
-                Devices = model.Devices,
+                //Devices = model.Devices,
             };
         }
 
@@ -105,7 +124,7 @@ namespace Core.Helper
                 CityID = model.CityID,
                 CountryID = model.CountryID,
                 BranchName = model.BranchName,
-                Devices = model.Devices.ToList()
+                //Devices = model.Devices.ToList()
             };
         }
 

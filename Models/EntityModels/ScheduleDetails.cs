@@ -16,8 +16,8 @@ namespace Models.EntityModels
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
         public bool HasPassed { get; set; }
-
-
+        [ForeignKey("Schedule")]
+        public int ScheduleID { get; set; }
         public virtual ICollection<Schedule> Schedule { get; set; }
     }
 }

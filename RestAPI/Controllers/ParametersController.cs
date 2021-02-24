@@ -21,22 +21,27 @@ namespace RestAPI.Controllers
         {
             return _parametersService.GetGenderList();
         }
+        //დეპარტამენტის დამატება
         public IResponse<GetDepartmentsListResponse> GetDepartmentsList()
         {
             return _parametersService.GetDepartmentsList();
         }
+        //ბრენჩის დამატება
         public IResponse<GetBranchListResponse> GetBranchList()
         {
             return _parametersService.GetBranchList();
         }
+        //პოზიციების დამატება
         public IResponse<GetEmployeePositionsResponse> GetEmployeePositionsList()
         {
             return _parametersService.GetEmployeePositionsList();
         }
+        //ანაზღაურებისტიპების დამატება
         public IResponse<GetSalaryTypeListResponse> GetSalaryTypesList()
         {
             return _parametersService.GetSalaryTypeList();
         }
+        //ჯარიმის ტიპის დამატება
         public IResponse<GetFineTypeListResponse> GetFineTypesLIst()
         {
             return _parametersService.GetFineTypeList();
@@ -53,6 +58,22 @@ namespace RestAPI.Controllers
         {
             return _parametersService.GetCitiesListByCountryID(countryID);
         }
-
+        public IResponse<GetDeviceTypeListResponse> GetDeviceTypeList()
+        {
+            return _parametersService.GetDeviceTypeList();
+        }
+        //მოწყობილობების ლოკაციების დამატება
+        public IResponse<GetDeviceLocationInBranchListResponse> GetDeviceLocationInBranchList()
+        {
+            return _parametersService.GetDeviceLocationInBranchListResponse();
+        }
+        public IResponse<AddForgivenessTypeResponse> AddForgivenessType(AddForgivenessTypeRequest model)
+        {
+            return _parametersService.AddForgivenessType(model);
+        }
+        public IResponse<EditForgivenessTypeResponse> EditForgivenessType(EditForgivenessTypeRequest model)
+        {
+            return _parametersService.EditForgivenessType(model);
+        }
     }
 }

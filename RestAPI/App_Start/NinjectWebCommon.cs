@@ -12,6 +12,7 @@ namespace RestAPI.App_Start
     using Ninject;
     using Ninject.Web.Common;
     using Ninject.Web.Common.WebHost;
+    using zkemkeeper;
 
     public static class NinjectWebCommon 
     {
@@ -64,6 +65,7 @@ namespace RestAPI.App_Start
         {
             kernel.Bind<IEmployeeService>().To<EmployeeService>();
             kernel.Bind<IParametersService>().To<PerametersService>();
+            kernel.Bind<IDeviceService>().To<DeviceService>();
         }
     }
 }

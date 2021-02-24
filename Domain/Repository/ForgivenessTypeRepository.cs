@@ -15,6 +15,21 @@ namespace Domain.Repository
 
         }
 
+        public ForgivenessType AddForgivenessType(ForgivenessType model)
+        {
+            var result= _database.ForgivenessTypes.Add(model);
+            _database.SaveChanges();
+            return result;
+        }
+
+        public ForgivenessType EditForgivenessType(ForgivenessType model)
+        {
+            var result = _database.ForgivenessTypes.Where(m => m.ID == model.ID).FirstOrDefault();
+            result.Description = model.Description;
+            _database.SaveChanges();
+            return result;
+        }
+
         public IEnumerable<ForgivenessType> GetForgivenessTypes()
         {
             return _database.ForgivenessTypes;

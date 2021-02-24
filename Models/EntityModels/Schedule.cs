@@ -30,11 +30,9 @@ namespace Models.EntityModels
         public bool OnWorkingDaysOnly { get; set; }
         public bool OnWorkingHouresOnly { get; set; }
         public bool NotStandartSchedule { get; set; }
-        [ForeignKey("ScheduleDetails")]
-        public int ScheduleDetailID { get; set; }
 
         public ICollection<Employee> Employee { get; set; }
         public  ScheduleType ScheduleType { get; set; }
-        public ScheduleDetails ScheduleDetails { get; set; }
+        public ICollection<ScheduleDetails> ScheduleDetails { get; set; }
     }
 }

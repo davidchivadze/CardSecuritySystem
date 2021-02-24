@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Models.EntityModels
 {
-    public class Device
+    public class Device:BaseModel
     {
         [Key]
         public int ID { get; set; }

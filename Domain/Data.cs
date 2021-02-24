@@ -35,7 +35,10 @@ namespace Domain
         public virtual DbSet<Device> Devices { get; set; }
         public virtual DbSet<DeviceType> DeviceTypes { get; set; }
         public virtual DbSet<DeviceLocationInBranch> DeviceLocationInBranches { get; set; }
+        public virtual DbSet<DeviceUserLog> DeviceUserLogs { get; set; }
+        public virtual DbSet<DeviceRegistratedUsers> DeviceRegistratedUsers { get; set; }
         public virtual DbSet<Gender> Genders { get; set; }
+        
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
 

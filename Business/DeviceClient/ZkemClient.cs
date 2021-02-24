@@ -5,7 +5,7 @@
 using System;
 using zkemkeeper;
 
-namespace RestAPI
+namespace Business.DeviceClient
 {
     public class ZkemClient : IZKEM
     {
@@ -1075,7 +1075,7 @@ namespace RestAPI
 
         public bool SetStrCardNumber(string ACardNumber)
         {
-            throw new NotImplementedException();
+            return objCZKEM.SetStrCardNumber(ACardNumber);
         }
 
         public bool SetSysOption(int dwMachineNumber, string Option, string Value)

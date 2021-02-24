@@ -31,6 +31,14 @@ namespace Domain.Repository
         private ISalaryRepository _salaryRepository;
         private IGenderRepository _genderRepository;
         private IBranchRepository _branchRepository;
+
+        private IDeviceTypeRepository _deviceTypeRepository;
+
+        private IDeviceRepository _deviceRepository;
+
+        private IDeviceLocationInBranchRepository _deviceLocationInBranchRepository;
+        private IDeviceUserLogRepository _deviceUserLogRepository;
+        private IDeviceRegistratedUsersRepository _deviceRegistratedUsersRepository;
         #endregion
 
 
@@ -44,6 +52,26 @@ namespace Domain.Repository
         #endregion
 
         #region Interface Repositories Implementation    
+        public IDeviceRepository DeviceRepository
+        {
+            get { return _deviceRepository = _deviceRepository ?? new DeviceRepository(_database); }
+        }
+        public IDeviceUserLogRepository DeviceUserLogRepository
+        {
+            get { return _deviceUserLogRepository = _deviceUserLogRepository ?? new DeviceUserLogRepository(_database); }
+        }
+        public IDeviceRegistratedUsersRepository DeviceRegistratedUsersRepository
+        {
+            get { return _deviceRegistratedUsersRepository = _deviceRegistratedUsersRepository ?? new DeviceRegistratedUsersRepository(_database); }
+        }
+        public IDeviceTypeRepository DeviceTypeRepository
+        {
+            get { return _deviceTypeRepository = _deviceTypeRepository ?? new DeviceTypeRepository(_database); }
+        }
+        public IDeviceLocationInBranchRepository DeviceLocationInBranchRepository
+        {
+            get { return _deviceLocationInBranchRepository = _deviceLocationInBranchRepository ?? new DeviceLocationInBranchRepository(_database); }
+        }
         public IBranchRepository BranchRepository
         {
             get { return _branchRepository = _branchRepository ?? new BranchRepository(_database); }
@@ -120,6 +148,7 @@ namespace Domain.Repository
         {
             get { return _genderRepository = _genderRepository ?? new GenderRepository(_database); }
         }
+
         #endregion
 
         public void Commit()

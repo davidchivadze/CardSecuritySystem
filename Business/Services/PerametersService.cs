@@ -90,5 +90,61 @@ namespace Business.Services
                 ForgivenessTypes = result.ToList()
             });
         }
+        public IResponse<GetDeviceTypeListResponse> GetDeviceTypeList()
+        {
+            try { 
+            var result = UnitOfWork.DeviceTypeRepository.GetDeviceTypes().Select(m=>m.AsViewModel());
+            return Ok(new GetDeviceTypeListResponse() { DeviceTypeList = result.ToList() });
+            }catch(Exception ex)
+            {
+                return Fail<GetDeviceTypeListResponse>(ex.Message);
+            }
+        }
+
+        public IResponse<GetDeviceLocationInBranchListResponse> GetDeviceLocationInBranchListResponse()
+        {
+            try { 
+            var result = UnitOfWork.DeviceLocationInBranchRepository.GetDeviceLocationInBranches().Select(m => m.AsViewModel());
+            return Ok(new GetDeviceLocationInBranchListResponse()
+            {
+                DeviceLocationInBranchList = result.ToList()
+            });
+            }catch(Exception ex)
+            {
+                return Fail<GetDeviceLocationInBranchListResponse>(ex.Message);
+            }
+        }
+
+        public IResponse<AddForgivenessTypeResponse> AddForgivenessType(AddForgivenessTypeRequest model)
+        {
+            try
+            {
+                var result = UnitOfWork.ForgivenessTypeRepository.AddForgivenessType(model.AsDatabaseModel());
+                if (result != null)
+                {
+                    return Ok(new AddForgivenessTypeResponse() { });
+                }
+                else
+                {
+                    return Fail<AddForgivenessTypeResponse>("ვერ მოხერხდა პატიების დამატება");
+                }
+            }catch(Exception ex)
+            {
+                return Fail<AddForgivenessTypeResponse>(ex.Message);
+            }
+        }
+
+        public IResponse<EditForgivenessTypeResponse> EditForgivenessType(EditForgivenessTypeRequest model)
+        {
+            var result = UnitOfWork.ForgivenessTypeRepository.EditForgivenessType(model.AsDatabaseModel());
+            if (result != null)
+            {
+                return Ok(new EditForgivenessTypeResponse() { });
+            }
+            else
+            {
+                return Fail<EditForgivenessTypeResponse>("");
+            }
+        }
     }
 }
