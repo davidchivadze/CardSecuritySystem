@@ -53,3 +53,14 @@ D:\P1\Core\obj\Debug\Core.csproj.CoreCompileInputs.cache
 D:\P1\Core\obj\Debug\Core.csproj.CopyComplete
 D:\P1\Core\obj\Debug\Core.dll
 D:\P1\Core\obj\Debug\Core.pdb
+D:\Card\Core\bin\Debug\Core.dll
+D:\Card\Core\bin\Debug\Core.pdb
+D:\Card\Core\bin\Debug\FluentValidation.dll
+D:\Card\Core\bin\Debug\Models.dll
+D:\Card\Core\bin\Debug\Models.pdb
+D:\Card\Core\bin\Debug\FluentValidation.xml
+D:\Card\Core\obj\Debug\Core.csprojAssemblyReference.cache
+D:\Card\Core\obj\Debug\Core.csproj.CoreCompileInputs.cache
+D:\Card\Core\obj\Debug\Core.csproj.CopyComplete
+D:\Card\Core\obj\Debug\Core.dll
+D:\Card\Core\obj\Debug\Core.pdb

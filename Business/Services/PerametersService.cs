@@ -146,5 +146,198 @@ namespace Business.Services
                 return Fail<EditForgivenessTypeResponse>("");
             }
         }
+
+        public IResponse<AddDepartmentResponse> AddDepartment(AddDepartmentRequest model)
+        {
+            try
+            {
+                var result = UnitOfWork.DepartmentsRepository.AddDepartment(model.AsDatabaseModel());
+                if (result != null)
+                {
+                    return Ok(new AddDepartmentResponse() { });
+                }
+                else
+                {
+                    return Fail<AddDepartmentResponse>("ვერ მოხერხდა დეპარტამენტის დამატება");
+                }
+            }
+            catch (Exception ex)
+            {
+                return Fail<AddDepartmentResponse>(ex.Message);
+            }
+        }
+
+        public IResponse<EditDeparmentResponse> EditDepartment(EditDepartmentRequest model)
+        {
+            var result = UnitOfWork.DepartmentsRepository.EditDepartment(model.AsDatabaseModel());
+            if (result != null)
+            {
+                return Ok(new EditDeparmentResponse() { });
+            }
+            else
+            {
+                return Fail<EditDeparmentResponse>("დეპარტამენტის რედაქტირება ვერ მოხერხდა");
+            }
+        }
+        public IResponse<AddSalaryTypeResponse> AddSalaryType(AddSalaryTypeRequest model)
+        {
+            try
+            {
+                var result = UnitOfWork.SalaryTypeRepository.AddSalaryType(model.AsDatabaseModel());
+                if (result != null)
+                {
+                    return Ok(new AddSalaryTypeResponse() { });
+                }
+                else
+                {
+                    return Fail<AddSalaryTypeResponse>("ვერ მოხერხდა ხელფასის ტიპის დამატება");
+                }
+            }
+            catch (Exception ex)
+            {
+                return Fail<AddSalaryTypeResponse>(ex.Message);
+            }
+        }
+
+        public IResponse<EditSalaryTypeResponse> EditSalaryType(EditSalaryTypeRequest model)
+        {
+            var result = UnitOfWork.SalaryTypeRepository.EditSalaryType(model.AsDatabaseModel());
+            if (result != null)
+            {
+                return Ok(new EditSalaryTypeResponse() { });
+            }
+            else
+            {
+                return Fail<EditSalaryTypeResponse>("ხელფასის ტიპის რედაქტირება ვერ მოხერხდა");
+            }
+        }
+        public IResponse<AddEmployeePositionResponse> AddEmployeePosition(AddEmployeePositionRequest model)
+        {
+            try
+            {
+                var result = UnitOfWork.EmployeePositionRepositoy.AddEmployeePosition(model.AsDatabaseModel());
+                if (result != null)
+                {
+                    return Ok(new AddEmployeePositionResponse() { });
+                }
+                else
+                {
+                    return Fail<AddEmployeePositionResponse>("ვერ მოხერხდა თანამდებობის დამატება");
+                }
+            }
+            catch (Exception ex)
+            {
+                return Fail<AddEmployeePositionResponse>(ex.Message);
+            }
+        }
+
+        public IResponse<EditEmployeePositionResponse> EditEmployeePosition(EditEmployeePositionRequest model)
+        {
+            var result = UnitOfWork.EmployeePositionRepositoy.EditEmployeePosition(model.AsDatabaseModel());
+            if (result != null)
+            {
+                return Ok(new EditEmployeePositionResponse() { });
+            }
+            else
+            {
+                return Fail<EditEmployeePositionResponse>("თანამდებობის რედაქტირება ვერ მოხერხდა");
+            }
+        }
+        public IResponse<AddFineTypeResponse> AddFineType(AddFineTypeRequest model)
+        {
+            try
+            {
+                var result = UnitOfWork.FineTypeRepository.AddFineType(model.AsDatabaseModel());
+                if (result != null)
+                {
+                    return Ok(new AddFineTypeResponse() { });
+                }
+                else
+                {
+                    return Fail<AddFineTypeResponse>("ვერ მოხერხდა ჯარიმის ტიპის დამატება");
+                }
+            }
+            catch (Exception ex)
+            {
+                return Fail<AddFineTypeResponse>(ex.Message);
+            }
+        }
+
+        public IResponse<EditFineTypeResponse> EditFineType(EditFineTypeRequest model)
+        {
+            var result = UnitOfWork.FineTypeRepository.EditFineType(model.AsDatabaseModel());
+            if (result != null)
+            {
+                return Ok(new EditFineTypeResponse() { });
+            }
+            else
+            {
+                return Fail<EditFineTypeResponse>("ჯარიმის ტიპის რედაქტირება ვერ მოხერხდა");
+            }
+        }
+        public IResponse<AddDeviceLocationInBranchResponse> AddDeviceLocationInBranch(AddDeviceLocationInBranchRequest model)
+        {
+            try
+            {
+                var result = UnitOfWork.DeviceLocationInBranchRepository.AddDeviceLocationInBranch(model.AsDatabaseModel());
+                if (result != null)
+                {
+                    return Ok(new AddDeviceLocationInBranchResponse() { });
+                }
+                else
+                {
+                    return Fail<AddDeviceLocationInBranchResponse>("ვერ მოხერხდა მოწყობილობის ლოკაციის დამატება");
+                }
+            }
+            catch (Exception ex)
+            {
+                return Fail<AddDeviceLocationInBranchResponse>(ex.Message);
+            }
+        }
+
+        public IResponse<EditDeviceLocationInBranchResponse> EditDeviceLocationInBranch(EditDeviceLocationInBranchRequest model)
+        {
+            var result = UnitOfWork.DeviceLocationInBranchRepository.EditDeviceLocationInBranch(model.AsDatabaseModel());
+            if (result != null)
+            {
+                return Ok(new EditDeviceLocationInBranchResponse() { });
+            }
+            else
+            {
+                return Fail<EditDeviceLocationInBranchResponse>("მოწყობილობის ლოკაციის რედაქტირება ვერ მოხერხდა");
+            }
+        }
+        public IResponse<AddBranchResponse> AddBranch(AddBranchRequest model)
+        {
+            try
+            {
+                var result = UnitOfWork.BranchRepository.AddBranch(model.AsDatabaseModel());
+                if (result != null)
+                {
+                    return Ok(new AddBranchResponse() { });
+                }
+                else
+                {
+                    return Fail<AddBranchResponse>("ვერ მოხერხდა ფილიალის დამატება");
+                }
+            }
+            catch (Exception ex)
+            {
+                return Fail<AddBranchResponse>(ex.Message);
+            }
+        }
+
+        public IResponse<EditBranchResponse> EditBranch(EditBranchRequest model)
+        {
+            var result = UnitOfWork.BranchRepository.EditBranch(model.AsDatabaseModel());
+            if (result != null)
+            {
+                return Ok(new EditBranchResponse() { });
+            }
+            else
+            {
+                return Fail<EditBranchResponse>("ფილიალის რედაქტირება ვერ მოხერხდა");
+            }
+        }
     }
 }

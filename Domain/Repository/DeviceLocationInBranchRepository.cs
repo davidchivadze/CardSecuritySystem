@@ -14,6 +14,21 @@ namespace Domain.Repository
         {
         }
 
+        public DeviceLocationInBranch AddDeviceLocationInBranch(DeviceLocationInBranch model)
+        {
+            var result = _database.DeviceLocationInBranches.Add(model);
+            _database.SaveChanges();
+            return result;
+        }
+
+        public DeviceLocationInBranch EditDeviceLocationInBranch(DeviceLocationInBranch model)
+        {
+            var result = _database.DeviceLocationInBranches.Where(m => m.ID == model.ID).FirstOrDefault();
+            result.Description = model.Description;
+            _database.SaveChanges();
+            return result;
+        }
+
         public IEnumerable<DeviceLocationInBranch> GetDeviceLocationInBranches()
         {
             return _database.DeviceLocationInBranches;

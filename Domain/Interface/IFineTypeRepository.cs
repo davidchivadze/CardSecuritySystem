@@ -10,5 +10,7 @@ namespace Domain.Interface
     public interface IFineTypeRepository:IBaseRepository<FineType>
     {
         IEnumerable<FineType> GetFineTypes();
+        FineType AddFineType(FineType model);
+        FineType EditFineType(FineType model);
     }
 }

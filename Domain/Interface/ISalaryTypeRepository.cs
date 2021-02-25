@@ -11,5 +11,7 @@ namespace Domain.Interface
     public interface ISalaryTypeRepository:IBaseRepository<SalaryType>
     {
         IEnumerable<SalaryType> GetSalarieTypes();
+        SalaryType AddSalaryType(SalaryType model);
+        SalaryType EditSalaryType(SalaryType model);
     }
 }

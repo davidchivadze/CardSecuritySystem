@@ -21,30 +21,70 @@ namespace RestAPI.Controllers
         {
             return _parametersService.GetGenderList();
         }
-        //დეპარტამენტის დამატება
+
         public IResponse<GetDepartmentsListResponse> GetDepartmentsList()
         {
             return _parametersService.GetDepartmentsList();
         }
-        //ბრენჩის დამატება
+        public IResponse<AddDepartmentResponse> AddDepartment(AddDepartmentRequest model)
+        {
+            return _parametersService.AddDepartment(model);
+        }
+        public IResponse<EditDeparmentResponse> EditDepartment(EditDepartmentRequest model)
+        {
+            return _parametersService.EditDepartment(model);
+        }
+        
         public IResponse<GetBranchListResponse> GetBranchList()
         {
             return _parametersService.GetBranchList();
         }
-        //პოზიციების დამატება
+        public IResponse<AddBranchResponse> AddBranch(AddBranchRequest model)
+        {
+            return _parametersService.AddBranch(model);
+        }
+        public IResponse<EditBranchResponse> EditBranch(EditBranchRequest model)
+        {
+            return _parametersService.EditBranch(model);
+        }
+
         public IResponse<GetEmployeePositionsResponse> GetEmployeePositionsList()
         {
             return _parametersService.GetEmployeePositionsList();
         }
-        //ანაზღაურებისტიპების დამატება
+        public IResponse<AddEmployeePositionResponse> AddEmployeePositionType(AddEmployeePositionRequest model)
+        {
+            return _parametersService.AddEmployeePosition(model);
+        }
+
+        public IResponse<EditEmployeePositionResponse> EditEmployeePosition(EditEmployeePositionRequest model)
+        {
+            return _parametersService.EditEmployeePosition(model);
+        }
         public IResponse<GetSalaryTypeListResponse> GetSalaryTypesList()
         {
             return _parametersService.GetSalaryTypeList();
         }
-        //ჯარიმის ტიპის დამატება
+        public IResponse<AddSalaryTypeResponse> AddSalaryType(AddSalaryTypeRequest model)
+        {
+            return _parametersService.AddSalaryType(model);
+        }
+        public IResponse<EditSalaryTypeResponse> EditSalaryType(EditSalaryTypeRequest model)
+        {
+            return _parametersService.EditSalaryType(model);
+        }
+
         public IResponse<GetFineTypeListResponse> GetFineTypesLIst()
         {
             return _parametersService.GetFineTypeList();
+        }
+        public IResponse<AddFineTypeResponse> AddFineType(AddFineTypeRequest model)
+        {
+            return _parametersService.AddFineType(model);
+        }
+        public IResponse<EditFineTypeResponse> EditFineType(EditFineTypeRequest model)
+        {
+            return _parametersService.EditFineType(model);
         }
         public IResponse<GetForgivenessTypeListResponse> GetForgivenessTypesLIst()
         {
@@ -62,10 +102,18 @@ namespace RestAPI.Controllers
         {
             return _parametersService.GetDeviceTypeList();
         }
-        //მოწყობილობების ლოკაციების დამატება
+
         public IResponse<GetDeviceLocationInBranchListResponse> GetDeviceLocationInBranchList()
         {
             return _parametersService.GetDeviceLocationInBranchListResponse();
+        }
+        public IResponse<AddDeviceLocationInBranchResponse> AddDeviceLocationInBranch(AddDeviceLocationInBranchRequest model)
+        {
+            return _parametersService.AddDeviceLocationInBranch(model);
+        }
+        public IResponse<EditDeviceLocationInBranchResponse> EditDeviceLocationInBranch(EditDeviceLocationInBranchRequest model)
+        {
+            return _parametersService.EditDeviceLocationInBranch(model);
         }
         public IResponse<AddForgivenessTypeResponse> AddForgivenessType(AddForgivenessTypeRequest model)
         {

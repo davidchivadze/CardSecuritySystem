@@ -15,6 +15,21 @@ namespace Domain.Repository
 
         }
 
+        public Departments AddDepartment(Departments model)
+        {
+            var result = _database.Departments.Add(model);
+            _database.SaveChanges();
+            return result;
+        }
+
+        public Departments EditDepartment(Departments model)
+        {
+            var result = _database.Departments.Where(m => m.ID == model.ID).FirstOrDefault();
+            result.Description = model.Description;
+            _database.SaveChanges();
+            return result;
+        }
+
         public IEnumerable<Departments> GetDepartments()
         {
             return _database.Departments;

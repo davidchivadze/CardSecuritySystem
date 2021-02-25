@@ -15,6 +15,21 @@ namespace Domain.Repository
 
         }
 
+        public FineType AddFineType(FineType model)
+        {
+            var result = _database.FineTypes.Add(model);
+            _database.SaveChanges();
+            return result;
+        }
+
+        public FineType EditFineType(FineType model)
+        {
+            var result = _database.FineTypes.Where(m => m.ID == model.ID).FirstOrDefault();
+            result.Description = model.Description;
+            _database.SaveChanges();
+            return result;
+        }
+
         public IEnumerable<FineType>GetFineTypes()
         {
             return _database.FineTypes;

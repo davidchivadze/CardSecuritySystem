@@ -10,5 +10,7 @@ namespace Domain.Interface
     public interface IEmployeePositionRepositoy : IBaseRepository<EmployeePosition>
     {
         IEnumerable<EmployeePosition> GetEmployeePositions();
+        EmployeePosition AddEmployeePosition(EmployeePosition model);
+        EmployeePosition EditEmployeePosition(EmployeePosition model);
     }
 }

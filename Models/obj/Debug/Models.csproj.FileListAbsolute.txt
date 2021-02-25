@@ -27,3 +27,9 @@ D:\P1\Models\obj\Debug\Models.csprojAssemblyReference.cache
 D:\P1\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
 D:\P1\Models\obj\Debug\Models.dll
 D:\P1\Models\obj\Debug\Models.pdb
+D:\Card\Models\bin\Debug\Models.dll
+D:\Card\Models\bin\Debug\Models.pdb
+D:\Card\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+D:\Card\Models\obj\Debug\Models.dll
+D:\Card\Models\obj\Debug\Models.pdb
+D:\Card\Models\obj\Debug\Models.csprojAssemblyReference.cache

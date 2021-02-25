@@ -20,8 +20,20 @@ namespace Business.Interface
         IResponse<GetFineTypeListResponse> GetFineTypeList();
         IResponse<GetForgivenessTypeListResponse> GetForgivenessTypeList();
         IResponse<GetDeviceTypeListResponse> GetDeviceTypeList();
-   IResponse<GetDeviceLocationInBranchListResponse> GetDeviceLocationInBranchListResponse();
+        IResponse<GetDeviceLocationInBranchListResponse> GetDeviceLocationInBranchListResponse();
         IResponse<AddForgivenessTypeResponse> AddForgivenessType(AddForgivenessTypeRequest model);
         IResponse<EditForgivenessTypeResponse> EditForgivenessType(EditForgivenessTypeRequest model);
+        IResponse<AddDepartmentResponse> AddDepartment(AddDepartmentRequest model);
+        IResponse<EditDeparmentResponse> EditDepartment(EditDepartmentRequest model);
+        IResponse<AddSalaryTypeResponse> AddSalaryType(AddSalaryTypeRequest model);
+        IResponse<EditSalaryTypeResponse> EditSalaryType(EditSalaryTypeRequest model);
+        IResponse<AddEmployeePositionResponse> AddEmployeePosition(AddEmployeePositionRequest model);
+        IResponse<EditEmployeePositionResponse> EditEmployeePosition(EditEmployeePositionRequest model);
+        IResponse<AddFineTypeResponse> AddFineType(AddFineTypeRequest model);
+        IResponse<EditFineTypeResponse> EditFineType(EditFineTypeRequest model);
+        IResponse<AddDeviceLocationInBranchResponse> AddDeviceLocationInBranch(AddDeviceLocationInBranchRequest model);
+        IResponse<EditDeviceLocationInBranchResponse> EditDeviceLocationInBranch(EditDeviceLocationInBranchRequest model);
+        IResponse<AddBranchResponse> AddBranch(AddBranchRequest model);
+        IResponse<EditBranchResponse> EditBranch(EditBranchRequest model);
     }
 }

@@ -10,5 +10,7 @@ namespace Domain.Interface
     public interface IDepartmentsRepository : IBaseRepository<Departments>
     {
         IEnumerable<Departments> GetDepartments();
+        Departments AddDepartment(Departments model);
+        Departments EditDepartment(Departments model);
     }
 }

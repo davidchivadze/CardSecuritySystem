@@ -15,6 +15,22 @@ namespace Domain.Repository
                 
         }
 
+        public EmployeePosition AddEmployeePosition(EmployeePosition model)
+        {
+            var result = _database.EmployeePositions.Add(model);
+            _database.SaveChanges();
+            return result;
+        }
+
+        public EmployeePosition EditEmployeePosition(EmployeePosition model)
+        {
+
+            var result = _database.EmployeePositions.Where(m => m.ID == model.ID).FirstOrDefault();
+            result.Description = model.Description;
+            _database.SaveChanges();
+            return result;
+        }
+
         public IEnumerable<EmployeePosition> GetEmployeePositions()
         {
            return _database.EmployeePositions;

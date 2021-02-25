@@ -10,5 +10,7 @@ namespace Domain.Interface
     public interface IBranchRepository : IBaseRepository<Branch>
     {
         IEnumerable<Branch> GetBranches();
+        Branch AddBranch(Branch model);
+        Branch EditBranch(Branch model);
     }
 }

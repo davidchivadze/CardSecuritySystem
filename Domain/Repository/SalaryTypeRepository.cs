@@ -14,6 +14,20 @@ namespace Domain.Repository
         {
         }
 
+        public SalaryType AddSalaryType(SalaryType model)
+        {
+            var result = _database.SalaryTypes.Add(model);
+            _database.SaveChanges();
+            return result;
+        }
+
+        public SalaryType EditSalaryType(SalaryType model)
+        {
+            var result = _database.SalaryTypes.Where(m => m.ID == model.ID).FirstOrDefault();
+            result.Description = model.Description;
+            _database.SaveChanges();
+            return result;
+        }
 
         public IEnumerable<SalaryType> GetSalarieTypes()
         {
