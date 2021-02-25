@@ -45,6 +45,8 @@ namespace Models.ViewModels
         public string[] MobileNumbers { get; set; }
         public Forgiveness Forgiveness { get; set; }
         public Fine Fine { get; set; }
+        public SalaryData Salary { get; set; }
+        public ScheduleData Schedule { get; set; }
     }
     public class Forgiveness
     {
@@ -57,6 +59,28 @@ namespace Models.ViewModels
         public int FineTypeID { get; set; }
         public Decimal Amount { get; set; }
         public int CurrencyID { get; set; }
+    }
+    public class SalaryData
+    {
+        public decimal Amount { get; set; }
+        public int CurrencyID { get; set; }
+        public bool IsHourly { get; set; }
+        public int SalaryTypeID { get; set; }
+    }
+    public class ScheduleData
+    {
+        public int ScheduleTypeID { get; set; }
+        public TimeSpan StartTime { get; set; }
+
+        public TimeSpan EndTime { get; set; }
+        public int WeekHouresAmount { get; set; }
+        public int DaylyHouresAmount { get; set; }
+
+        public bool OnWorkingDaysOnly { get; set; }
+        public bool OnWorkingHouresOnly { get; set; }
+        public bool NotStandartSchedule { get; set; }
+        public byte[] ScheduleFileData { get; set; }
+        public string FileFormat { get; set; }
     }
     public class AddEmployeeResposeModel
     {

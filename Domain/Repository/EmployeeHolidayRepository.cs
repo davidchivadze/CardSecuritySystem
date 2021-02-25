@@ -45,7 +45,7 @@ namespace Domain.Repository
                 result.IsActive = holiday.IsActive;
                 result.Left = holiday.Left;
                 result.LeftInYear = holiday.LeftInYear;
-                result.Name = holiday.Name;
+                //result.Name = holiday.Name;
                 result.NumInYear = holiday.NumInYear;
                 result.Used = holiday.Used;
                 result.AllWritten = holiday.AllWritten;

@@ -17,7 +17,7 @@ namespace Core.Helper
             return new GetEmployeeHolidayListItem
             {
                 ID = model.ID,
-                Name=model.Name,
+             
                 AllWritten=model.AllWritten,
                 Used=model.Used,
                 Left=model.Left,

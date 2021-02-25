@@ -27,33 +27,18 @@ namespace Core.Helper
                 LastName = model.LastName,
                 LastName_ka = model.LastName_ka,
                 LastName_ru = model.LastName_ru,
-                GenderID=1,
+                GenderID = model.GenderID,
                 EmployeeDetails = new EmployeeDetails()
                 {
                     BranchID = model.BranchID,
                     DepartmentID = model.DepartmentID,
                     EmployeePositionID = model.EmployeePositionID,
-                    Salary=new Salary()
-                    {
-                         Amount=100,
-                          CurrencyID=1,
-                           IsHourly=false,
-                            SalaryTypeID=1
-                    },
+                    Salary = model.Salary.AsDatabaseModel(),
                     Forgiveness = model.Forgiveness.AsDatabaseModel(),
-                    Fine=model.Fine.AsDatabaseModel()
+                    Fine = model.Fine.AsDatabaseModel()
                 },
                 EmployeeMobileNumbers = model.MobileNumbers.Select(m => new EmployeeMobileNumbers() { PhoneNumber = m, IsActive = true }).ToList(),
-                Schedule=new Schedule() { 
-                    DaylyHouresAmount=8, 
-                    StartTime=DateTime.Now.TimeOfDay, 
-                    OnWorkingDaysOnly=true,
-                    OnWorkingHouresOnly=false,
-                     NotStandartSchedule=false,
-                      EndTime=DateTime.Now.TimeOfDay,
-                       WeekHouresAmount=40,
-                       ScheduleTypeID=1
-                }
+                Schedule = model.Schedule.AsDatabaseModel()
                 
             
             };
@@ -84,7 +69,30 @@ namespace Core.Helper
                 
             };
         }
-
+        public static Salary AsDatabaseModel(this SalaryData model)
+        {
+            return new Salary()
+            {
+                Amount = model.Amount,
+                CurrencyID = model.CurrencyID,
+                IsHourly = model.IsHourly,
+                SalaryTypeID = model.SalaryTypeID
+            };
+        }
+        public static Schedule AsDatabaseModel(this ScheduleData model)
+        {
+            return new Schedule()
+            {
+                DaylyHouresAmount = model.DaylyHouresAmount,
+                EndTime = model.EndTime,
+                NotStandartSchedule = model.NotStandartSchedule,
+                OnWorkingDaysOnly = model.OnWorkingDaysOnly,
+                OnWorkingHouresOnly = model.OnWorkingHouresOnly,
+                ScheduleTypeID = model.ScheduleTypeID,
+                StartTime = model.StartTime,
+                WeekHouresAmount = model.WeekHouresAmount
+            };
+        }
         public static Models.EntityModels.Forgiveness AsDatabaseModel(this Models.ViewModels.Forgiveness model) {
             return new Models.EntityModels.Forgiveness()
             {

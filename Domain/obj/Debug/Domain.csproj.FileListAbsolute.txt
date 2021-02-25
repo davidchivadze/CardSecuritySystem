@@ -38,3 +38,4 @@ D:\Card\Domain\obj\Debug\Domain.csproj.CoreCompileInputs.cache
 D:\Card\Domain\obj\Debug\Domain.csproj.CopyComplete
 D:\Card\Domain\obj\Debug\Domain.dll
 D:\Card\Domain\obj\Debug\Domain.pdb
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.HolidayTypes.resources

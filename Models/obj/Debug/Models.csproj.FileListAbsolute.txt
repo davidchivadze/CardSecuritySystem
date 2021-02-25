@@ -33,3 +33,4 @@ D:\Card\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
 D:\Card\Models\obj\Debug\Models.dll
 D:\Card\Models\obj\Debug\Models.pdb
 D:\Card\Models\obj\Debug\Models.csprojAssemblyReference.cache
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Models\obj\Debug\Models.csprojAssemblyReference.cache

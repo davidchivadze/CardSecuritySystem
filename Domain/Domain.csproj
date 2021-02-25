@@ -76,12 +76,17 @@
     <Compile Include="Interface\IForgivenessRepository.cs" />
     <Compile Include="Interface\IForgivenessTypeRepository.cs" />
     <Compile Include="Interface\IGenderRepository.cs" />
+    <Compile Include="Interface\IHolidayTypesRepository.cs" />
     <Compile Include="Interface\ISalaryRepository.cs" />
     <Compile Include="Interface\ISalaryTypeRepository.cs" />
     <Compile Include="Interface\IUnitOfWork.cs" />
     <Compile Include="Migrations\202102242302285_fixMigrationsLoss.cs" />
     <Compile Include="Migrations\202102242302285_fixMigrationsLoss.designer.cs">
       <DependentUpon>202102242302285_fixMigrationsLoss.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202102252031159_HolidayTypes.cs" />
+    <Compile Include="Migrations\202102252031159_HolidayTypes.designer.cs">
+      <DependentUpon>202102252031159_HolidayTypes.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -107,6 +112,7 @@
     <Compile Include="Repository\ForgivenessRepository.cs" />
     <Compile Include="Repository\ForgivenessTypeRepository.cs" />
     <Compile Include="Repository\GenderRepository.cs" />
+    <Compile Include="Repository\HolidayTypesRepository.cs" />
     <Compile Include="Repository\SalaryRepository.cs" />
     <Compile Include="Repository\SalaryTypeRepository.cs" />
     <Compile Include="Repository\UnitOfWork.cs" />
@@ -131,6 +137,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202102242302285_fixMigrationsLoss.resx">
       <DependentUpon>202102242302285_fixMigrationsLoss.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202102252031159_HolidayTypes.resx">
+      <DependentUpon>202102252031159_HolidayTypes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -75,6 +75,14 @@ namespace Core.Helper
                 ID = model.ID
             };
         }
+        public static GetHolidayTypeListItem AsViewModel(this HolidayType model)
+        {
+            return new GetHolidayTypeListItem()
+            {
+                ID = model.ID,
+                Description = model.Description
+            };
+        }
         public static Departments AsDatabaseModel(this AddDepartmentRequest model)
         {
             return new Departments()

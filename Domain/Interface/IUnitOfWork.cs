@@ -33,7 +33,7 @@ namespace Domain.Interface
         IDeviceLocationInBranchRepository DeviceLocationInBranchRepository { get; }
         IDeviceUserLogRepository DeviceUserLogRepository { get; }
         IDeviceRegistratedUsersRepository DeviceRegistratedUsersRepository { get; }
-
+        IHolidayTypesRepository HolidayTypesRepository { get; }
 
         void Commit();
     }

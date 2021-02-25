@@ -35,5 +35,6 @@ namespace Business.Interface
         IResponse<EditDeviceLocationInBranchResponse> EditDeviceLocationInBranch(EditDeviceLocationInBranchRequest model);
         IResponse<AddBranchResponse> AddBranch(AddBranchRequest model);
         IResponse<EditBranchResponse> EditBranch(EditBranchRequest model);
+        IResponse<GetHolidayTypesListResponse> GetHolidayTypeList();
     }
 }

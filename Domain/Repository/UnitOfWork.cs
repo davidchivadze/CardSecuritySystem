@@ -13,7 +13,7 @@ namespace Domain.Repository
         private readonly Data _database;
 
         #region variables For Lazey Loading
-  
+
         private ICityRepository _cityRepository;
         private ICountryRepository _countryRepository;
         private ICurrencyRepository _currencyRepository;
@@ -40,6 +40,7 @@ namespace Domain.Repository
         private IDeviceLocationInBranchRepository _deviceLocationInBranchRepository;
         private IDeviceUserLogRepository _deviceUserLogRepository;
         private IDeviceRegistratedUsersRepository _deviceRegistratedUsersRepository;
+        private IHolidayTypesRepository _holidayTypesRepository;
         #endregion
 
 
@@ -93,6 +94,7 @@ namespace Domain.Repository
         {
             get { return _forgivenessRepository = _forgivenessRepository ?? new ForgivenessRepository(_database); }
         }
+        public IHolidayTypesRepository HolidayTypesRepository { get { return _holidayTypesRepository = _holidayTypesRepository ?? new HolidayTypesRepository(_database); } }
         public IForgivenessTypeRepository ForgivenessTypeRepository
         {
             get { return _forgivenessTypeRepository = _forgivenessTypeRepository ?? new ForgivenessTypeRepository(_database); }
@@ -128,7 +130,7 @@ namespace Domain.Repository
 
         public IEmployeePositionRepositoy EmployeePositionRepositoy
         {
-            get { return _employeePositionRepositoy = _employeePositionRepositoy ?? new EmployeePositionRepository (_database); }
+            get { return _employeePositionRepositoy = _employeePositionRepositoy ?? new EmployeePositionRepository(_database); }
         }
 
         public IEmployeeRepository EmployeeRepository

@@ -147,6 +147,12 @@ namespace Business.Services
             }
         }
 
+        public IResponse<GetHolidayTypesListResponse> GetHolidayTypeList()
+        {
+            var result = UnitOfWork.HolidayTypesRepository.GetHolidayTypes().Select(m => m.AsViewModel());
+            return Ok(new GetHolidayTypesListResponse() { HolidayTypes=result.ToList() });
+             
+        }
         public IResponse<AddDepartmentResponse> AddDepartment(AddDepartmentRequest model)
         {
             try

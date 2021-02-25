@@ -123,5 +123,9 @@ namespace RestAPI.Controllers
         {
             return _parametersService.EditForgivenessType(model);
         }
+        public IResponse<GetHolidayTypesListResponse> GetHolidayTypeList()
+        {
+            return _parametersService.GetHolidayTypeList();
+        }
     }
 }

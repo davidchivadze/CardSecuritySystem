@@ -12,7 +12,8 @@ namespace Models.EntityModels
     {
         [Key]
         public int ID { get; set; }
-        public string Name { get; set; }
+        [ForeignKey("HolidayType")]
+        public int HolidayTypeID { get; set; }
         public string AllWritten { get; set; }
         public string Left { get; set; }
         public string Used { get; set; }
@@ -25,5 +26,6 @@ namespace Models.EntityModels
         public int EmployeeID { get; set; }
 
         public virtual Employee Employee { get; set; }
+        public virtual HolidayType HolidayType { get; set; }
     }
 }
