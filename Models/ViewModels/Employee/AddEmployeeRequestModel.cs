@@ -47,12 +47,24 @@ namespace Models.ViewModels
         public Fine Fine { get; set; }
         public SalaryData Salary { get; set; }
         public ScheduleData Schedule { get; set; }
+        public List<EmployeeHolidays> EmployeeHolidays { get; set; }
     }
     public class Forgiveness
     {
         public int ForgivenessTypeID { get; set; }
         public int Amount { get; set; }
         
+    }
+    public class EmployeeHolidays
+    {
+        public int HolidayTypeID { get; set; }
+        public int AllWritten { get; set; }
+        public int Left { get; set; }
+        public int Used { get; set; }
+        public int NumInYear { get; set; }
+        public int LeftInYear { get; set; }
+        public DateTime DeactivateDate { get; set; }
+        public bool IsActive { get; set; }
     }
     public class Fine
     {

@@ -38,7 +38,8 @@ namespace Core.Helper
                     Fine = model.Fine.AsDatabaseModel()
                 },
                 EmployeeMobileNumbers = model.MobileNumbers.Select(m => new EmployeeMobileNumbers() { PhoneNumber = m, IsActive = true }).ToList(),
-                Schedule = model.Schedule.AsDatabaseModel()
+                Schedule = model.Schedule.AsDatabaseModel(),
+                EmployeeHolidays=model.EmployeeHolidays.Select(m=>m.AsDatabaseModel()).ToList()
                 
             
             };

@@ -10,5 +10,6 @@ namespace Domain.Interface
     public interface IDeviceRepository:IBaseRepository<Device>
     {
         Device AddDevice(Device device);
+        IEnumerable<Device> GetDevices();
     }
 }

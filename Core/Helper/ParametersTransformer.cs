@@ -23,7 +23,9 @@ namespace Core.Helper
             return new GetDepartmentsListItem()
             {
                 ID = model.ID,
-                Description = model.Description
+                Description = model.Description,
+                ParentID=model.ParentDepartment?.ID,
+                ParentDescription=model.ParentDepartment?.Description
             };
         }
         public static GetBranchListItem AsViewModel(this Branch model)
@@ -31,7 +33,10 @@ namespace Core.Helper
             return new GetBranchListItem()
             {
                 ID = model.ID,
-                Description = model.BranchName
+                Description = model.BranchName,
+                Address=model.Address,
+                City=model.City.Description,
+                Country=model.Country.Description
             };
         }
         public static GetEmployeePositionsListItem AsViewModel(this EmployeePosition model)
@@ -87,7 +92,8 @@ namespace Core.Helper
         {
             return new Departments()
             {
-                Description = model.Description
+                Description = model.Description,
+                ParentDepartmentID=model.ParentDepartmentID
             };
         }
         public static Departments AsDatabaseModel(this EditDepartmentRequest model)

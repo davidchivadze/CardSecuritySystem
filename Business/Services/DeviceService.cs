@@ -60,6 +60,17 @@ namespace Business.Services
                 return Fail<bool>(ex.Message);
             }
         }
+        public IResponse<GetDeviceListResponse> GetDeviceList()
+        {
+            try {
+                var result1 = UnitOfWork.DeviceRepository.GetDevices().ToList();
+            var result = UnitOfWork.DeviceRepository.GetDevices().Select(m => m.AsViewModel()).ToList();
+            return Ok(new GetDeviceListResponse() { DeviceList = result });
+            }catch(Exception ex)
+            {
+                return Fail<GetDeviceListResponse>(ex.Message);
+            }
+        }
         public static bool PingTheDevice(string ipAdd)
         {
             try

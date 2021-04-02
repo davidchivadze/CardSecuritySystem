@@ -26,5 +26,18 @@ namespace Domain.Repository
                 throw new Exception(ex.Message + "; Inner Exception" + ex.InnerException);
             }
         }
+
+        public IEnumerable<Device> GetDevices()
+        {
+            try
+            {
+                var result = _database.Devices.Include("Branch").Include("DeviceLocationInBranch");
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message + "; Inner Exception" + ex.InnerException);
+            }
+        }
     }
 }

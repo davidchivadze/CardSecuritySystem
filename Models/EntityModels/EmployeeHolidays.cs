@@ -14,11 +14,11 @@ namespace Models.EntityModels
         public int ID { get; set; }
         [ForeignKey("HolidayType")]
         public int HolidayTypeID { get; set; }
-        public string AllWritten { get; set; }
-        public string Left { get; set; }
-        public string Used { get; set; }
-        public string NumInYear { get; set; }
-        public string LeftInYear { get; set; }
+        public int AllWritten { get; set; }
+        public int Left { get; set; }
+        public int Used { get; set; }
+        public int NumInYear { get; set; }
+        public int LeftInYear { get; set; }
         public DateTime DeactivateDate { get; set; }
         public bool IsActive { get; set; }
 

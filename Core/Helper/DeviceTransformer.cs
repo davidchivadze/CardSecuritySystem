@@ -55,5 +55,17 @@ namespace Core.Helper
                 UserDeviceID = int.Parse(model.EnrollNumber)
             };
         }
+        public static GetDeviceListItem AsViewModel(this Device model)
+        {
+            return new GetDeviceListItem()
+            {
+                ID = model.ID,
+                IPAddress = model.IPAddress,
+                LastSyncDate = model.LastSyncDate,
+                Branch = model.Branch.BranchName,
+                LocationInBranch = model.DeviceLocationInBranch.Description,
+                State=model.IsActive==true?1:0
+            };
+        }
     }
 }

@@ -12,6 +12,7 @@ namespace Business.Interface
     {
         IResponse<DateTime> GetDeviceDateTime();
         IResponse<bool> AddDevice(AddDeviceRequest model);
+        IResponse<GetDeviceListResponse> GetDeviceList();
         Task<IResponse<bool>> SyncUserLog();
         Task<IResponse<bool>> UpdateUserListFromDevice();
     }

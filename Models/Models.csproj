@@ -75,6 +75,7 @@
     <Compile Include="EntityModels\ScheduleType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\Device\AddDevice.cs" />
+    <Compile Include="ViewModels\Device\GetDeviceList.cs" />
     <Compile Include="ViewModels\Employee\AddEmployeeRequestModel.cs" />
     <Compile Include="ViewModels\BranchViewModel.cs" />
     <Compile Include="ViewModels\CityViewModel.cs" />

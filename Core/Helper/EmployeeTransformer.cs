@@ -17,17 +17,32 @@ namespace Core.Helper
             return new GetEmployeeHolidayListItem
             {
                 ID = model.ID,
-             
-                AllWritten=model.AllWritten,
-                Used=model.Used,
-                Left=model.Left,
-                NumInYear=model.NumInYear,
-                LeftInYear=model.LeftInYear,
-                DeactivateDate=model.DeactivateDate,
-                IsActive=model.IsActive,
-                EmployeeID=model.EmployeeID
+
+                AllWritten = model.AllWritten,
+                Used = model.Used,
+                Left = model.Left,
+                NumInYear = model.NumInYear,
+                LeftInYear = model.LeftInYear,
+                DeactivateDate = model.DeactivateDate,
+                IsActive = model.IsActive,
+                EmployeeID = model.EmployeeID
             };
         }
-        
+        public static EmployeeHolidays AsDatabaseModel(this Models.ViewModels.EmployeeHolidays model)
+        {
+            return new EmployeeHolidays()
+            {
+                AllWritten = model.AllWritten,
+                DeactivateDate = model.DeactivateDate,
+                HolidayTypeID = model.HolidayTypeID,
+                IsActive = model.IsActive,
+                Left = model.Left,
+                LeftInYear = model.LeftInYear,
+                NumInYear = model.NumInYear,
+                Used = model.Used,
+
+            };
+        }
+
     }
 }

@@ -8,6 +8,7 @@ namespace Models.ViewModels.Parameters
 {
     public class AddDepartmentRequest
     {
+        public int? ParentDepartmentID { get; set; }
         public string Description { get; set; }
     }
 

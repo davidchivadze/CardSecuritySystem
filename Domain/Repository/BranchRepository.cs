@@ -35,7 +35,7 @@ namespace Domain.Repository
 
         public IEnumerable<Branch> GetBranches()
         {
-            return _database.Branches;
+            return _database.Branches.Include("City").Include("Country");
         }
     }
 }

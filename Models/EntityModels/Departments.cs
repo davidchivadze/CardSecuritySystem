@@ -32,7 +32,7 @@ namespace Models.EntityModels
 
         //relations
 
-        public virtual ICollection<Departments> ParentDepartment { get; set; }
+        public virtual Departments ParentDepartment { get; set; }
 
         public virtual ICollection<Employee> Employees { get; set; }
 

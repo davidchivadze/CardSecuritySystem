@@ -32,7 +32,7 @@ namespace Domain.Repository
 
         public IEnumerable<Departments> GetDepartments()
         {
-            return _database.Departments;
+            return _database.Departments.Include("ParentDepartment");
         }
     }
 }
