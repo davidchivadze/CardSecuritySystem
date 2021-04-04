@@ -50,6 +50,18 @@ namespace Business.Services
                 return Fail<GetBranchListItem>("Branch Not Found");
             }
         }
+        //public IResponse<GetEmployeePositionItem> GetEmployeePositionForEdit(int id)
+        //{
+        //    var result = UnitOfWork.EmployeePositionRepositoy.GetEmployeePositions().Where(m => m.ID == id).FirstOrDefault();
+        //    if (result != null)
+        //    {
+        //        return Ok(ParametersTransformer.AsViewModel(result));
+        //    }
+        //    else
+        //    {
+        //        return Fail<GetBranchListItem>("EmployeePosition Not Found");
+        //    }
+        //}
 
         public IResponse<GetEmployeePositionsResponse> GetEmployeePositionsList()
         {

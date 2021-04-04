@@ -96,6 +96,14 @@
     <Compile Include="Migrations\202104021857064_ChangeDepartmentRelation.designer.cs">
       <DependentUpon>202104021857064_ChangeDepartmentRelation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104041835120_EmployeeDeviceCardIDAdd.cs" />
+    <Compile Include="Migrations\202104041835120_EmployeeDeviceCardIDAdd.designer.cs">
+      <DependentUpon>202104041835120_EmployeeDeviceCardIDAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104041842243_EmployeePersonalNumberAdd.cs" />
+    <Compile Include="Migrations\202104041842243_EmployeePersonalNumberAdd.designer.cs">
+      <DependentUpon>202104041842243_EmployeePersonalNumberAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\BaseRepository.cs" />
@@ -154,6 +162,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104021857064_ChangeDepartmentRelation.resx">
       <DependentUpon>202104021857064_ChangeDepartmentRelation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104041835120_EmployeeDeviceCardIDAdd.resx">
+      <DependentUpon>202104041835120_EmployeeDeviceCardIDAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104041842243_EmployeePersonalNumberAdd.resx">
+      <DependentUpon>202104041842243_EmployeePersonalNumberAdd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

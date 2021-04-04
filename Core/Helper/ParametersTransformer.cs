@@ -105,7 +105,8 @@ namespace Core.Helper
             {
                 Description = model.Description
                 ,
-                ID = model.ID
+                ID = model.ID,
+                ParentDepartmentID=model.ParentDepartmentID
             };
         }
         public static GetDeviceTypeListItem AsViewModel(this DeviceType model)

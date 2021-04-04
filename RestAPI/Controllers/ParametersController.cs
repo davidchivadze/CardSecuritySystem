@@ -43,6 +43,10 @@ namespace RestAPI.Controllers
         {
             return _parametersService.GetBranchForEdit(id);
         }
+        //public IResponse<GetEmployeePositionItem> GetEmployeePositionForEdit(int id)
+        //{
+        //    return _parametersService.GetEmployeePositionForEdit(id);
+        //}
         public IResponse<AddBranchResponse> AddBranch(AddBranchRequest model)
         {
             return _parametersService.AddBranch(model);

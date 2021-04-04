@@ -64,3 +64,5 @@ C:\Users\datoc\OneDrive\Documents\CardSecuritySysttem\CardSecuritySystem\Domain\
 C:\Users\datoc\OneDrive\Documents\CardSecuritySysttem\CardSecuritySystem\Domain\obj\Debug\Domain.csproj.CopyComplete
 C:\Users\datoc\OneDrive\Documents\CardSecuritySysttem\CardSecuritySystem\Domain\obj\Debug\Domain.dll
 C:\Users\datoc\OneDrive\Documents\CardSecuritySysttem\CardSecuritySystem\Domain\obj\Debug\Domain.pdb
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.EmployeeDeviceCardIDAdd.resources
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.EmployeePersonalNumberAdd.resources

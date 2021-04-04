@@ -51,7 +51,9 @@ namespace Models
         public string Email { get; set; }
 
         public bool IsActive { get; set; } = true;
-
+        public string DeviceCardID { get; set; }
+        public string PersonalNumber { get; set; }
+        
 
         [ForeignKey("Schedule")]
         public int ScheduleID { get; set; }

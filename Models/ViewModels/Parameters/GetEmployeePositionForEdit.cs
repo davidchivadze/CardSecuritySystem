@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Models.ViewModels.Parameters
 {
-    public class GetBranchForEditModel
+    public class GetEmployeePositionForEdit
     {
     }
 }

@@ -14,6 +14,7 @@ namespace Business.Interface
         IResponse<GetDepartmentsListResponse> GetDepartmentsList();
         IResponse<GetBranchListResponse> GetBranchList();
         IResponse<GetBranchListItem> GetBranchForEdit(int id);
+        //IResponse<GetEmployeePositionItem> GetEmployeePositionForEdit(int id);
         IResponse<GetEmployeePositionsResponse> GetEmployeePositionsList();
         IResponse<GetCountryListResponse> GetCountryList();
         IResponse<GetCitiesListByCountryIDResponse> GetCitiesListByCountryID(int? countryID);

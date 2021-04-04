@@ -10,6 +10,7 @@ namespace Models.ViewModels.Parameters
     {
         public int ID { get; set; }
         public string Description { get; set; }
+        public int? ParentDepartmentID { get; set; }
     }
     public class EditDeparmentResponse
     {

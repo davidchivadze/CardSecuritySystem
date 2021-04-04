@@ -109,6 +109,7 @@
     <Compile Include="ViewModels\Parameters\GetDepartmentsList.cs" />
     <Compile Include="ViewModels\Parameters\GetDeviceLocationInBranchList.cs" />
     <Compile Include="ViewModels\Parameters\GetDeviceTypeList.cs" />
+    <Compile Include="ViewModels\Parameters\GetEmployeePositionForEdit.cs" />
     <Compile Include="ViewModels\Parameters\GetEmployeePositions.cs" />
     <Compile Include="ViewModels\Parameters\GetFineTypeList.cs" />
     <Compile Include="ViewModels\Parameters\GetForgivenessTypeList.cs" />

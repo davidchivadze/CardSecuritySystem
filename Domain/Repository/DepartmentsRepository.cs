@@ -26,6 +26,7 @@ namespace Domain.Repository
         {
             var result = _database.Departments.Where(m => m.ID == model.ID).FirstOrDefault();
             result.Description = model.Description;
+            result.ParentDepartmentID = model.ParentDepartmentID;
             _database.SaveChanges();
             return result;
         }

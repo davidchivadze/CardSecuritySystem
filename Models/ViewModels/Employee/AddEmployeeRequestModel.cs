@@ -34,6 +34,7 @@ namespace Models.ViewModels
 
         public bool IsActive { get; set; } = true;
         public int EmployeePositionID { get; set; }
+        public string DeviceCardID { get; set; }
 
         public int  SalaryID { get; set; }
 
@@ -41,6 +42,7 @@ namespace Models.ViewModels
 
         public int DepartmentID { get; set; }
         public int GenderID { get; set; }
+        public string PersonalNumber { get; set; }
 
         public string[] MobileNumbers { get; set; }
         public Forgiveness Forgiveness { get; set; }

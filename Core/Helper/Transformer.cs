@@ -28,6 +28,8 @@ namespace Core.Helper
                 LastName_ka = model.LastName_ka,
                 LastName_ru = model.LastName_ru,
                 GenderID = model.GenderID,
+                DeviceCardID=model.DeviceCardID,
+                PersonalNumber=model.PersonalNumber,
                 EmployeeDetails = new EmployeeDetails()
                 {
                     BranchID = model.BranchID,
