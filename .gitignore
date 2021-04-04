@@ -5,11 +5,20 @@
 .vs/
 # Uncomment if you have tasks that create the project's static files in wwwroot
 #wwwroot/
-./Business/bin
 
-./Core/bin
-./Models/bin
-./Domain/bin
+
+.bin/Debug
+.bin/Release
+.Core/bin/Debug
+.Core/bin/Release
+.Domain/bin/Debug
+.Domain/bin/Release
+.Models/bin/Debug
+.Models/bin/Release
+.RestApi/bin/Debug
+.RestApi/bin/Release
+.Business/bin/Debug
+.Business/bin/Release
 # MSTest test Results
 [Tt]est[Rr]esult*/
 [Bb]uild[Ll]og.*
