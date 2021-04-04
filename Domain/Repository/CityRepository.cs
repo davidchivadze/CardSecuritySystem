@@ -17,7 +17,7 @@ namespace Domain.Repository
 
         public IEnumerable<City> GetCitiesByCountryID(int? countryID)
         {
-            return _database.Cities.Where(m => m.CountryID == (countryID.HasValue ? countryID : m.CountryID));
+            return _database.Cities.Where(m => m.CountryID == (countryID.HasValue ? countryID : -1));
         }
     }
 }

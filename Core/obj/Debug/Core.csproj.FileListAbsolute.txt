@@ -64,3 +64,14 @@ D:\Card\Core\obj\Debug\Core.csproj.CoreCompileInputs.cache
 D:\Card\Core\obj\Debug\Core.csproj.CopyComplete
 D:\Card\Core\obj\Debug\Core.dll
 D:\Card\Core\obj\Debug\Core.pdb
+C:\Users\datoc\OneDrive\Documents\CardSecuritySysttem\CardSecuritySystem\Core\bin\Debug\Core.dll
+C:\Users\datoc\OneDrive\Documents\CardSecuritySysttem\CardSecuritySystem\Core\bin\Debug\Core.pdb
+C:\Users\datoc\OneDrive\Documents\CardSecuritySysttem\CardSecuritySystem\Core\bin\Debug\FluentValidation.dll
+C:\Users\datoc\OneDrive\Documents\CardSecuritySysttem\CardSecuritySystem\Core\bin\Debug\Models.dll
+C:\Users\datoc\OneDrive\Documents\CardSecuritySysttem\CardSecuritySystem\Core\bin\Debug\Models.pdb
+C:\Users\datoc\OneDrive\Documents\CardSecuritySysttem\CardSecuritySystem\Core\bin\Debug\FluentValidation.xml
+C:\Users\datoc\OneDrive\Documents\CardSecuritySysttem\CardSecuritySystem\Core\obj\Debug\Core.csprojAssemblyReference.cache
+C:\Users\datoc\OneDrive\Documents\CardSecuritySysttem\CardSecuritySystem\Core\obj\Debug\Core.csproj.CoreCompileInputs.cache
+C:\Users\datoc\OneDrive\Documents\CardSecuritySysttem\CardSecuritySystem\Core\obj\Debug\Core.csproj.CopyComplete
+C:\Users\datoc\OneDrive\Documents\CardSecuritySysttem\CardSecuritySystem\Core\obj\Debug\Core.dll
+C:\Users\datoc\OneDrive\Documents\CardSecuritySysttem\CardSecuritySystem\Core\obj\Debug\Core.pdb

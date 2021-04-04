@@ -13,6 +13,7 @@ namespace Business.Interface
         IResponse<GetGenderListResponse> GetGenderList();
         IResponse<GetDepartmentsListResponse> GetDepartmentsList();
         IResponse<GetBranchListResponse> GetBranchList();
+        IResponse<GetBranchListItem> GetBranchForEdit(int id);
         IResponse<GetEmployeePositionsResponse> GetEmployeePositionsList();
         IResponse<GetCountryListResponse> GetCountryList();
         IResponse<GetCitiesListByCountryIDResponse> GetCitiesListByCountryID(int? countryID);

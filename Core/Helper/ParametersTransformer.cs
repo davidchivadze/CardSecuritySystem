@@ -36,9 +36,12 @@ namespace Core.Helper
                 Description = model.BranchName,
                 Address=model.Address,
                 City=model.City.Description,
-                Country=model.Country.Description
+                Country=model.Country.Description,
+                CityID=model.City.ID,
+                CountryID=model.Country.ID
             };
         }
+
         public static GetEmployeePositionsListItem AsViewModel(this EmployeePosition model)
         {
             return new GetEmployeePositionsListItem()

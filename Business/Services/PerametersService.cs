@@ -38,6 +38,18 @@ namespace Business.Services
                 BranchList = result
             });
         }
+        public IResponse<GetBranchListItem> GetBranchForEdit(int id)
+        {
+            var result = UnitOfWork.BranchRepository.GetBranches().Where(m => m.ID == id).FirstOrDefault();
+            if (result != null)
+            {
+                return Ok(ParametersTransformer.AsViewModel(result));
+            }
+            else
+            {
+                return Fail<GetBranchListItem>("Branch Not Found");
+            }
+        }
 
         public IResponse<GetEmployeePositionsResponse> GetEmployeePositionsList()
         {

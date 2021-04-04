@@ -39,6 +39,10 @@ namespace RestAPI.Controllers
         {
             return _parametersService.GetBranchList();
         }
+        public IResponse<GetBranchListItem> GetBranchForEdit(int id)
+        {
+            return _parametersService.GetBranchForEdit(id);
+        }
         public IResponse<AddBranchResponse> AddBranch(AddBranchRequest model)
         {
             return _parametersService.AddBranch(model);
