@@ -15,8 +15,8 @@
 .Domain/bin/Release
 .Models/bin/Debug
 .Models/bin/Release
-.RestApi/bin/Debug
-.RestApi/bin/Release
+.RestApi/bin
+.RestApi/obj
 .Business/bin/Debug
 .Business/bin/Release
 # MSTest test Results
@@ -42,6 +42,7 @@ artifacts/
 *.ilk
 *.meta
 *.obj
+
 *.pch
 *.pdb
 *.pgc
