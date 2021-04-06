@@ -48,6 +48,7 @@
     <Compile Include="Helper\DeviceTransformer.cs" />
     <Compile Include="Helper\EmployeeTransformer.cs" />
     <Compile Include="Helper\ParametersTransformer.cs" />
+    <Compile Include="Helper\RepositoryHelperClasses\DeviceLogFilter.cs" />
     <Compile Include="Helper\RepositoryHelperClasses\EmployeeFilter.cs" />
     <Compile Include="Helper\ResponseHelper\AppServiceResponse.cs" />
     <Compile Include="Helper\ResponseHelper\IResponse.cs" />

@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DeviceResponseModels\DeviceUserLog.cs" />
+    <Compile Include="ViewModels\Device\DeviceUserLog.cs" />
     <Compile Include="DeviceResponseModels\UserInfo.cs" />
     <Compile Include="EntityModels\BaseModel.cs" />
     <Compile Include="EntityModels\Branch.cs" />
@@ -118,6 +118,8 @@
     <Compile Include="ViewModels\Parameters\GetSalaryTypeList.cs" />
     <Compile Include="ViewModels\SalaryViewModel.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="ViewModels\FilterModels\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
