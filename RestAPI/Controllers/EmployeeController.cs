@@ -31,5 +31,9 @@ namespace RestAPI.Controllers
         {
             return _employeeService.GetEmployeeHolidayList(model);
         }
+        public IResponse<List<AddEmployeeRequestModel>> GetFilteredEmployees()
+        {
+            return _employeeService.GetFilteredEmployees();
+        }
     }
 }

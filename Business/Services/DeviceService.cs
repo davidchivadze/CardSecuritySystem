@@ -38,6 +38,8 @@ namespace Business.Services
             DateTime deviceTime = new DateTime(dwYear, dwMonth, dwDay, dwHour, dwMinute, dwSecond);
             return Ok(deviceTime);
         }
+
+
         public IResponse<bool> AddDevice(AddDeviceRequest model)
         {
             try {
@@ -219,6 +221,124 @@ namespace Business.Services
                 }
             }
                 return lstFPTemplates;
+        }
+        private bool InsertUserInDevice(int userID)
+        {
+            try { 
+            var userFromDb = UnitOfWork.EmployeeRepository.GetAll().Where(m => m.ID == userID).FirstOrDefault();
+                if (userFromDb != null)
+                {
+                    if (userFromDb.UserIDInDevice == null)
+                    {
+                        var deviceList = UnitOfWork.DeviceRepository.GetDevices().Where(m => m.IsActive).ToList();
+                        foreach(var device in deviceList) {
+                            this.SetStrCardNumber(device.IPAddress,int.Parse(device.Port), true, userFromDb.ID.ToString() + userFromDb.ID.ToString(), userFromDb.PersonalNumber, this.RandomDigits(6), 3, userFromDb.DeviceCardID);
+                                }
+                        return true;
+                    }
+                    else
+                    {
+                        throw new Exception("თანამშრომელი უკვე დამატებულია მოწყობილობაში");
+                    }
+            }
+                else
+                {
+                    throw new Exception("თანამშრომელი ვერ მოიძებნა");
+                }
+            }catch(Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+        }
+        public void SetStrCardNumber(string sIp = "192.168.1.201", int iPort = 4370,
+                                    bool bEnabled = true, string sdwEnrollNumber = "6969",
+                                    string sName = "MVC Datoie", string sPassword = "123456",
+                                    int iPrivilege = 0, string sCardnumber = "0"
+)
+        {
+            //Create Standalone SDK class dynamicly.
+            _deviceClient.Connect_Net(sIp, iPort);
+            int iMachineNumber = 1;
+            //axCZKEM1.Connect_Net(sIp, iPort);
+
+            int idwErrorCode = 0;
+
+            _deviceClient.EnableDevice(iMachineNumber, false);
+            _deviceClient.SetStrCardNumber(sCardnumber);//Before you using function SetUserInfo,set the card number to make sure you can upload it to the device
+            if (_deviceClient.SSR_SetUserInfo(iMachineNumber, sdwEnrollNumber, sName, sPassword, iPrivilege, bEnabled))//upload the user's information(card number included)
+            {
+                Console.Write("Success");
+            }
+            else
+            {
+                _deviceClient.GetLastError(ref idwErrorCode);
+                throw new Exception("ვერ მოხერხდა ჩამატება: " + idwErrorCode.ToString());
+            }
+
+            _deviceClient.RefreshData(iMachineNumber);//the data in the device should be refreshed
+            _deviceClient.EnableDevice(iMachineNumber, true);
+        }
+        public ICollection<UserInfo> GetAllUserInfo(IZKEM objZkeeper, int machineNumber)
+        {
+            string sdwEnrollNumber = string.Empty, sName = string.Empty, sPassword = string.Empty, sTmpData = string.Empty;
+            int iPrivilege = 0, iTmpLength = 0, iFlag = 0, idwFingerIndex;
+            bool bEnabled = false;
+
+            ICollection<UserInfo> lstFPTemplates = new List<UserInfo>();
+
+            // objZkeeper.ReadAllUserID(machineNumber);
+            //objZkeeper.ReadAllTemplate(machineNumber);
+
+            while (objZkeeper.SSR_GetAllUserInfo(machineNumber, out sdwEnrollNumber, out sName, out sPassword, out iPrivilege, out bEnabled))
+            {
+                UserInfo fpInfo = new UserInfo();
+                fpInfo.FingerIndex = 0;
+                for (idwFingerIndex = 0; idwFingerIndex < 10; idwFingerIndex++)
+                {
+                    if (objZkeeper.GetUserTmpExStr(machineNumber, sdwEnrollNumber, idwFingerIndex, out iFlag, out sTmpData, out iTmpLength))
+                    {
+                        fpInfo = new UserInfo();
+                        fpInfo.MachineNumber = machineNumber;
+                        fpInfo.EnrollNumber = sdwEnrollNumber;
+                        fpInfo.Name = sName;
+                        fpInfo.FingerIndex += 1; //idwFingerIndex;
+                        fpInfo.TmpData = sTmpData;
+                        fpInfo.Privelage = iPrivilege;
+                        fpInfo.Password = sPassword;
+                        fpInfo.Enabled = bEnabled;
+                        fpInfo.iFlag = iFlag.ToString();
+                    }
+                }
+                lstFPTemplates.Add(fpInfo);
+
+            }
+            return lstFPTemplates;
+        }
+        public string RandomDigits(int length)
+        {
+            var random = new Random();
+            string s = string.Empty;
+            for (int i = 0; i < length; i++)
+                s = String.Concat(s, random.Next(10).ToString());
+            return s;
+        }
+
+        public IResponse<bool> InsertUserToDevice(int UserID)
+        {
+            try { 
+            if (this.InsertUserInDevice(UserID))
+            {
+                return Ok(true);
+            }
+            else
+            {
+                return Fail<bool>("ვერ მოხერხდა თანამშრომლის ჩამატება მოწყობილობაში");
+            }
+            }catch(Exception ex)
+            {
+                return Fail<bool>(ex.Message);
+            }
         }
     }
 }

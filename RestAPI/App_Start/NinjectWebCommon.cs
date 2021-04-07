@@ -66,6 +66,7 @@ namespace RestAPI.App_Start
             kernel.Bind<IEmployeeService>().To<EmployeeService>();
             kernel.Bind<IParametersService>().To<PerametersService>();
             kernel.Bind<IDeviceService>().To<DeviceService>();
+            kernel.Bind<IAuthService>().To<AuthService>();
         }
     }
 }

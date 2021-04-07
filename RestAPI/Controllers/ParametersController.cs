@@ -1,6 +1,7 @@
 ﻿using Business.Interface;
 using Core.Helpers;
 using Models.ViewModels.Parameters;
+using RestAPI.Authentification;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace RestAPI.Controllers
         {
             this._parametersService = parametersService;
         }
+        //[JwtAuthentication]
         public IResponse<GetGenderListResponse> GetGenderList()
         {
             return _parametersService.GetGenderList();

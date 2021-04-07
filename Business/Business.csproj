@@ -47,11 +47,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DeviceClient\ZkemClient.cs" />
+    <Compile Include="Interface\IAuthService.cs" />
     <Compile Include="Interface\IBaseService.cs" />
     <Compile Include="Interface\IDeviceService.cs" />
     <Compile Include="Interface\IEmployeeService.cs" />
     <Compile Include="Interface\IParametersService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AuthService.cs" />
     <Compile Include="Services\BaseService.cs" />
     <Compile Include="Services\DeviceService.cs" />
     <Compile Include="Services\EmployeeService.cs" />

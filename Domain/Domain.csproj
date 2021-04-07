@@ -104,6 +104,10 @@
     <Compile Include="Migrations\202104041842243_EmployeePersonalNumberAdd.designer.cs">
       <DependentUpon>202104041842243_EmployeePersonalNumberAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104070616020_EmployeeAddDeviceUserID.cs" />
+    <Compile Include="Migrations\202104070616020_EmployeeAddDeviceUserID.designer.cs">
+      <DependentUpon>202104070616020_EmployeeAddDeviceUserID.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\BaseRepository.cs" />
@@ -168,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104041842243_EmployeePersonalNumberAdd.resx">
       <DependentUpon>202104041842243_EmployeePersonalNumberAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104070616020_EmployeeAddDeviceUserID.resx">
+      <DependentUpon>202104070616020_EmployeeAddDeviceUserID.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

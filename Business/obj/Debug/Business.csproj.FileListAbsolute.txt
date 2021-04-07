@@ -34,3 +34,11 @@ C:\Users\datoc\Source\Repos\CardSecuritySystem3\Business\obj\Debug\Business.cspr
 C:\Users\datoc\Source\Repos\CardSecuritySystem3\Business\obj\Debug\Business.csproj.CopyComplete
 C:\Users\datoc\Source\Repos\CardSecuritySystem3\Business\obj\Debug\Business.dll
 C:\Users\datoc\Source\Repos\CardSecuritySystem3\Business\obj\Debug\Business.pdb
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Business\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Business\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Business\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Business\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Business\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Business\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Business\bin\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Business\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml

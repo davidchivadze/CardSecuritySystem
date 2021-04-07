@@ -190,3 +190,11 @@ C:\Users\datoc\Source\Repos\CardSecuritySystem3\RestAPI\obj\Debug\RestAPI.pdb
 C:\Users\datoc\Source\Repos\CardSecuritySystem3\RestAPI\bin\roslyn\csc.rsp
 C:\Users\datoc\Source\Repos\CardSecuritySystem3\RestAPI\bin\roslyn\csi.rsp
 C:\Users\datoc\Source\Repos\CardSecuritySystem3\RestAPI\bin\roslyn\vbc.rsp
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\RestAPI\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\RestAPI\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\RestAPI\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\RestAPI\bin\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\RestAPI\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\RestAPI\bin\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\RestAPI\bin\Microsoft.IdentityModel.Logging.xml
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\RestAPI\bin\Microsoft.IdentityModel.JsonWebTokens.xml

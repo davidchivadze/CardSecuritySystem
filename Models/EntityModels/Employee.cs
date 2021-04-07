@@ -10,6 +10,7 @@ namespace Models
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
+        public int? UserIDInDevice { get; set; }
 
         [Required]
         [StringLength(250)]

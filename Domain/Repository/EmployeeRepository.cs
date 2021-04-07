@@ -16,7 +16,7 @@ namespace Domain.Repository
 
         public IEnumerable<Employee> GetFilteredEmployees(EmployeeFilter filterModel)
         {
-            return _database.Employees.Where(e => (filterModel.IsActive.HasValue ? e.IsActive == filterModel.IsActive.Value : e.IsActive == e.IsActive)
+            return _database.Employees.Include("EmployeeDetails").Include("EmployeeDetails.Branch").Where(e => (filterModel.IsActive.HasValue ? e.IsActive == filterModel.IsActive.Value : e.IsActive == e.IsActive)
                                                && (filterModel.BranchID.HasValue ? e.EmployeeDetails.BranchID == filterModel.BranchID.Value : e.EmployeeDetails.BranchID == e.EmployeeDetails.BranchID)
                                                && (filterModel.DepartmentID.HasValue ? e.EmployeeDetails.BranchID == filterModel.DepartmentID.Value : e.EmployeeDetails.DepartmentID == e.EmployeeDetails.DepartmentID));
         }

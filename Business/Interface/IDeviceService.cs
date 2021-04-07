@@ -15,5 +15,6 @@ namespace Business.Interface
         IResponse<GetDeviceListResponse> GetDeviceList();
         Task<IResponse<bool>> SyncUserLog();
         Task<IResponse<bool>> UpdateUserListFromDevice();
+        IResponse<bool> InsertUserToDevice(int UserID);
     }
 }
