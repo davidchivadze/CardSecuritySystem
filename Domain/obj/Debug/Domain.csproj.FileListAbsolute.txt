@@ -100,3 +100,12 @@ C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\bin\Debug\Microsoft.IdentityModel.Logging.xml
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.EmployeeAddDeviceUserID.resources
+C:\Users\datoc\Source\Repos\CardSecuritySystem3\Domain\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\datoc\Source\Repos\CardSecuritySystem3\Domain\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\datoc\Source\Repos\CardSecuritySystem3\Domain\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\datoc\Source\Repos\CardSecuritySystem3\Domain\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\datoc\Source\Repos\CardSecuritySystem3\Domain\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\datoc\Source\Repos\CardSecuritySystem3\Domain\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\datoc\Source\Repos\CardSecuritySystem3\Domain\bin\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Users\datoc\Source\Repos\CardSecuritySystem3\Domain\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\datoc\Source\Repos\CardSecuritySystem3\Domain\obj\Debug\Domain.Migrations.EmployeeAddDeviceUserID.resources

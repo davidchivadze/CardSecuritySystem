@@ -22,6 +22,7 @@ namespace Domain.Interface
         ICurrencyRepository CurrencyRepository { get; }
         ICurrencyTypeRepository CurrencyTypeRepository { get; }
         IDepartmentsRepository DepartmentsRepository { get; }
+        IEmployeeListRepository EmployeeListRepository { get; }
         IEmployeeHolidayRepository EmployeeHolidayRepository { get; }
         IEmployeeMobileNumbersRepository EmployeeMobileNumbersRepository { get; }
         IEmployeePositionRepositoy EmployeePositionRepositoy { get; }
@@ -32,6 +33,7 @@ namespace Domain.Interface
         IDeviceRepository DeviceRepository { get; }
         IDeviceLocationInBranchRepository DeviceLocationInBranchRepository { get; }
         IDeviceUserLogRepository DeviceUserLogRepository { get; }
+
         IDeviceRegistratedUsersRepository DeviceRegistratedUsersRepository { get; }
         IHolidayTypesRepository HolidayTypesRepository { get; }
 

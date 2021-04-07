@@ -47,31 +47,31 @@ namespace Core.Helper
             };
         }
 
-        public static AddEmployeeRequestModel AsViewModel(this Employee model)
-        {
-            return new AddEmployeeRequestModel()
-            {
-                Address = model.Address,
-                Address_ka = model.Address_ka,
-                Address_ru = model.Address_ru,
-                BranchID = model.EmployeeDetails.BranchID,
-                DateOfBirth = model.DateOfBirth,
-                DepartmentID = model.EmployeeDetails.DepartmentID,
-                Email = model.Email,
-                EmployeePositionID = model.EmployeeDetails.EmployeePositionID,
-                FirsName = model.FirsName,
-                FirsName_ka = model.FirsName_ka,
-                FirsName_ru = model.FirsName_ru,
-                LastName = model.LastName,
-                LastName_ka = model.LastName_ka,
-                LastName_ru = model.LastName_ru,
-                IsActive = model.IsActive,
-                SalaryID = model.EmployeeDetails.SalaryID,
-                MobileNumbers = model.EmployeeMobileNumbers.Select(m => m.PhoneNumber.ToString()).ToArray(),
+        //public static AddEmployeeRequestModel AsViewModel(this Employee model)
+        //{
+        //    return new AddEmployeeRequestModel()
+        //    {
+        //        Address = model.Address,
+        //        Address_ka = model.Address_ka,
+        //        Address_ru = model.Address_ru,
+        //        BranchID = model.EmployeeDetails.BranchID,
+        //        DateOfBirth = model.DateOfBirth,
+        //        DepartmentID = model.EmployeeDetails.DepartmentID,
+        //        Email = model.Email,
+        //        EmployeePositionID = model.EmployeeDetails.EmployeePositionID,
+        //        FirsName = model.FirsName,
+        //        FirsName_ka = model.FirsName_ka,
+        //        FirsName_ru = model.FirsName_ru,
+        //        LastName = model.LastName,
+        //        LastName_ka = model.LastName_ka,
+        //        LastName_ru = model.LastName_ru,
+        //        IsActive = model.IsActive,
+        //        SalaryID = model.EmployeeDetails.SalaryID,
+        //        MobileNumbers = model.EmployeeMobileNumbers.Select(m => m.PhoneNumber.ToString()).ToArray(),
                
                 
-            };
-        }
+        //    };
+        //}
         public static Salary AsDatabaseModel(this SalaryData model)
         {
             return new Salary()

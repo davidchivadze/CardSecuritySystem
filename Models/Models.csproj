@@ -85,6 +85,7 @@
     <Compile Include="ViewModels\Employee\EmployeeDetailsViewModel.cs" />
     <Compile Include="ViewModels\Employee\EmployeePositionViewModel.cs" />
     <Compile Include="ViewModels\Employee\GetEmployeeHolidayList.cs" />
+    <Compile Include="ViewModels\Employee\GetEmployeeList.cs" />
     <Compile Include="ViewModels\FineViewModel.cs" />
     <Compile Include="ViewModels\ForgivenessViewModel.cs" />
     <Compile Include="ViewModels\Parameters\AddBranch.cs" />

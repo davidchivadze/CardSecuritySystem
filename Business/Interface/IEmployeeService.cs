@@ -11,8 +11,9 @@ namespace Business.Interface
 {
     public interface IEmployeeService
     {
-        IResponse<List<AddEmployeeRequestModel>> GetFilteredEmployees();
-        IResponse<AddEmployeeResposeModel> AddEmployee(AddEmployeeRequestModel request);
+        //IResponse<List<AddEmployeeRequestModel>> GetFilteredEmployees();
+        //IResponse<AddEmployeeResposeModel> AddEmployee(AddEmployeeRequestModel request);
         IResponse<GetEmployeeHolidayListResponse> GetEmployeeHolidayList(GetEmployeeHolidayListRequest model);
+        IResponse<GetEmployeeListResponse> GetEmployeeList();
     }
 }

@@ -66,6 +66,7 @@
     <Compile Include="Interface\IDeviceRepository.cs" />
     <Compile Include="Interface\IDeviceTypeRepository.cs" />
     <Compile Include="Interface\IEmployeeHolidayRepository.cs" />
+    <Compile Include="Interface\IEmployeeListRepository.cs" />
     <Compile Include="Interface\IEmployeeMobileNumbersRepository.cs" />
     <Compile Include="Interface\IEmployeePositionRepositoy.cs" />
     <Compile Include="Interface\IEmpoyeeDetaisRepository.cs" />
@@ -124,6 +125,7 @@
     <Compile Include="Repository\DeviceUserLogRepository.cs" />
     <Compile Include="Repository\EmployeeDetailsRepository.cs" />
     <Compile Include="Repository\EmployeeHolidayRepository.cs" />
+    <Compile Include="Repository\EmployeeListRepository.cs" />
     <Compile Include="Repository\EmployeeMobileNumbersRepository.cs" />
     <Compile Include="Repository\EmployeePositionRepository.cs" />
     <Compile Include="Repository\EmployeeRepository.cs" />

@@ -94,3 +94,11 @@ C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Core\bi
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Core\bin\Debug\Microsoft.IdentityModel.Logging.xml
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Core\bin\Debug\Microsoft.IdentityModel.Tokens.xml
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Core\bin\Debug\System.IdentityModel.Tokens.Jwt.xml
+C:\Users\datoc\Source\Repos\CardSecuritySystem3\Core\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\datoc\Source\Repos\CardSecuritySystem3\Core\bin\Debug\Microsoft.IdentityModel.Logging.dll
+C:\Users\datoc\Source\Repos\CardSecuritySystem3\Core\bin\Debug\Microsoft.IdentityModel.Tokens.dll
+C:\Users\datoc\Source\Repos\CardSecuritySystem3\Core\bin\Debug\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\datoc\Source\Repos\CardSecuritySystem3\Core\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
+C:\Users\datoc\Source\Repos\CardSecuritySystem3\Core\bin\Debug\Microsoft.IdentityModel.Logging.xml
+C:\Users\datoc\Source\Repos\CardSecuritySystem3\Core\bin\Debug\Microsoft.IdentityModel.Tokens.xml
+C:\Users\datoc\Source\Repos\CardSecuritySystem3\Core\bin\Debug\System.IdentityModel.Tokens.Jwt.xml

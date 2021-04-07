@@ -14,22 +14,22 @@ namespace Business.Services
 {
     public class EmployeeService : BaseService, IEmployeeService
     {
-        public IResponse<List<AddEmployeeRequestModel>> GetFilteredEmployees()
-        {
-            var result = UnitOfWork.EmployeeRepository.GetFilteredEmployees(new EmployeeFilter() { }).Select(m=> m.AsViewModel()).ToList();
-            return Ok(result);
+        //public IResponse<List<AddEmployeeRequestModel>> GetFilteredEmployees()
+        //{
+        //    var result = UnitOfWork.EmployeeRepository.GetFilteredEmployees(new EmployeeFilter() { }).Select(m=> m.AsViewModel()).ToList();
+        //    return Ok(result);
          
-        }
-        public IResponse<AddEmployeeResposeModel> AddEmployee(AddEmployeeRequestModel request)
-        {
-            try { 
-            var result = UnitOfWork.EmployeeRepository.AddEmployee(request.AsDatabaseModel());
-            return Ok(new AddEmployeeResposeModel() { });
-            }catch(Exception ex)
-            {
-                return Fail<AddEmployeeResposeModel>(ex.Message);
-            }
-        }
+        //}
+        //public IResponse<AddEmployeeResposeModel> AddEmployee(AddEmployeeRequestModel request)
+        //{
+        //    try { 
+        //    var result = UnitOfWork.EmployeeRepository.AddEmployee(request.AsDatabaseModel());
+        //    return Ok(new AddEmployeeResposeModel() { });
+        //    }catch(Exception ex)
+        //    {
+        //        return Fail<AddEmployeeResposeModel>(ex.Message);
+        //    }
+        //}
 
         public void get()
         {
@@ -45,5 +45,13 @@ namespace Business.Services
             });
         }
 
+        public IResponse<GetEmployeeListResponse> GetEmployeeList()
+        {
+            var result = UnitOfWork.EmployeeListRepository.GetEmployeeList().Select(m => m.AsViewModel()).ToList();
+            return Ok<GetEmployeeListResponse>(new GetEmployeeListResponse()
+            {
+                GetEmployeeList = result
+            });
+        }
     }
 }

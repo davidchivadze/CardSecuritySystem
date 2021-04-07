@@ -23,17 +23,21 @@ namespace RestAPI.Controllers
         //{
         //    return _employeeService.GetFilteredEmployees();
         //}
-        public IResponse<AddEmployeeResposeModel> AddEmployee(AddEmployeeRequestModel request)
-        {
-            return _employeeService.AddEmployee(request);
-        }
+        //public IResponse<AddEmployeeResposeModel> AddEmployee(AddEmployeeRequestModel request)
+        //{
+        //    return _employeeService.AddEmployee(request);
+        //}
         public IResponse<GetEmployeeHolidayListResponse> GetEmployeeHolidayList(GetEmployeeHolidayListRequest model)
         {
             return _employeeService.GetEmployeeHolidayList(model);
         }
-        public IResponse<List<AddEmployeeRequestModel>> GetFilteredEmployees()
+        public IResponse<GetEmployeeListResponse> GetEmployeeList()
         {
-            return _employeeService.GetFilteredEmployees();
+            return _employeeService.GetEmployeeList();
         }
+        //public IResponse<List<AddEmployeeRequestModel>> GetFilteredEmployees()
+        //{
+        //    return _employeeService.GetFilteredEmployees();
+        //}
     }
 }
