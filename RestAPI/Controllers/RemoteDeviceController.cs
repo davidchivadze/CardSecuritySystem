@@ -33,6 +33,10 @@ namespace RestAPI.Controllers
         {
             return _deviceService.AddDevice(model);
         }
+        public IResponse<GetDeviceUserLogResponse> GetDeviceUserLogList()
+        {
+            return _deviceService.GetDeviceUserLogList();
+        }
         public IResponse<GetDeviceListResponse> GetDeviceList()
         {
             return _deviceService.GetDeviceList();
@@ -40,6 +44,10 @@ namespace RestAPI.Controllers
         public async Task<IResponse<bool>> SyncUserLog()
         {
             return await _deviceService.SyncUserLog();
+        }
+        public IResponse<bool> ClearDeviceData()
+        {
+            return _deviceService.ClearDeviceData();
         }
         public  Task<IResponse<bool>> UpdateUserListFromDevice()
         {

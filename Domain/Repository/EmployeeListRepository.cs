@@ -18,7 +18,8 @@ namespace Domain.Repository
         public IEnumerable<Employee> GetEmployeeList()
         {
 
-            return _database.Employees;
+            return _database.Employees.Include("EmployeeDetails.Branch.Country").Include("EmployeeDetails.Forgiveness").Include("EmployeeDetails.Fine")
+                .Include("EmployeeDetails.Salary").Include("EmployeeDetails.Department").Include("Gender");
         }
     }
 }

@@ -23,10 +23,10 @@ namespace RestAPI.Controllers
         //{
         //    return _employeeService.GetFilteredEmployees();
         //}
-        //public IResponse<AddEmployeeResposeModel> AddEmployee(AddEmployeeRequestModel request)
-        //{
-        //    return _employeeService.AddEmployee(request);
-        //}
+        public IResponse<AddEmployeeResposeModel> AddEmployee(AddEmployeeRequestModel request)
+        {
+            return _employeeService.AddEmployee(request);
+        }
         public IResponse<GetEmployeeHolidayListResponse> GetEmployeeHolidayList(GetEmployeeHolidayListRequest model)
         {
             return _employeeService.GetEmployeeHolidayList(model);

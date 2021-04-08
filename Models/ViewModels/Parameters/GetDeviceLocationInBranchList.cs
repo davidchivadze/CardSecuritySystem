@@ -14,5 +14,7 @@ namespace Models.ViewModels.Parameters
     {
         public int ID { get; set; }
         public string Description { get; set; }
+        public string BranchName { get; set; }
+        public int BranchID { get; set; }
     }
 }

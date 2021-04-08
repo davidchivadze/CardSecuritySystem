@@ -16,20 +16,21 @@ namespace Core.Helper
             return new Employee()
             {
                 Address = model.Address,
-                Address_ka = model.Address_ka,
-                Address_ru = model.Address_ru,
+                Address_ka = model.Address_ka?? model.Address,
+                Address_ru = model.Address_ru ?? model.Address,
                 DateOfBirth = model.DateOfBirth,
                 Email = model.Email,
                 FirsName = model.FirsName,
-                FirsName_ka = model.FirsName_ka,
-                FirsName_ru = model.FirsName_ru,
+                FirsName_ka = model.FirsName_ka ?? model.FirsName,
+                FirsName_ru = model.FirsName_ru ?? model.FirsName,
                 IsActive = true,
                 LastName = model.LastName,
-                LastName_ka = model.LastName_ka,
-                LastName_ru = model.LastName_ru,
+                LastName_ka = model.LastName_ka ?? model.LastName,
+                LastName_ru = model.LastName_ru ?? model.LastName,
                 GenderID = model.GenderID,
                 DeviceCardID=model.DeviceCardID,
                 PersonalNumber=model.PersonalNumber,
+                
                 EmployeeDetails = new EmployeeDetails()
                 {
                     BranchID = model.BranchID,
@@ -39,8 +40,8 @@ namespace Core.Helper
                     Forgiveness = model.Forgiveness.AsDatabaseModel(),
                     Fine = model.Fine.AsDatabaseModel()
                 },
-                EmployeeMobileNumbers = model.MobileNumbers.Select(m => new EmployeeMobileNumbers() { PhoneNumber = m, IsActive = true }).ToList(),
-                Schedule = model.Schedule.AsDatabaseModel(),
+               // EmployeeMobileNumbers = model.MobileNumbers.Select(m => new EmployeeMobileNumbers() { PhoneNumber = m, IsActive = true }).ToList(),
+                Schedule = model.Schedule?.AsDatabaseModel(),
                 EmployeeHolidays=model.EmployeeHolidays.Select(m=>m.AsDatabaseModel()).ToList()
                 
             
@@ -77,7 +78,7 @@ namespace Core.Helper
             return new Salary()
             {
                 Amount = model.Amount,
-                CurrencyID = model.CurrencyID,
+                CurrencyID = model.CurrencyID==0?1:model.CurrencyID,
                 IsHourly = model.IsHourly,
                 SalaryTypeID = model.SalaryTypeID
             };
@@ -110,7 +111,7 @@ namespace Core.Helper
             {
                 Amount = model.Amount,
                 FineTypeID = model.FineTypeID,
-                 CurrencyID=model.CurrencyID
+                 CurrencyID=model.CurrencyID==0?1:model.CurrencyID
 
             };
         }

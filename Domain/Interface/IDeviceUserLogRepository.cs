@@ -1,4 +1,5 @@
 ﻿using Models.EntityModels;
+using Models.LinqJoinDatabaseModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,5 +11,6 @@ namespace Domain.Interface
     public interface IDeviceUserLogRepository:IBaseRepository<DeviceUserLog>
     {
         bool AddLogList(List<DeviceUserLog> addList);
+        List<DeviceAndDbUsersJoin> GetDeviceUserLogs();
     }
 }

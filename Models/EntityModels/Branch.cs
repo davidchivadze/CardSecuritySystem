@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Models.EntityModels
 {
-    public class Branch:BaseModel
+    public class Branch : BaseModel
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -25,5 +25,6 @@ namespace Models.EntityModels
 
         public virtual Country Country { get; set; }
         public ICollection<Device> Devices { get; set; }
+        public ICollection<DeviceLocationInBranch> DeviceLocationInBranches{ get; set; }
     }
 }

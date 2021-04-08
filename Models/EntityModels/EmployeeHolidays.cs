@@ -19,7 +19,7 @@ namespace Models.EntityModels
         public int Used { get; set; }
         public int NumInYear { get; set; }
         public int LeftInYear { get; set; }
-        public DateTime DeactivateDate { get; set; }
+        public DateTime? DeactivateDate { get; set; }
         public bool IsActive { get; set; }
 
         [ForeignKey("Employee")]

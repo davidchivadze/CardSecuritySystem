@@ -122,7 +122,10 @@ namespace Core.Helper
             return new GetDeviceLocationInBranchListItem()
             {
                 ID = model.ID,
-                Description = model.Description
+                Description = model.Description,
+                BranchID=model.Branches.ID,
+                BranchName=model.Branches.BranchName
+
             };
         }
         public static GetSalaryTypeListItem AsViewModel(this SalaryType model)
@@ -209,7 +212,8 @@ namespace Core.Helper
         {
             return new DeviceLocationInBranch()
             {
-                Description = model.Description
+                Description = model.Description,
+                BranchID=model.BranchID
             };
         }
         public static DeviceLocationInBranch AsDatabaseModel(this EditDeviceLocationInBranchRequest model)
@@ -218,7 +222,8 @@ namespace Core.Helper
             {
                 Description = model.Description
                 ,
-                ID = model.ID
+                ID = model.ID,
+                BranchID=model.BranchID
             };
         }
         public static Branch AsDatabaseModel(this AddBranchRequest model)

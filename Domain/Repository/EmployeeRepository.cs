@@ -26,5 +26,13 @@ namespace Domain.Repository
             _database.SaveChanges();
             return result;
         }
+
+        public Employee UpdateEmployeeSyncData(int deviceUserID,int userID)
+        {
+            var editUser = _database.Employees.Where(m => m.ID == userID).FirstOrDefault();
+            editUser.UserIDInDevice = deviceUserID;
+            _database.SaveChanges();
+            return editUser;
+        }
     }
 }

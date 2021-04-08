@@ -40,6 +40,7 @@ namespace Business.Services
         }
 
 
+
         public IResponse<bool> AddDevice(AddDeviceRequest model)
         {
             try {
@@ -142,6 +143,20 @@ namespace Business.Services
             }
         }
 
+        public IResponse<bool> ClearDeviceData()
+        {
+            try
+            {
+                _deviceClient.Connect_Net("192.168.1.201", 4370);
+                int iMachineNumber = 1;
+                _deviceClient.ClearGLog(iMachineNumber);
+                return Ok(true);
+            }catch(Exception ex)
+            {
+                return Fail<bool>(ex.Message);
+            }
+        }
+
         private ICollection<DeviceUserLog> GetUserLogList()
         {
             var Devices = UnitOfWork.DeviceRepository.GetAll().Where(m => m.IsActive == true).FirstOrDefault();
@@ -177,10 +192,13 @@ namespace Business.Services
 
                 lstEnrollData.Add(objInfo);
             }
+                _deviceClient.ClearGLog(i);
             }
+            
             return lstEnrollData;
         }
 
+        
         private ICollection<UserInfo> GetUsersListFromDevice()
         {
             var Devices = UnitOfWork.DeviceRepository.GetAll().Where(m => m.IsActive == true).FirstOrDefault();
@@ -232,7 +250,10 @@ namespace Business.Services
                     {
                         var deviceList = UnitOfWork.DeviceRepository.GetDevices().Where(m => m.IsActive).ToList();
                         foreach(var device in deviceList) {
-                            this.SetStrCardNumber(device.IPAddress,int.Parse(device.Port), true, userFromDb.ID.ToString() + userFromDb.ID.ToString(), userFromDb.PersonalNumber, this.RandomDigits(6), 3, userFromDb.DeviceCardID);
+                            if (this.SetStrCardNumber(device.IPAddress, int.Parse(device.Port), true, userFromDb.ID.ToString() + userFromDb.ID.ToString(), userFromDb.PersonalNumber, this.RandomDigits(6), 3, userFromDb.DeviceCardID)) {
+                                UnitOfWork.EmployeeRepository.UpdateEmployeeSyncData(int.Parse(userFromDb.ID.ToString() + userFromDb.ID.ToString()), userFromDb.ID);
+                            };
+
                                 }
                         return true;
                     }
@@ -251,7 +272,7 @@ namespace Business.Services
             }
 
         }
-        public void SetStrCardNumber(string sIp = "192.168.1.201", int iPort = 4370,
+        public bool SetStrCardNumber(string sIp = "192.168.1.201", int iPort = 4370,
                                     bool bEnabled = true, string sdwEnrollNumber = "6969",
                                     string sName = "MVC Datoie", string sPassword = "123456",
                                     int iPrivilege = 0, string sCardnumber = "0"
@@ -268,7 +289,11 @@ namespace Business.Services
             _deviceClient.SetStrCardNumber(sCardnumber);//Before you using function SetUserInfo,set the card number to make sure you can upload it to the device
             if (_deviceClient.SSR_SetUserInfo(iMachineNumber, sdwEnrollNumber, sName, sPassword, iPrivilege, bEnabled))//upload the user's information(card number included)
             {
-                Console.Write("Success");
+
+                _deviceClient.RefreshData(iMachineNumber);//the data in the device should be refreshed
+                _deviceClient.EnableDevice(iMachineNumber, true);
+                return true;
+                
             }
             else
             {
@@ -276,8 +301,6 @@ namespace Business.Services
                 throw new Exception("ვერ მოხერხდა ჩამატება: " + idwErrorCode.ToString());
             }
 
-            _deviceClient.RefreshData(iMachineNumber);//the data in the device should be refreshed
-            _deviceClient.EnableDevice(iMachineNumber, true);
         }
         public ICollection<UserInfo> GetAllUserInfo(IZKEM objZkeeper, int machineNumber)
         {
@@ -338,6 +361,21 @@ namespace Business.Services
             }catch(Exception ex)
             {
                 return Fail<bool>(ex.Message);
+            }
+        }
+
+        public IResponse<GetDeviceUserLogResponse> GetDeviceUserLogList()
+        {
+            try
+            {
+                var result = UnitOfWork.DeviceUserLogRepository.GetDeviceUserLogs()?.Select(m => m.AsViewModel()).ToList();
+                return Ok(new GetDeviceUserLogResponse()
+                {
+                    DeviceUserLogList = result
+                });
+            }catch(Exception ex)
+            {
+                return Fail<GetDeviceUserLogResponse>(ex.Message);
             }
         }
     }

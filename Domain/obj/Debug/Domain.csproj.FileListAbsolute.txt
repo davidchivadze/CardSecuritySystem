@@ -109,3 +109,6 @@ C:\Users\datoc\Source\Repos\CardSecuritySystem3\Domain\bin\Debug\System.Identity
 C:\Users\datoc\Source\Repos\CardSecuritySystem3\Domain\bin\Debug\Microsoft.IdentityModel.Logging.xml
 C:\Users\datoc\Source\Repos\CardSecuritySystem3\Domain\bin\Debug\Microsoft.IdentityModel.JsonWebTokens.xml
 C:\Users\datoc\Source\Repos\CardSecuritySystem3\Domain\obj\Debug\Domain.Migrations.EmployeeAddDeviceUserID.resources
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.EmployeeHolidayDeactivateNULLABLE.resources
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.AddBranchDeviceLocation.resources
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.AddBranchDeviceLocationRealtionChange.resources

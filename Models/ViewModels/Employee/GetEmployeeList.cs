@@ -41,6 +41,7 @@ namespace Models.ViewModels.Employee
         public bool IsActive { get; set; } = true;
         public string EmployeePosition { get; set; }
         public string DeviceCardID { get; set; }
+        public int? UserIDInDevice { get; set; }
 
         public string BranchName { get; set; }
 

@@ -82,6 +82,15 @@
 
                 context.SaveChanges();
             }
+            if (context.DeviceTypes.Count() == 0)
+            {
+                context.DeviceTypes.Add(new Models.EntityModels.DeviceType()
+                {
+                    Description = "ZKTeco მოწყობილობა",
+                    ID = 1
+                });
+                context.SaveChanges();
+            }
             //  This method will be called after migrating to the latest version.
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method

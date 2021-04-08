@@ -9,6 +9,7 @@ namespace Models.ViewModels.Parameters
     public class AddDeviceLocationInBranchRequest
     {
         public string Description { get; set; }
+        public int BranchID { get; set; }
     }
 
     public class AddDeviceLocationInBranchResponse

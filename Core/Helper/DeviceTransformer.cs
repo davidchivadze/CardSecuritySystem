@@ -1,4 +1,5 @@
 ﻿using Models.EntityModels;
+using Models.LinqJoinDatabaseModels;
 using Models.ViewModels.Device;
 using System;
 using System.Collections.Generic;
@@ -64,7 +65,20 @@ namespace Core.Helper
                 LastSyncDate = model.LastSyncDate,
                 Branch = model.Branch.BranchName,
                 LocationInBranch = model.DeviceLocationInBranch.Description,
-                State=model.IsActive==true?1:0
+                State = model.IsActive == true ? 1 : 0
+            };
+        }
+        public static GetDeviceUserLogItem AsViewModel(this DeviceAndDbUsersJoin model)
+        {
+            return new GetDeviceUserLogItem()
+            {
+                FirsName = model.FirsName,
+                LastName = model.LastName,
+                MachineNumber = model.MachineNumber,
+                PersonalNumber = model.PersonalNumber,
+                RecordTime = DateTime.Parse(model.RecordTime),
+                UserIDInDevice = model.UserIDInDevice,
+                VerifyMode = model.VerifyMode
             };
         }
     }

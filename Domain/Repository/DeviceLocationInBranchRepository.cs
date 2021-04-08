@@ -31,7 +31,7 @@ namespace Domain.Repository
 
         public IEnumerable<DeviceLocationInBranch> GetDeviceLocationInBranches()
         {
-            return _database.DeviceLocationInBranches;
+            return _database.DeviceLocationInBranches.Include("Branches");
         }
     }
 }
