@@ -34,5 +34,13 @@ namespace Domain.Repository
             _database.SaveChanges();
             return editUser;
         }
+
+        public bool DeleteEmployee(Employee Model)
+        {
+            var result = _database.Employees.Where(m => m.ID == Model.ID).FirstOrDefault();
+            result.IsActive = false;
+            _database.SaveChanges();
+            return true;
+        }
     }
 }

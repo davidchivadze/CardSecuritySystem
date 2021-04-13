@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LinqJoinDatabaseModels\DeviceAndDbUsersJoin.cs" />
+    <Compile Include="ViewModels\Device\DeleteDevice.cs" />
     <Compile Include="ViewModels\Device\DeviceUserLog.cs" />
     <Compile Include="DeviceResponseModels\UserInfo.cs" />
     <Compile Include="EntityModels\BaseModel.cs" />

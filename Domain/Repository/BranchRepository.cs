@@ -22,6 +22,14 @@ namespace Domain.Repository
             return result;
         }
 
+        public bool DeleteBranch(Branch model)
+        {
+            var result = _database.Branches.Where(m => m.ID == model.ID).FirstOrDefault();
+            result.IsActive = false;
+            _database.SaveChanges();
+            return true;
+        }
+
         public Branch EditBranch(Branch model)
         {
             var result = _database.Branches.Where(m => m.ID == model.ID).FirstOrDefault();

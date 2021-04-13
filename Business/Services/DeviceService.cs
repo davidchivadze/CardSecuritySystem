@@ -378,5 +378,10 @@ namespace Business.Services
                 return Fail<GetDeviceUserLogResponse>(ex.Message);
             }
         }
+
+        public IResponse<bool> DeleteDevice(DeleteDeviceRequest model)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

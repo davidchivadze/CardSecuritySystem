@@ -27,6 +27,14 @@ namespace Domain.Repository
             }
         }
 
+        public bool DeleteDevice(Device device)
+        {
+            var result = _database.Devices.Where(m => m.ID == device.ID).FirstOrDefault();
+            result.IsActive = false;
+            _database.SaveChanges();
+            return true;
+        }
+
         public IEnumerable<Device> GetDevices()
         {
             try

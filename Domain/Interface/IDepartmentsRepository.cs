@@ -12,5 +12,6 @@ namespace Domain.Interface
         IEnumerable<Departments> GetDepartments();
         Departments AddDepartment(Departments model);
         Departments EditDepartment(Departments model);
+        bool DeleteDepartment(Departments model);
     }
 }

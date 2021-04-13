@@ -13,6 +13,7 @@ namespace Domain.Interface
     {
         IEnumerable<Employee> GetFilteredEmployees(EmployeeFilter filterModel);
         Employee AddEmployee(Employee addModel);
+        bool DeleteEmployee(Employee Model);
         Employee UpdateEmployeeSyncData(int deviceUserID,int userID);
     }
 }
