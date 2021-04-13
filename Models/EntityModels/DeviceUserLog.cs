@@ -18,5 +18,6 @@ namespace Models.EntityModels
         public int dwVerifyMode { get; set; }
         public int dwInOutMode { get; set; }
         public string DateTimeRecord { get; set; }
+        public bool IsActive { get; set; } = true;
     }
 }

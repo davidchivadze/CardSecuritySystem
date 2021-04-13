@@ -49,7 +49,7 @@ namespace Business.Services
 
         public IResponse<GetEmployeeListResponse> GetEmployeeList()
         {
-            var result = UnitOfWork.EmployeeListRepository.GetEmployeeList().Select(m => m.AsViewModel()).ToList();
+            var result = UnitOfWork.EmployeeListRepository.GetEmployeeList().Where(m=>m.IsActive==true).Select(m => m.AsViewModel()).ToList();
             return Ok<GetEmployeeListResponse>(new GetEmployeeListResponse()
             {
                 GetEmployeeList = result

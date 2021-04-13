@@ -15,6 +15,7 @@ namespace Models.ViewModels.Parameters
         public int ID { get; set; }
         public string Description { get; set; }
         public string ParentDescription { get; set; }
+        public bool IsActive { get; set; }
         public int? ParentID { get; set; }
     }
 }

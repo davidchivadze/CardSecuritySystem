@@ -14,7 +14,7 @@ namespace Business.Services
     {
         public IResponse<GetDepartmentsListResponse> GetDepartmentsList()
         {
-            var result = UnitOfWork.DepartmentsRepository.GetDepartments().Select(m => m.AsViewModel()).ToList();
+            var result = UnitOfWork.DepartmentsRepository.GetDepartments().Where(m=>m.IsActive==true).Select(m => m.AsViewModel()).ToList();
             return Ok<GetDepartmentsListResponse>(new GetDepartmentsListResponse()
             {
                 DepartmentsList = result
@@ -32,7 +32,7 @@ namespace Business.Services
         }
         public IResponse<GetBranchListResponse> GetBranchList()
         {
-            var result = UnitOfWork.BranchRepository.GetBranches().Select(m => ParametersTransformer.AsViewModel(m)).ToList();
+            var result = UnitOfWork.BranchRepository.GetBranches().Where(m=>m.IsActive==true).Select(m => ParametersTransformer.AsViewModel(m)).ToList();
             return Ok<GetBranchListResponse>(new GetBranchListResponse()
             {
                 BranchList = result

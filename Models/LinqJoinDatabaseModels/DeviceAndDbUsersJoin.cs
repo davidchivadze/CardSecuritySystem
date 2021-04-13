@@ -16,5 +16,6 @@ namespace Models.LinqJoinDatabaseModels
         public int? UserIDInDevice { get; set; }
         public int MachineNumber { get; set; }
         public int VerifyMode { get; set; }
+        public bool IsActive { get; set; }
     }
 }

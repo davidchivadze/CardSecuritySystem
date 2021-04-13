@@ -38,7 +38,8 @@ namespace Core.Helper
                 dwInOutMode = model.dwInOutMode,
                 dwVerifyMode = model.dwVerifyMode,
                 IndRegID = model.IndRegID,
-                MachineNumber = model.MachineNumber
+                MachineNumber = model.MachineNumber,
+                IsActive=model.IsActive
             };
         }
         public static DeviceRegistratedUsers AsDatabaseModel(this Models.DeviceResponseModels.UserInfo model)
@@ -54,6 +55,7 @@ namespace Core.Helper
                 Privelage = model.Privelage,
                 TmpData = model.TmpData,
                 UserDeviceID = int.Parse(model.EnrollNumber)
+               
             };
         }
         public static GetDeviceListItem AsViewModel(this Device model)
@@ -78,7 +80,8 @@ namespace Core.Helper
                 PersonalNumber = model.PersonalNumber,
                 RecordTime = DateTime.Parse(model.RecordTime),
                 UserIDInDevice = model.UserIDInDevice,
-                VerifyMode = model.VerifyMode
+                VerifyMode = model.VerifyMode,
+                IsActive=model.IsActive
             };
         }
     }

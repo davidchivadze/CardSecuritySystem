@@ -27,6 +27,8 @@ namespace Models.EntityModels
         [StringLength(250)]
         public string Description_ru { get; set; }
 
+        public bool IsActive { get; set; } = true;
+
 
 
 

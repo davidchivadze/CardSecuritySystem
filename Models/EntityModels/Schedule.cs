@@ -31,8 +31,12 @@ namespace Models.EntityModels
         public bool OnWorkingHouresOnly { get; set; }
         public bool NotStandartSchedule { get; set; }
 
+        public bool IsActive { get; set; } = true;
+
         public ICollection<Employee> Employee { get; set; }
         public  ScheduleType ScheduleType { get; set; }
         public ICollection<ScheduleDetails> ScheduleDetails { get; set; }
+
+
     }
 }

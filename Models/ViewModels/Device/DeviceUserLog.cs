@@ -14,6 +14,7 @@ namespace Models.DeviceResponseModels
             public int dwVerifyMode { get; set; }
             public int dwInOutMode { get; set; }
             public string DateTimeRecord { get; set; }
+            public bool IsActive { get; set; }
 
 
             public DateTime DateOnlyRecord

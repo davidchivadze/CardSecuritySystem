@@ -121,6 +121,18 @@
     <Compile Include="Migrations\202104081821108_AddBranchDeviceLocationRealtionChange.designer.cs">
       <DependentUpon>202104081821108_AddBranchDeviceLocationRealtionChange.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104131417099_Department &amp; Branch IsActive.cs" />
+    <Compile Include="Migrations\202104131417099_Department &amp; Branch IsActive.designer.cs">
+      <DependentUpon>202104131417099_Department &amp; Branch IsActive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104131441391_Schedule &amp; DeviceUserLog IsActive.cs" />
+    <Compile Include="Migrations\202104131441391_Schedule &amp; DeviceUserLog IsActive.designer.cs">
+      <DependentUpon>202104131441391_Schedule &amp; DeviceUserLog IsActive.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104131501337_Make All IsActive-Deffault True.cs" />
+    <Compile Include="Migrations\202104131501337_Make All IsActive-Deffault True.designer.cs">
+      <DependentUpon>202104131501337_Make All IsActive-Deffault True.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\BaseRepository.cs" />
@@ -198,6 +210,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104081821108_AddBranchDeviceLocationRealtionChange.resx">
       <DependentUpon>202104081821108_AddBranchDeviceLocationRealtionChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104131417099_Department &amp; Branch IsActive.resx">
+      <DependentUpon>202104131417099_Department &amp; Branch IsActive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104131441391_Schedule &amp; DeviceUserLog IsActive.resx">
+      <DependentUpon>202104131441391_Schedule &amp; DeviceUserLog IsActive.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104131501337_Make All IsActive-Deffault True.resx">
+      <DependentUpon>202104131501337_Make All IsActive-Deffault True.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

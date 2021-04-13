@@ -20,5 +20,6 @@ namespace Models.ViewModels.Parameters
         public string City { get; set; }
         public int CityID { get; set; }
         public string Address { get; set; }
+        public bool IsActive { get; set; }
     }
 }

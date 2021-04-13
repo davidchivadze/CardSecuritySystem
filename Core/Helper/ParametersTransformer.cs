@@ -23,6 +23,7 @@ namespace Core.Helper
             return new GetDepartmentsListItem()
             {
                 ID = model.ID,
+                IsActive=model.IsActive,
                 Description = model.Description,
                 ParentID=model.ParentDepartment?.ID,
                 ParentDescription=model.ParentDepartment?.Description
@@ -33,6 +34,7 @@ namespace Core.Helper
             return new GetBranchListItem()
             {
                 ID = model.ID,
+                IsActive=model.IsActive,
                 Description = model.BranchName,
                 Address=model.Address,
                 City=model.City.Description,

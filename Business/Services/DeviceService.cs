@@ -66,8 +66,8 @@ namespace Business.Services
         public IResponse<GetDeviceListResponse> GetDeviceList()
         {
             try {
-                var result1 = UnitOfWork.DeviceRepository.GetDevices().ToList();
-            var result = UnitOfWork.DeviceRepository.GetDevices().Select(m => m.AsViewModel()).ToList();
+            var result1 = UnitOfWork.DeviceRepository.GetDevices().ToList();
+            var result = UnitOfWork.DeviceRepository.GetDevices().Where(m=>m.IsActive==true).Select(m => m.AsViewModel()).ToList();
             return Ok(new GetDeviceListResponse() { DeviceList = result });
             }catch(Exception ex)
             {
@@ -368,7 +368,7 @@ namespace Business.Services
         {
             try
             {
-                var result = UnitOfWork.DeviceUserLogRepository.GetDeviceUserLogs()?.Select(m => m.AsViewModel()).ToList();
+                var result = UnitOfWork.DeviceUserLogRepository.GetDeviceUserLogs()?.Where(m=>m.IsActive==true).Select(m => m.AsViewModel()).ToList();
                 return Ok(new GetDeviceUserLogResponse()
                 {
                     DeviceUserLogList = result
