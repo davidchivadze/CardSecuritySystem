@@ -27,9 +27,9 @@ namespace Domain.Repository
             }
         }
 
-        public bool DeleteDevice(Device device)
+        public bool DeleteDevice(int id)
         {
-            var result = _database.Devices.Where(m => m.ID == device.ID).FirstOrDefault();
+            var result = _database.Devices.Where(m => m.ID == id).FirstOrDefault();
             result.IsActive = false;
             _database.SaveChanges();
             return true;
@@ -39,7 +39,7 @@ namespace Domain.Repository
         {
             try
             {
-                var result = _database.Devices.Include("Branch").Include("DeviceLocationInBranch");
+                var result = _database.Devices.Include("Branch").Include("DeviceLocationInBranch").Where(m=>m.IsActive);
                 return result;
             }
             catch (Exception ex)

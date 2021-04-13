@@ -12,6 +12,6 @@ namespace Domain.Interface
         IEnumerable<Branch> GetBranches();
         Branch AddBranch(Branch model);
         Branch EditBranch(Branch model);
-        bool DeleteBranch(Branch model);
+        bool DeleteBranch(int id);
     }
 }

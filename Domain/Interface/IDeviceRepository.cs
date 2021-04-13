@@ -10,7 +10,7 @@ namespace Domain.Interface
     public interface IDeviceRepository:IBaseRepository<Device>
     {
         Device AddDevice(Device device);
-        bool DeleteDevice(Device device);
+        bool DeleteDevice(int id);
         IEnumerable<Device> GetDevices();
     }
 }

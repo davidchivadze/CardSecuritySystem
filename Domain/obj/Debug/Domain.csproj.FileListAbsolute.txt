@@ -132,3 +132,7 @@ D:\Card\Domain\obj\Debug\Domain.Migrations.AddBranchDeviceLocationRealtionChange
 D:\Card\Domain\obj\Debug\Domain.Migrations.DepartmentBranchIsActive.resources
 D:\Card\Domain\obj\Debug\Domain.Migrations.ScheduleDeviceUserLogIsActive.resources
 D:\Card\Domain\obj\Debug\Domain.Migrations.MakeAllIsActiveDeffaultTrue.resources
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.DepartmentBranchIsActive.resources
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.ScheduleDeviceUserLogIsActive.resources
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.MakeAllIsActiveDeffaultTrue.resources
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.AddIsActiveEmployeePosition.resources

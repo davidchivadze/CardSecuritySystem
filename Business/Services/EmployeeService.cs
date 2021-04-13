@@ -55,5 +55,16 @@ namespace Business.Services
                 GetEmployeeList = result
             });
         }
+
+        public IResponse<bool> DeleteEmployee(int employeeID)
+        {
+            try
+            {
+                return Ok(UnitOfWork.EmployeeRepository.DeleteEmployee(employeeID));
+            }catch(Exception ex)
+            {
+                return Fail<bool>(ex.Message);
+            }
+        }
     }
 }

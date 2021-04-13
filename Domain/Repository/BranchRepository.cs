@@ -22,9 +22,9 @@ namespace Domain.Repository
             return result;
         }
 
-        public bool DeleteBranch(Branch model)
+        public bool DeleteBranch(int id)
         {
-            var result = _database.Branches.Where(m => m.ID == model.ID).FirstOrDefault();
+            var result = _database.Branches.Where(m => m.ID == id).FirstOrDefault();
             result.IsActive = false;
             _database.SaveChanges();
             return true;
@@ -43,7 +43,7 @@ namespace Domain.Repository
 
         public IEnumerable<Branch> GetBranches()
         {
-            return _database.Branches.Include("City").Include("Country");
+            return _database.Branches.Include("City").Include("Country").Where(m=>m.IsActive);
         }
     }
 }

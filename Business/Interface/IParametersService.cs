@@ -14,6 +14,10 @@ namespace Business.Interface
         IResponse<GetDepartmentsListResponse> GetDepartmentsList();
         IResponse<GetBranchListResponse> GetBranchList();
         IResponse<GetBranchListItem> GetBranchForEdit(int id);
+        IResponse<bool> DeleteDevice(int deviceID);
+        IResponse<bool> DeleteEmployeePosition(int employeePositionID);
+        IResponse<bool> DeleteBranch(int branchID);
+        IResponse<bool> DeleteDepartment(int departmentID);
         //IResponse<GetEmployeePositionItem> GetEmployeePositionForEdit(int id);
         IResponse<GetEmployeePositionsResponse> GetEmployeePositionsList();
         IResponse<GetCountryListResponse> GetCountryList();

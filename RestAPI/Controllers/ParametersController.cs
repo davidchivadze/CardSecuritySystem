@@ -45,6 +45,22 @@ namespace RestAPI.Controllers
         {
             return _parametersService.GetBranchForEdit(id);
         }
+        public IResponse<bool> DeleteBranch(int branchID)
+        {
+            return _parametersService.DeleteBranch(branchID);
+        }
+        public IResponse<bool> DeleteDepartment(int departmentID)
+        {
+            return _parametersService.DeleteDepartment(departmentID);
+        }
+        public IResponse<bool> DeleteDevice(int DeviceID)
+        {
+            return _parametersService.DeleteDevice(DeviceID);
+        }
+        public IResponse<bool> DeleteEmployeePosition(int employeePositionID)
+        {
+            return _parametersService.DeleteEmployeePosition(employeePositionID);
+        }
         //public IResponse<GetEmployeePositionItem> GetEmployeePositionForEdit(int id)
         //{
         //    return _parametersService.GetEmployeePositionForEdit(id);

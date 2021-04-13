@@ -15,5 +15,6 @@ namespace Business.Interface
         IResponse<AddEmployeeResposeModel> AddEmployee(AddEmployeeRequestModel request);
         IResponse<GetEmployeeHolidayListResponse> GetEmployeeHolidayList(GetEmployeeHolidayListRequest model);
         IResponse<GetEmployeeListResponse> GetEmployeeList();
+        IResponse<bool> DeleteEmployee(int employeeID);
     }
 }

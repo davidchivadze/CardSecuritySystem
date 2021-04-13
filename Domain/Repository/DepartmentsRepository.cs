@@ -22,9 +22,9 @@ namespace Domain.Repository
             return result;
         }
 
-        public bool DeleteDepartment(Departments model)
+        public bool DeleteDepartment(int id)
         {
-            var result = _database.Departments.Where(m => m.ID == model.ID).FirstOrDefault();
+            var result = _database.Departments.Where(m => m.ID == id).FirstOrDefault();
             result.IsActive = false;
             _database.SaveChanges();
             return true;

@@ -33,7 +33,19 @@ namespace Domain.Repository
 
         public IEnumerable<EmployeePosition> GetEmployeePositions()
         {
-           return _database.EmployeePositions;
+           return _database.EmployeePositions.Where(m=>m.IsActive);
+        }
+        public bool DeleteEmployeePosition(int employeePositionID)
+        {
+            try { 
+            var editModel = _database.EmployeePositions.Where(m => m.ID == employeePositionID).FirstOrDefault();
+            editModel.IsActive = false;
+            _database.SaveChanges();
+            return true;
+            }catch(Exception ex)
+            {
+                return false;
+            }
         }
     }
 }

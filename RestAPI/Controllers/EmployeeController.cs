@@ -27,6 +27,10 @@ namespace RestAPI.Controllers
         {
             return _employeeService.AddEmployee(request);
         }
+        public IResponse<bool> DeleteEmployee(int employeeID)
+        {
+            return _employeeService.DeleteEmployee(employeeID);
+        }
         public IResponse<GetEmployeeHolidayListResponse> GetEmployeeHolidayList(GetEmployeeHolidayListRequest model)
         {
             return _employeeService.GetEmployeeHolidayList(model);

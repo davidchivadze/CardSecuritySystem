@@ -7,8 +7,8 @@
     {
         public override void Up()
         {
-            AddColumn("dbo.Schedules", "IsActive", c => c.Boolean(nullable: false));
-            AddColumn("dbo.DeviceUserLogs", "IsActive", c => c.Boolean(nullable: false));
+            AddColumn("dbo.Schedules", "IsActive", c => c.Boolean(nullable: false,defaultValue:true));
+            AddColumn("dbo.DeviceUserLogs", "IsActive", c => c.Boolean(nullable: false, defaultValue: true));
         }
         
         public override void Down()

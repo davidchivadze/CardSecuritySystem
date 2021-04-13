@@ -66,7 +66,6 @@ namespace Business.Services
         public IResponse<GetDeviceListResponse> GetDeviceList()
         {
             try {
-            var result1 = UnitOfWork.DeviceRepository.GetDevices().ToList();
             var result = UnitOfWork.DeviceRepository.GetDevices().Where(m=>m.IsActive==true).Select(m => m.AsViewModel()).ToList();
             return Ok(new GetDeviceListResponse() { DeviceList = result });
             }catch(Exception ex)
@@ -379,9 +378,16 @@ namespace Business.Services
             }
         }
 
-        public IResponse<bool> DeleteDevice(DeleteDeviceRequest model)
+        public IResponse<bool> DeleteDevice(int id)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var result = UnitOfWork.DeviceRepository.DeleteDevice(id);
+                return Ok(result);
+            }catch(Exception ex)
+            {
+                return Fail<bool>(ex.Message);
+            }
         }
     }
 }

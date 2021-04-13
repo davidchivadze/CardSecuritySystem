@@ -63,6 +63,20 @@ namespace Business.Services
         //    }
         //}
 
+        public IResponse<bool> DeleteEmployeePosition(int employeePositionID)
+        {
+            try
+            {
+                var result = UnitOfWork.EmployeePositionRepositoy.DeleteEmployeePosition(employeePositionID);
+
+                return Ok<bool>(result);
+
+            }
+            catch (Exception ex)
+            {
+                return Fail<bool>(ex.Message);
+            }
+        }
         public IResponse<GetEmployeePositionsResponse> GetEmployeePositionsList()
         {
             var result = UnitOfWork.EmployeePositionRepositoy.GetEmployeePositions().Select(m => m.AsViewModel()).ToList();
@@ -196,7 +210,20 @@ namespace Business.Services
                 return Fail<AddDepartmentResponse>(ex.Message);
             }
         }
+        public IResponse<bool> DeleteDevice(int deviceID)
+        {
+            try
+            {
+                var result = UnitOfWork.DeviceRepository.DeleteDevice(deviceID);
 
+                return Ok<bool>(result);
+
+            }
+            catch (Exception ex)
+            {
+                return Fail<bool>(ex.Message);
+            }
+        }
         public IResponse<EditDeparmentResponse> EditDepartment(EditDepartmentRequest model)
         {
             var result = UnitOfWork.DepartmentsRepository.EditDepartment(model.AsDatabaseModel());
@@ -356,6 +383,18 @@ namespace Business.Services
                 return Fail<AddBranchResponse>(ex.Message);
             }
         }
+        public IResponse<bool> DeleteBranch(int branchID)
+        {
+            try {
+                var result = UnitOfWork.BranchRepository.DeleteBranch(branchID);
+
+                    return Ok<bool>(result);
+                
+        }catch(Exception ex)
+            {
+                return Fail<bool>(ex.Message);
+            }
+                    }
 
         public IResponse<EditBranchResponse> EditBranch(EditBranchRequest model)
         {
@@ -367,6 +406,17 @@ namespace Business.Services
             else
             {
                 return Fail<EditBranchResponse>("ფილიალის რედაქტირება ვერ მოხერხდა");
+            }
+        }
+
+        public IResponse<bool> DeleteDepartment(int departmentID)
+        {
+            try { 
+            var result = UnitOfWork.DepartmentsRepository.DeleteDepartment(departmentID);
+                return Ok(result);
+            }catch(Exception ex)
+            {
+                return Fail<bool>(ex.Message);
             }
         }
     }

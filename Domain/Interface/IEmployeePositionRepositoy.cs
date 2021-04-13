@@ -12,5 +12,6 @@ namespace Domain.Interface
         IEnumerable<EmployeePosition> GetEmployeePositions();
         EmployeePosition AddEmployeePosition(EmployeePosition model);
         EmployeePosition EditEmployeePosition(EmployeePosition model);
+        bool DeleteEmployeePosition(int employeePositionID);
     }
 }

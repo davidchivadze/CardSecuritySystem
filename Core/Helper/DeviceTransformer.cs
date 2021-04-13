@@ -30,18 +30,18 @@ namespace Core.Helper
 
             };
         }
-        public static Device AsViewModel(this DeleteDeviceRequest model)
-        {
-            return new Device()
-            {
-                ID=model.ID,
-                CreateDate = DateTime.Now,
-                IPAddress = model.IPAddress,
-                IsActive = true,
-                LastSyncDate = DateTime.Now
+        //public static Device AsViewModel(this DeleteDeviceRequest model)
+        //{
+        //    return new Device()
+        //    {
+        //        ID=model.ID,
+        //        CreateDate = DateTime.Now,
+        //        IPAddress = model.IPAddress,
+        //        IsActive = true,
+        //        LastSyncDate = DateTime.Now
 
-            };
-        }
+        //    };
+        //}
         public static DeviceUserLog AsDatabaseModel(this Models.DeviceResponseModels.DeviceUserLog model)
         {
             return new DeviceUserLog()
