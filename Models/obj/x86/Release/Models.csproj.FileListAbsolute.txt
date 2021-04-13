@@ -1,0 +1,5 @@
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Models\bin\x86\Release\Models.dll
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Models\bin\x86\Release\Models.pdb
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Models\obj\x86\Release\Models.csproj.CoreCompileInputs.cache
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Models\obj\x86\Release\Models.dll
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Models\obj\x86\Release\Models.pdb

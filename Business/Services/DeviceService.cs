@@ -250,7 +250,7 @@ namespace Business.Services
                     {
                         var deviceList = UnitOfWork.DeviceRepository.GetDevices().Where(m => m.IsActive).ToList();
                         foreach(var device in deviceList) {
-                            if (this.SetStrCardNumber(device.IPAddress, int.Parse(device.Port), true, userFromDb.ID.ToString() + userFromDb.ID.ToString(), userFromDb.PersonalNumber, this.RandomDigits(6), 3, userFromDb.DeviceCardID)) {
+                            if (this.SetStrCardNumber(device.IPAddress, int.Parse(device.Port), true, userFromDb.ID.ToString() + userFromDb.ID.ToString(), userFromDb.PersonalNumber, this.RandomDigits(6), 1, userFromDb.DeviceCardID)) {
                                 UnitOfWork.EmployeeRepository.UpdateEmployeeSyncData(int.Parse(userFromDb.ID.ToString() + userFromDb.ID.ToString()), userFromDb.ID);
                             };
 
