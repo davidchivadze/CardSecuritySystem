@@ -49,7 +49,8 @@ namespace Core.Helper
             return new GetEmployeePositionsListItem()
             {
                 ID = model.ID,
-                Description = model.Description
+                Description = model.Description,
+                
             };
         }
         public static GetCountryListItem AsViewModel(this Country model)

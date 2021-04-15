@@ -1,5 +1,6 @@
 ﻿using Models;
 using Models.EntityModels;
+using Models.ViewModels;
 using Models.ViewModels.Employee;
 using Models.ViewModels.Parameters;
 using System;
@@ -13,7 +14,7 @@ namespace Core.Helper
 {
     public static class EmployeeTransformer
     {
-        public static GetEmployeeHolidayListItem AsViewModel(this EmployeeHolidays model)
+        public static GetEmployeeHolidayListItem AsViewModel(this Models.EntityModels.EmployeeHolidays model)
         {
             return new GetEmployeeHolidayListItem
             {
@@ -60,9 +61,9 @@ namespace Core.Helper
                 //MobileNumbers = model.EmployeeMobileNumbers?.Select(m => m.PhoneNumber.ToString()).ToArray()
             };
         }
-        public static EmployeeHolidays AsDatabaseModel(this Models.ViewModels.EmployeeHolidays model)
+        public static Models.EntityModels.EmployeeHolidays AsDatabaseModel(this Models.ViewModels.EmployeeHolidays model)
         {
-            return new EmployeeHolidays()
+            return new Models.EntityModels.EmployeeHolidays()
             {
                 AllWritten = model.AllWritten,
                 DeactivateDate = model.DeactivateDate,
@@ -75,6 +76,94 @@ namespace Core.Helper
 
             };
         }
+
+        public static Employee AsDatabaseModel(this EditEmployeeRequestModel model)
+        {
+            return new Employee()
+            {
+                ID=model.ID,
+                Address = model.Address,
+                Address_ka = model.Address_ka ?? model.Address,
+                Address_ru = model.Address_ru ?? model.Address,
+                DateOfBirth = model.DateOfBirth,
+                Email = model.Email,
+                FirsName = model.FirsName,
+                FirsName_ka = model.FirsName_ka ?? model.FirsName,
+                FirsName_ru = model.FirsName_ru ?? model.FirsName,
+                IsActive = true,
+                LastName = model.LastName,
+                LastName_ka = model.LastName_ka ?? model.LastName,
+                LastName_ru = model.LastName_ru ?? model.LastName,
+                GenderID = model.GenderID,
+                DeviceCardID = model.DeviceCardID,
+                PersonalNumber = model.PersonalNumber,
+                ScheduleID=model.Schedule.ID,
+
+                 //EmployeeMobileNumbers=model.MobileNumbers.FirstOrDefault()
+                 
+                
+
+                EmployeeDetails = new EmployeeDetails()
+                {
+                    BranchID = model.BranchID,
+                    DepartmentID = model.DepartmentID,
+                    EmployeePositionID = model.EmployeePositionID,
+                    Salary = model.Salary.AsDatabaseModel(),
+                    Forgiveness = model.Forgiveness.AsDatabaseModel(),
+                    Fine = model.Fine.AsDatabaseModel()
+                },
+                // EmployeeMobileNumbers = model.MobileNumbers.Select(m => new EmployeeMobileNumbers() { PhoneNumber = m, IsActive = true }).ToList(),
+                Schedule = model.Schedule?.AsDatabaseModel(),
+                EmployeeHolidays = model.EmployeeHolidays.Select(m => m.AsDatabaseModel()).ToList()
+
+
+            };
+
+        }
+        public static Models.EntityModels.Salary AsDatabaseModel(this EditSalary model)
+        {
+            return new Models.EntityModels.Salary()
+            {
+                Amount = model.Amount,
+                CurrencyID = model.CurrencyID == 0 ? 1 : model.CurrencyID,
+                IsHourly = model.IsHourly,
+                SalaryTypeID = model.SalaryTypeID
+            };
+        }
+        public static Models.EntityModels.Schedule AsDatabaseModel(this Models.ViewModels.Employee.Schedule model)
+        {
+            return new Models.EntityModels.Schedule()
+            {
+                DaylyHouresAmount = model.DaylyHouresAmount,
+                EndTime = model.EndTime,
+                NotStandartSchedule = model.NotStandartSchedule,
+                OnWorkingDaysOnly = model.OnWorkingDaysOnly,
+                OnWorkingHouresOnly = model.OnWorkingHouresOnly,
+                ScheduleTypeID = model.ScheduleTypeID,
+                StartTime = model.StartTime,
+                WeekHouresAmount = model.WeekHouresAmount
+            };
+        }
+        public static Models.EntityModels.Forgiveness AsDatabaseModel(this EditForgiveness model)
+        {
+            return new Models.EntityModels.Forgiveness()
+            {
+                Amount = model.Amount,
+                ForgivenessTypeID = model.ForgivenessTypeID
+
+            };
+        }
+        public static Models.EntityModels.Fine AsDatabaseModel(this EditFine model)
+        {
+            return new Models.EntityModels.Fine()
+            {
+                Amount = model.Amount,
+                FineTypeID = model.FineTypeID,
+                CurrencyID = model.CurrencyID == 0 ? 1 : model.CurrencyID
+
+            };
+        }
+
 
     }
 }

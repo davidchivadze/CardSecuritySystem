@@ -86,6 +86,7 @@
     <Compile Include="ViewModels\CountryViewModel.cs" />
     <Compile Include="ViewModels\CurrencyViewModel.cs" />
     <Compile Include="ViewModels\DepartmentsViewModel.cs" />
+    <Compile Include="ViewModels\Employee\EditEmployee.cs" />
     <Compile Include="ViewModels\Employee\EmployeeDetailsViewModel.cs" />
     <Compile Include="ViewModels\Employee\EmployeePositionViewModel.cs" />
     <Compile Include="ViewModels\Employee\GetEmployeeHolidayList.cs" />

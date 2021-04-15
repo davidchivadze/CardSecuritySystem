@@ -13,6 +13,7 @@ namespace Business.Interface
     {
         IResponse<List<GetEmployeeListItem>> GetFilteredEmployees();
         IResponse<AddEmployeeResposeModel> AddEmployee(AddEmployeeRequestModel request);
+        IResponse<EditEmployeeResposeModel> EditEmployee(EditEmployeeRequestModel request);
         IResponse<GetEmployeeHolidayListResponse> GetEmployeeHolidayList(GetEmployeeHolidayListRequest model);
         IResponse<GetEmployeeListResponse> GetEmployeeList();
         IResponse<bool> DeleteEmployee(int employeeID);

@@ -139,3 +139,7 @@ C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.RemoteDeviceSyncLogAdd.resources
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.relationChange.resources
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.relationChange1.resources
+D:\Card\Domain\obj\Debug\Domain.Migrations.AddIsActiveEmployeePosition.resources
+D:\Card\Domain\obj\Debug\Domain.Migrations.RemoteDeviceSyncLogAdd.resources
+D:\Card\Domain\obj\Debug\Domain.Migrations.relationChange.resources
+D:\Card\Domain\obj\Debug\Domain.Migrations.relationChange1.resources

@@ -29,6 +29,10 @@ namespace RestAPI.Controllers
         {
             return _employeeService.AddEmployee(request);
         }
+        public IResponse<EditEmployeeResposeModel> EditEmployee(EditEmployeeRequestModel request)
+        {
+            return _employeeService.EditEmployee(request);
+        }
         [HttpGet]
         public IResponse<bool> DeleteEmployee(int employeeID)
         {

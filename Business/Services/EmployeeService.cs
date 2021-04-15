@@ -66,5 +66,18 @@ namespace Business.Services
                 return Fail<bool>(ex.Message);
             }
         }
+
+        public IResponse<EditEmployeeResposeModel> EditEmployee(EditEmployeeRequestModel request)
+        {
+            try
+            {
+                var result = UnitOfWork.EmployeeRepository.EditEmployee(request.AsDatabaseModel());
+                return Ok(new EditEmployeeResposeModel() { });
+            }
+            catch (Exception ex)
+            {
+                return Fail<EditEmployeeResposeModel>(ex.Message + " დეერხა " + ex.InnerException.Message);
+            }
+        }
     }
 }
