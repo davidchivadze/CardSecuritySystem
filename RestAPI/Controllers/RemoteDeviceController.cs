@@ -8,11 +8,13 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Mvc;
 using zkemkeeper;
 
 namespace RestAPI.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class RemoteDeviceController : ApiController
     {
         private IDeviceService _deviceService;
@@ -41,9 +43,13 @@ namespace RestAPI.Controllers
         {
             return _deviceService.GetDeviceList();
         }
-        public async Task<IResponse<bool>> SyncUserLog()
+        public async Task SyncUserLog()
         {
-            return  await _deviceService.SyncUserLog();
+             _deviceService.SyncUserLog();
+        }
+        public IResponse<bool> SyncIsRunning()
+        {
+            return _deviceService.SyncIsRunning();
         }
         public IResponse<bool> ClearDeviceData()
         {

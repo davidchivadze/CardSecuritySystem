@@ -22,7 +22,7 @@ namespace Core.Helper
                 IPAddress = model.IPAddress,
                 IsActive = true,
                 Name = model.Name,
-                NumberDevices = model.NumberDevices,
+                NumberDevices = model.NumberDevices==0?1:model.NumberDevices,
                 Password = model.Password,
                 Port = model.Port,
                 UserName = model.UserName,
@@ -93,7 +93,7 @@ namespace Core.Helper
                 RecordTime = DateTime.Parse(model.RecordTime),
                 UserIDInDevice = model.UserIDInDevice,
                 VerifyMode = model.VerifyMode,
-                IsActive=model.IsActive
+            
             };
         }
     }

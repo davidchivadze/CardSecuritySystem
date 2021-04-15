@@ -8,9 +8,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace RestAPI.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class EmployeeController : ApiController
     {
         private IEmployeeService _employeeService;
@@ -27,6 +29,7 @@ namespace RestAPI.Controllers
         {
             return _employeeService.AddEmployee(request);
         }
+        [HttpGet]
         public IResponse<bool> DeleteEmployee(int employeeID)
         {
             return _employeeService.DeleteEmployee(employeeID);

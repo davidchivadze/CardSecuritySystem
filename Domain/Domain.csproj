@@ -78,6 +78,7 @@
     <Compile Include="Interface\IForgivenessTypeRepository.cs" />
     <Compile Include="Interface\IGenderRepository.cs" />
     <Compile Include="Interface\IHolidayTypesRepository.cs" />
+    <Compile Include="Interface\IRemoteDeviceSyncLogRepository.cs" />
     <Compile Include="Interface\ISalaryRepository.cs" />
     <Compile Include="Interface\ISalaryTypeRepository.cs" />
     <Compile Include="Interface\IUnitOfWork.cs" />
@@ -137,6 +138,18 @@
     <Compile Include="Migrations\202104131745448_AddIsActiveEmployeePosition.designer.cs">
       <DependentUpon>202104131745448_AddIsActiveEmployeePosition.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104131936041_RemoteDeviceSyncLogAdd.cs" />
+    <Compile Include="Migrations\202104131936041_RemoteDeviceSyncLogAdd.designer.cs">
+      <DependentUpon>202104131936041_RemoteDeviceSyncLogAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104132048186_relationChange.cs" />
+    <Compile Include="Migrations\202104132048186_relationChange.designer.cs">
+      <DependentUpon>202104132048186_relationChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104132103011_relationChange1.cs" />
+    <Compile Include="Migrations\202104132103011_relationChange1.designer.cs">
+      <DependentUpon>202104132103011_relationChange1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\BaseRepository.cs" />
@@ -163,6 +176,7 @@
     <Compile Include="Repository\ForgivenessTypeRepository.cs" />
     <Compile Include="Repository\GenderRepository.cs" />
     <Compile Include="Repository\HolidayTypesRepository.cs" />
+    <Compile Include="Repository\RemoteDeviceSyncLogRepository.cs" />
     <Compile Include="Repository\SalaryRepository.cs" />
     <Compile Include="Repository\SalaryTypeRepository.cs" />
     <Compile Include="Repository\UnitOfWork.cs" />
@@ -226,6 +240,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104131745448_AddIsActiveEmployeePosition.resx">
       <DependentUpon>202104131745448_AddIsActiveEmployeePosition.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104131936041_RemoteDeviceSyncLogAdd.resx">
+      <DependentUpon>202104131936041_RemoteDeviceSyncLogAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104132048186_relationChange.resx">
+      <DependentUpon>202104132048186_relationChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104132103011_relationChange1.resx">
+      <DependentUpon>202104132103011_relationChange1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

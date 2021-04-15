@@ -19,5 +19,6 @@ namespace Business.Interface
         Task<IResponse<bool>> UpdateUserListFromDevice();
         IResponse<bool> InsertUserToDevice(int UserID);
         IResponse<bool> ClearDeviceData();
+        IResponse<bool> SyncIsRunning();
     }
 }

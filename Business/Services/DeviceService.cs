@@ -116,7 +116,7 @@ namespace Business.Services
                     throw new Exception("ვერ მოხერხდა მონაცემების ბაზაში ასახვა");
                 }
             }
-            return Fail<bool>("deendzra");
+            return Fail<bool>("ჩანაწერები ვერ მოიძებნა");
         }
         
         public async Task<IResponse<bool>> UpdateUserListFromDevice()
@@ -158,7 +158,7 @@ namespace Business.Services
 
         private ICollection<DeviceUserLog> GetUserLogList()
         {
-            var Devices = UnitOfWork.DeviceRepository.GetAll().Where(m => m.IsActive == true).FirstOrDefault();
+            var Devices = UnitOfWork.DeviceRepository.GetAll().Where(m => m.IsActive == true);
             string dwEnrollNumber1 = "";
             int dwVerifyMode = 0;
             int dwInOutMode = 0;
@@ -169,10 +169,19 @@ namespace Business.Services
             int dwMinute = 0;
             int dwSecond = 0;
             int dwWorkCode = 0;
-
             ICollection<DeviceUserLog> lstEnrollData = new List<DeviceUserLog>();
-            _deviceClient.Connect_Net(Devices.IPAddress, int.Parse(Devices.Port));
-            for (var i=1;i<=Devices.NumberDevices;i++) {
+            var log = new Models.EntityModels.RemoteDeviceSyncLog()
+            {
+                
+                StartTime = DateTime.Now,
+                IsRuning = true,
+            };
+            log=UnitOfWork.RemoteDeviceSyncLogRepository.AddRemoteDeviceSyncLog(log);
+            foreach (var device in Devices) {
+
+                try { 
+            _deviceClient.Connect_Net(device.IPAddress, int.Parse(device.Port));
+            for (var i=1;i<= device.NumberDevices;i++) {
               
             _deviceClient.ReadAllGLogData(i);
 
@@ -191,9 +200,14 @@ namespace Business.Services
 
                 lstEnrollData.Add(objInfo);
             }
-                _deviceClient.ClearGLog(i);
+                //_deviceClient.ClearGLog(i);
             }
-            
+                }catch(Exception ex)
+                {
+                    UnitOfWork.RemoteDeviceSyncLogRepository.RemoteDeviceSyncLogFinish(device.ID,log.ID, ex.Message);
+                }
+            }
+            UnitOfWork.RemoteDeviceSyncLogRepository.RemoteDeviceSyncLogFinish(null,log.ID);
             return lstEnrollData;
         }
 
@@ -367,7 +381,7 @@ namespace Business.Services
         {
             try
             {
-                var result = UnitOfWork.DeviceUserLogRepository.GetDeviceUserLogs()?.Where(m=>m.IsActive==true).Select(m => m.AsViewModel()).ToList();
+                var result = UnitOfWork.DeviceUserLogRepository.GetDeviceUserLogs()?.Select(m => m.AsViewModel()).ToList();
                 return Ok(new GetDeviceUserLogResponse()
                 {
                     DeviceUserLogList = result
@@ -387,6 +401,17 @@ namespace Business.Services
             }catch(Exception ex)
             {
                 return Fail<bool>(ex.Message);
+            }
+        }
+
+        public IResponse<bool> SyncIsRunning()
+        {
+            try { 
+            var result = UnitOfWork.RemoteDeviceSyncLogRepository.SyncIsRunnig();
+            return Ok(result);
+            }catch(Exception x)
+            {
+                return Ok(false);
             }
         }
     }

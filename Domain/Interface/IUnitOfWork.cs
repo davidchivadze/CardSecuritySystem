@@ -30,6 +30,7 @@ namespace Domain.Interface
         IEmpoyeeDetaisRepository EmpoyeeDetaisRepository { get; }
         IGenderRepository GenderRepository { get; }
         IDeviceTypeRepository DeviceTypeRepository { get; }
+        IRemoteDeviceSyncLogRepository RemoteDeviceSyncLogRepository { get; }
         IDeviceRepository DeviceRepository { get; }
         IDeviceLocationInBranchRepository DeviceLocationInBranchRepository { get; }
         IDeviceUserLogRepository DeviceUserLogRepository { get; }

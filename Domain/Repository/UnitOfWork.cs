@@ -37,7 +37,7 @@ namespace Domain.Repository
         private IDeviceTypeRepository _deviceTypeRepository;
 
         private IDeviceRepository _deviceRepository;
-
+        private IRemoteDeviceSyncLogRepository _remoteDeviceSyncLogRepository;
         private IDeviceLocationInBranchRepository _deviceLocationInBranchRepository;
         private IDeviceUserLogRepository _deviceUserLogRepository;
         private IDeviceRegistratedUsersRepository _deviceRegistratedUsersRepository;
@@ -70,6 +70,10 @@ namespace Domain.Repository
         public IDeviceTypeRepository DeviceTypeRepository
         {
             get { return _deviceTypeRepository = _deviceTypeRepository ?? new DeviceTypeRepository(_database); }
+        }
+        public IRemoteDeviceSyncLogRepository RemoteDeviceSyncLogRepository
+        {
+            get { return _remoteDeviceSyncLogRepository = _remoteDeviceSyncLogRepository ?? new RemoteDeviceSyncLogRepository(_database); }
         }
         public IDeviceLocationInBranchRepository DeviceLocationInBranchRepository
         {

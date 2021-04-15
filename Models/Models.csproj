@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntityModels\RemoteDeviceSyncLog.cs" />
     <Compile Include="LinqJoinDatabaseModels\DeviceAndDbUsersJoin.cs" />
     <Compile Include="ViewModels\Device\DeleteDevice.cs" />
     <Compile Include="ViewModels\Device\DeviceUserLog.cs" />

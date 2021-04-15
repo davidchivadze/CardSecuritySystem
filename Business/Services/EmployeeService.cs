@@ -29,7 +29,7 @@ namespace Business.Services
             }
             catch (Exception ex)
             {
-                return Fail<AddEmployeeResposeModel>(ex.Message);
+                return Fail<AddEmployeeResposeModel>(ex.Message + " Inner Exception:"+ex.InnerException.Message);
             }
         }
 

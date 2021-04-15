@@ -8,9 +8,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace RestAPI.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class ParametersController : ApiController
     {
         private IParametersService _parametersService;
@@ -45,18 +47,22 @@ namespace RestAPI.Controllers
         {
             return _parametersService.GetBranchForEdit(id);
         }
+        [HttpGet]
         public IResponse<bool> DeleteBranch(int branchID)
         {
             return _parametersService.DeleteBranch(branchID);
         }
+        [HttpGet]
         public IResponse<bool> DeleteDepartment(int departmentID)
         {
             return _parametersService.DeleteDepartment(departmentID);
         }
+        [HttpGet]
         public IResponse<bool> DeleteDevice(int DeviceID)
         {
             return _parametersService.DeleteDevice(DeviceID);
         }
+        [HttpGet]
         public IResponse<bool> DeleteEmployeePosition(int employeePositionID)
         {
             return _parametersService.DeleteEmployeePosition(employeePositionID);

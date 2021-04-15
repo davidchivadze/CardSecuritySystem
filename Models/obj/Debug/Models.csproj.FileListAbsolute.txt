@@ -45,3 +45,4 @@ C:\Users\datoc\Source\Repos\CardSecuritySystem3\Models\obj\Debug\Models.csprojAs
 C:\Users\datoc\Source\Repos\CardSecuritySystem3\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
 C:\Users\datoc\Source\Repos\CardSecuritySystem3\Models\obj\Debug\Models.dll
 C:\Users\datoc\Source\Repos\CardSecuritySystem3\Models\obj\Debug\Models.pdb
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Models\obj\Debug\Models.csprojAssemblyReference.cache
