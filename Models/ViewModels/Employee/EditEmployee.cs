@@ -56,14 +56,13 @@ namespace Models.ViewModels.Employee
     }
     public class EditForgiveness
     {
-        public int ID { get; set; }
         public int ForgivenessTypeID { get; set; }
         public int Amount { get; set; }
 
     }
     public class EditEmployeeHolidays
     {
-        public int ID { get; set; }
+
         public int HolidayTypeID { get; set; }
         public int AllWritten { get; set; }
         public int Left { get; set; }
@@ -75,14 +74,14 @@ namespace Models.ViewModels.Employee
     }
     public class EditFine
     {
-        public int ID { get; set; }
+
         public int FineTypeID { get; set; }
         public Decimal Amount { get; set; }
         public int CurrencyID { get; set; }
     }
     public class EditSalary
     {
-        public int ID { get; set; }
+
         public decimal Amount { get; set; }
         public int CurrencyID { get; set; }
         public bool IsHourly { get; set; }
