@@ -63,6 +63,30 @@ namespace Business.Services
                 return Fail<bool>(ex.Message);
             }
         }
+        public IResponse<bool> EditDevice(AddDeviceRequest model)
+        {
+            try
+            {
+                var pingDevice = PingTheDevice(model.IPAddress);
+                if (!pingDevice)
+                {
+                    throw new Exception("მოწყობილობა მისამართზე '" + model.IPAddress + "' ვერ მოიძებნა");
+                }
+                var result = UnitOfWork.DeviceRepository.EditDevice(model.AsDatabaseModel());
+                if (result != null)
+                {
+                    return Ok(true);
+                }
+                else
+                {
+                    return Fail<bool>("მოწყობილობის რედაქტირება ვერ მოხერხდა");
+                }
+            }
+            catch (Exception ex)
+            {
+                return Fail<bool>(ex.Message);
+            }
+        }
         public IResponse<GetDeviceListResponse> GetDeviceList()
         {
             try {
@@ -104,6 +128,7 @@ namespace Business.Services
 
         public async Task<IResponse<bool>> SyncUserLog()
         {
+            this.UpdateUserListFromDevice();
             var machineList = this.GetUserLogList();
             if (machineList != null && machineList.Count > 0)
             {
@@ -121,10 +146,13 @@ namespace Business.Services
         
         public async Task<IResponse<bool>> UpdateUserListFromDevice()
         {
-            try { 
+            try {
+       
             var userListInDevice = GetUsersListFromDevice();
+
             if (userListInDevice != null && userListInDevice.Count > 0)
             {
+                
                 var result = UnitOfWork.DeviceRegistratedUsersRepository.AddDeviceRegistratedUsersList(userListInDevice.Select(m => m.AsDatabaseModel()).ToList());
                 if (result)
                 {
@@ -214,44 +242,51 @@ namespace Business.Services
         
         private ICollection<UserInfo> GetUsersListFromDevice()
         {
-            var Devices = UnitOfWork.DeviceRepository.GetAll().Where(m => m.IsActive == true).FirstOrDefault();
-
-            string sdwEnrollNumber = string.Empty, sName = string.Empty, sPassword = string.Empty, sTmpData = string.Empty;
-            int iPrivilege = 0, iTmpLength = 0, iFlag = 0, idwFingerIndex;
-            bool bEnabled = false;
-
-            ICollection<UserInfo> lstFPTemplates = new List<UserInfo>();
-
-            // objZkeeper.ReadAllUserID(machineNumber);
-            //objZkeeper.ReadAllTemplate(machineNumber);
-            _deviceClient.Connect_Net(Devices.IPAddress, int.Parse(Devices.Port));
-            for (var i = 1; i <= Devices.NumberDevices; i++)
+            try
             {
-                while (_deviceClient.SSR_GetAllUserInfo(i, out sdwEnrollNumber, out sName, out sPassword, out iPrivilege, out bEnabled))
-                {
-                    UserInfo fpInfo = new UserInfo();
-                    fpInfo.FingerIndex = 0;
-                    for (idwFingerIndex = 0; idwFingerIndex < 10; idwFingerIndex++)
-                    {
-                        if (_deviceClient.GetUserTmpExStr(i, sdwEnrollNumber, idwFingerIndex, out iFlag, out sTmpData, out iTmpLength))
-                        {
-                            fpInfo = new UserInfo();
-                            fpInfo.MachineNumber = i;
-                            fpInfo.EnrollNumber = sdwEnrollNumber;
-                            fpInfo.Name = sName;
-                            fpInfo.FingerIndex += 1; //idwFingerIndex;
-                            fpInfo.TmpData = sTmpData;
-                            fpInfo.Privelage = iPrivilege;
-                            fpInfo.Password = sPassword;
-                            fpInfo.Enabled = bEnabled;
-                            fpInfo.iFlag = iFlag.ToString();
-                        }
-                    }
-                    lstFPTemplates.Add(fpInfo);
+                var Devices = UnitOfWork.DeviceRepository.GetAll().Where(m => m.IsActive == true).FirstOrDefault();
 
+                string sdwEnrollNumber = string.Empty, sName = string.Empty, sPassword = string.Empty, sTmpData = string.Empty;
+                int iPrivilege = 0, iTmpLength = 0, iFlag = 0, idwFingerIndex;
+                bool bEnabled = false;
+
+                ICollection<UserInfo> lstFPTemplates = new List<UserInfo>();
+
+                // objZkeeper.ReadAllUserID(machineNumber);
+                //objZkeeper.ReadAllTemplate(machineNumber);
+                _deviceClient.Connect_Net(Devices.IPAddress, int.Parse(Devices.Port));
+                for (var i = 1; i <= Devices.NumberDevices; i++)
+                {
+                    while (_deviceClient.SSR_GetAllUserInfo(i, out sdwEnrollNumber, out sName, out sPassword, out iPrivilege, out bEnabled))
+                    {
+                        UserInfo fpInfo = new UserInfo();
+                        fpInfo.FingerIndex = 0;
+                        for (idwFingerIndex = 0; idwFingerIndex < 10; idwFingerIndex++)
+                        {
+                            if (_deviceClient.GetUserTmpExStr(i, sdwEnrollNumber, idwFingerIndex, out iFlag, out sTmpData, out iTmpLength))
+                            {
+                                fpInfo = new UserInfo();
+                                fpInfo.MachineNumber = i;
+                                fpInfo.EnrollNumber = sdwEnrollNumber;
+                                fpInfo.Name = sName;
+                                fpInfo.FingerIndex += 1; //idwFingerIndex;
+                                fpInfo.TmpData = sTmpData;
+                                fpInfo.Privelage = iPrivilege;
+                                fpInfo.Password = sPassword;
+                                fpInfo.Enabled = bEnabled;
+                                fpInfo.iFlag = iFlag.ToString();
+                            }
+                        }
+                        lstFPTemplates.Add(fpInfo);
+
+                    }
                 }
-            }
                 return lstFPTemplates;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message + "ბაზამდე გაასხა");
+            }
         }
         private bool InsertUserInDevice(int userID)
         {
@@ -412,6 +447,32 @@ namespace Business.Services
             }catch(Exception x)
             {
                 return Ok(false);
+            }
+        }
+
+        public IResponse<AddDeviceRequest> GetDeviceForEdit(int deviceID)
+        {
+            try
+            {
+                var result = UnitOfWork.DeviceRepository.GetDevices().Where(m => m.ID == deviceID).FirstOrDefault();
+                return Ok(result.AsViewModelEdit());
+            }catch(Exception ex)
+            {
+                return Fail<AddDeviceRequest>(ex.Message);
+            }
+        }
+
+        public IResponse<DeviceUserListResponse> GetDeviceUserList(DeviceUserListRequest request)
+        {
+            try
+            {
+                var result = UnitOfWork.DeviceRepository.GetDeviceRegistratedUsers();
+                return Ok(new DeviceUserListResponse() {
+                    deviceUserListItems = result.Select(m => m.AsViewModel()).ToList()
+                });
+            }catch(Exception ex)
+            {
+                return Fail<DeviceUserListResponse>(ex.Message);
             }
         }
     }

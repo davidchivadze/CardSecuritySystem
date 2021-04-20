@@ -15,6 +15,8 @@ namespace Core.Helper
         {
             return new Employee()
             {
+                Avatar=model.AvatarImage,
+                UserIDInDevice=model.UserIdInDevice,
                 Address = model.Address,
                 Address_ka = model.Address_ka?? model.Address,
                 Address_ru = model.Address_ru ?? model.Address,
@@ -78,6 +80,7 @@ namespace Core.Helper
         {
             return new Salary()
             {
+                ID=model.ID.HasValue?model.ID.Value:0,
                 Amount = model.Amount,
                 CurrencyID = model.CurrencyID==0?1:model.CurrencyID,
                 IsHourly = model.IsHourly,
@@ -88,8 +91,12 @@ namespace Core.Helper
         {
             return new Schedule()
             {
+                ID=model.ID.HasValue?model.ID.Value:0,
                 DaylyHouresAmount = model.DaylyHouresAmount,
                 EndTime = model.EndTime,
+                MinCheckInTime=model.MinCheckInTime,
+                MaxCheckOutTime=model.MaxCheckOutTime,
+                BreakAmount=model.BreakAmount,
                 NotStandartSchedule = model.NotStandartSchedule,
                 OnWorkingDaysOnly = model.OnWorkingDaysOnly,
                 OnWorkingHouresOnly = model.OnWorkingHouresOnly,
@@ -101,6 +108,7 @@ namespace Core.Helper
         public static Models.EntityModels.Forgiveness AsDatabaseModel(this Models.ViewModels.Forgiveness model) {
             return new Models.EntityModels.Forgiveness()
             {
+                ID=model.ID.HasValue?model.ID.Value:0,
                 Amount = model.Amount,
                 ForgivenessTypeID = model.ForgivenessTypeID
 
@@ -110,6 +118,7 @@ namespace Core.Helper
         {
             return new Models.EntityModels.Fine()
             {
+                ID=model.ID.HasValue?model.ID.Value:0,
                 Amount = model.Amount,
                 FineTypeID = model.FineTypeID,
                  CurrencyID=model.CurrencyID==0?1:model.CurrencyID

@@ -77,25 +77,25 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>12/04/2020 03:02:22</publishTime>
     </File>
     <File Include="bin/Business.dll">
-      <publishTime>04/14/2021 12:31:44</publishTime>
+      <publishTime>04/19/2021 14:33:50</publishTime>
     </File>
     <File Include="bin/Business.pdb">
-      <publishTime>04/14/2021 12:31:44</publishTime>
+      <publishTime>04/19/2021 14:33:50</publishTime>
     </File>
     <File Include="bin/Core.dll">
-      <publishTime>04/14/2021 12:31:43</publishTime>
+      <publishTime>04/19/2021 14:33:45</publishTime>
     </File>
     <File Include="bin/Core.pdb">
-      <publishTime>04/14/2021 12:31:43</publishTime>
+      <publishTime>04/19/2021 14:33:45</publishTime>
     </File>
     <File Include="bin/Domain.dll">
-      <publishTime>04/14/2021 12:31:43</publishTime>
+      <publishTime>04/19/2021 14:33:47</publishTime>
     </File>
     <File Include="bin/Domain.dll.config">
       <publishTime>04/10/2021 22:37:46</publishTime>
     </File>
     <File Include="bin/Domain.pdb">
-      <publishTime>04/14/2021 12:31:43</publishTime>
+      <publishTime>04/19/2021 14:33:47</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
       <publishTime>12/04/2020 03:02:23</publishTime>
@@ -106,26 +106,29 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
     <File Include="bin/FluentValidation.dll">
       <publishTime>12/04/2020 03:02:23</publishTime>
     </File>
+    <File Include="bin/jose-jwt.dll">
+      <publishTime>04/12/2021 10:11:04</publishTime>
+    </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>12/04/2020 03:02:23</publishTime>
     </File>
     <File Include="bin/Microsoft.IdentityModel.JsonWebTokens.dll">
-      <publishTime>03/30/2021 19:41:06</publishTime>
+      <publishTime>04/15/2021 15:32:00</publishTime>
     </File>
     <File Include="bin/Microsoft.IdentityModel.Logging.dll">
-      <publishTime>03/30/2021 19:43:00</publishTime>
+      <publishTime>04/15/2021 15:32:50</publishTime>
     </File>
     <File Include="bin/Microsoft.IdentityModel.Tokens.dll">
-      <publishTime>03/30/2021 19:52:42</publishTime>
+      <publishTime>04/15/2021 15:39:58</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
       <publishTime>12/04/2020 03:02:30</publishTime>
     </File>
     <File Include="bin/Models.dll">
-      <publishTime>04/14/2021 11:24:07</publishTime>
+      <publishTime>04/19/2021 14:13:46</publishTime>
     </File>
     <File Include="bin/Models.pdb">
-      <publishTime>04/14/2021 11:24:07</publishTime>
+      <publishTime>04/19/2021 14:13:46</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
       <publishTime>12/04/2020 03:02:30</publishTime>
@@ -149,10 +152,10 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>12/04/2020 03:02:30</publishTime>
     </File>
     <File Include="bin/RestAPI.dll">
-      <publishTime>04/14/2021 12:31:45</publishTime>
+      <publishTime>04/19/2021 14:33:50</publishTime>
     </File>
     <File Include="bin/RestAPI.pdb">
-      <publishTime>04/14/2021 12:31:45</publishTime>
+      <publishTime>04/19/2021 14:33:50</publishTime>
     </File>
     <File Include="bin/roslyn/csc.exe">
       <publishTime>12/04/2020 03:02:23</publishTime>
@@ -236,7 +239,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>12/04/2020 03:02:30</publishTime>
     </File>
     <File Include="bin/System.IdentityModel.Tokens.Jwt.dll">
-      <publishTime>03/30/2021 19:39:42</publishTime>
+      <publishTime>04/15/2021 15:25:04</publishTime>
     </File>
     <File Include="bin/System.Net.Http.Formatting.dll">
       <publishTime>12/04/2020 03:02:23</publishTime>
@@ -371,7 +374,7 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
       <publishTime>12/04/2020 03:02:22</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/14/2021 11:24:11</publishTime>
+      <publishTime>04/19/2021 13:23:26</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -28,7 +28,9 @@ namespace Domain.Interface
         IEmployeePositionRepositoy EmployeePositionRepositoy { get; }
         IEmployeeRepository EmployeeRepository { get; }
         IEmpoyeeDetaisRepository EmpoyeeDetaisRepository { get; }
+        IKeygenRepository KeygenRepository { get; }
         IGenderRepository GenderRepository { get; }
+        IUserRepository UserRepository { get; }
         IDeviceTypeRepository DeviceTypeRepository { get; }
         IRemoteDeviceSyncLogRepository RemoteDeviceSyncLogRepository { get; }
         IDeviceRepository DeviceRepository { get; }

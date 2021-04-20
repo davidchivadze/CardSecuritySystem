@@ -78,10 +78,12 @@
     <Compile Include="Interface\IForgivenessTypeRepository.cs" />
     <Compile Include="Interface\IGenderRepository.cs" />
     <Compile Include="Interface\IHolidayTypesRepository.cs" />
+    <Compile Include="Interface\IKeygenRepository.cs" />
     <Compile Include="Interface\IRemoteDeviceSyncLogRepository.cs" />
     <Compile Include="Interface\ISalaryRepository.cs" />
     <Compile Include="Interface\ISalaryTypeRepository.cs" />
     <Compile Include="Interface\IUnitOfWork.cs" />
+    <Compile Include="Interface\IUserRepository.cs" />
     <Compile Include="Migrations\202102242302285_fixMigrationsLoss.cs" />
     <Compile Include="Migrations\202102242302285_fixMigrationsLoss.designer.cs">
       <DependentUpon>202102242302285_fixMigrationsLoss.cs</DependentUpon>
@@ -150,6 +152,26 @@
     <Compile Include="Migrations\202104132103011_relationChange1.designer.cs">
       <DependentUpon>202104132103011_relationChange1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104161927562_AddAvatarImageToEmployee.cs" />
+    <Compile Include="Migrations\202104161927562_AddAvatarImageToEmployee.designer.cs">
+      <DependentUpon>202104161927562_AddAvatarImageToEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104171402555_AddUserToDb.cs" />
+    <Compile Include="Migrations\202104171402555_AddUserToDb.designer.cs">
+      <DependentUpon>202104171402555_AddUserToDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104171834141_addKeygen.cs" />
+    <Compile Include="Migrations\202104171834141_addKeygen.designer.cs">
+      <DependentUpon>202104171834141_addKeygen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104182158038_ChangeEmployeeScheduleData.cs" />
+    <Compile Include="Migrations\202104182158038_ChangeEmployeeScheduleData.designer.cs">
+      <DependentUpon>202104182158038_ChangeEmployeeScheduleData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104191012567_ChangeDeviceRegistratedUsers.cs" />
+    <Compile Include="Migrations\202104191012567_ChangeDeviceRegistratedUsers.designer.cs">
+      <DependentUpon>202104191012567_ChangeDeviceRegistratedUsers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\BaseRepository.cs" />
@@ -176,10 +198,12 @@
     <Compile Include="Repository\ForgivenessTypeRepository.cs" />
     <Compile Include="Repository\GenderRepository.cs" />
     <Compile Include="Repository\HolidayTypesRepository.cs" />
+    <Compile Include="Repository\KeygenRepository.cs" />
     <Compile Include="Repository\RemoteDeviceSyncLogRepository.cs" />
     <Compile Include="Repository\SalaryRepository.cs" />
     <Compile Include="Repository\SalaryTypeRepository.cs" />
     <Compile Include="Repository\UnitOfWork.cs" />
+    <Compile Include="Repository\UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -249,6 +273,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104132103011_relationChange1.resx">
       <DependentUpon>202104132103011_relationChange1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104161927562_AddAvatarImageToEmployee.resx">
+      <DependentUpon>202104161927562_AddAvatarImageToEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104171402555_AddUserToDb.resx">
+      <DependentUpon>202104171402555_AddUserToDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104171834141_addKeygen.resx">
+      <DependentUpon>202104171834141_addKeygen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104182158038_ChangeEmployeeScheduleData.resx">
+      <DependentUpon>202104182158038_ChangeEmployeeScheduleData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104191012567_ChangeDeviceRegistratedUsers.resx">
+      <DependentUpon>202104191012567_ChangeDeviceRegistratedUsers.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

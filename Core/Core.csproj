@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Encryption\HashGenerator.cs" />
     <Compile Include="Helper\DeviceTransformer.cs" />
     <Compile Include="Helper\EmployeeTransformer.cs" />
     <Compile Include="Helper\ParametersTransformer.cs" />

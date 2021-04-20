@@ -310,3 +310,4 @@ D:\Card\RestAPI\obj\Debug\RestAPI.csproj.CoreCompileInputs.cache
 D:\Card\RestAPI\obj\Debug\RestAPI.csproj.CopyComplete
 D:\Card\RestAPI\obj\Debug\RestAPI.dll
 D:\Card\RestAPI\obj\Debug\RestAPI.pdb
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\RestAPI\bin\jose-jwt.dll

@@ -19,7 +19,7 @@ namespace Domain.Repository
             //var trans = _database.Database.BeginTransaction();
             try {
                 //var trans=_database.Database.BeginTransaction();
-            _database.Database.ExecuteSqlCommand(" TRUNCATE TABLE DeviceRegistratedUsers");
+            _database.Database.ExecuteSqlCommand("TRUNCATE TABLE DeviceRegistratedUsers");
                 _database.DeviceRegistratedUsers.AddRange(userList);
                 _database.SaveChanges();
                 //trans.Commit();
@@ -27,7 +27,7 @@ namespace Domain.Repository
             }catch(Exception ex)
             {
                 //trans.Rollback();
-                throw new Exception(ex.Message);
+                throw new Exception(ex.Message+"სიის განახლებისას გაასხა:" +ex.InnerException?.Message);
             }
         }
     }

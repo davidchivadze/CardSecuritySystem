@@ -8,6 +8,7 @@ namespace Models.ViewModels.Device
 {
     public class AddDeviceRequest
     {
+        public int? ID { get; set; }
         public string Name { get; set; }
         public int NumberDevices { get; set; }
         public string IPAddress { get; set; }

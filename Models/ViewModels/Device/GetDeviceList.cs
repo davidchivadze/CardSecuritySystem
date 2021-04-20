@@ -24,5 +24,6 @@ namespace Models.ViewModels.Device
         public string Branch { get; set; }
         public string LocationInBranch { get; set; }
         public int State { get; set; }
+        public string Name { get; set; }
     }
 }

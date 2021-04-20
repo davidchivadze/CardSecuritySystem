@@ -1,5 +1,6 @@
 ﻿namespace Domain.Migrations
 {
+    using Core.Encryption;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -90,6 +91,14 @@
                     ID = 1
                 });
                 context.SaveChanges();
+            }
+            if (context.Users.Count() == 0)
+            {
+                context.Users.Add(new Models.EntityModels.Users()
+                {
+                    UserName = "admin",
+                    Password = HashGenerator.CreateMD5("admin")
+                });
             }
             //  This method will be called after migrating to the latest version.
 

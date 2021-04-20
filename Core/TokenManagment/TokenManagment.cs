@@ -67,8 +67,8 @@ namespace Core.TokenManagment
             {
                 JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
                
-                JwtSecurityToken jwtToken = (JwtSecurityToken)tokenHandler.ReadJwtToken(token);
-                if (jwtToken == null)
+                //JwtSecurityToken jwtToken = (JwtSecurityToken)tokenHandler.ReadJwtToken(token);
+                if (true)
                 {
                     return null;
                 }

@@ -143,3 +143,8 @@ D:\Card\Domain\obj\Debug\Domain.Migrations.AddIsActiveEmployeePosition.resources
 D:\Card\Domain\obj\Debug\Domain.Migrations.RemoteDeviceSyncLogAdd.resources
 D:\Card\Domain\obj\Debug\Domain.Migrations.relationChange.resources
 D:\Card\Domain\obj\Debug\Domain.Migrations.relationChange1.resources
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.AddAvatarImageToEmployee.resources
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.AddUserToDb.resources
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.addKeygen.resources
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.ChangeEmployeeScheduleData.resources
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.ChangeDeviceRegistratedUsers.resources

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestAPI.Authentification;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Headers;
@@ -18,8 +19,12 @@ namespace RestAPI
             origins: "http://localhost:7788",
             headers: "*",
             methods: "*");
-            config.EnableCors(cors);
+           
             config.MapHttpAttributeRoutes();
+            config.Filters.Add(new JwtAuthentication());
+
+            //config.MessageHandlers.Add(new JWT.ValidateTokenHandler());
+            config.EnableCors(cors);
             config.Formatters.JsonFormatter.SupportedMediaTypes
                 .Add(new MediaTypeHeaderValue("text/html"));
             config.Routes.MapHttpRoute(
@@ -27,6 +32,8 @@ namespace RestAPI
                 routeTemplate: "api/{controller}/{action}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("application/octet-stream"));
         }
     }
 }

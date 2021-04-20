@@ -10,5 +10,9 @@ namespace Business.Interface
     public interface IAuthService
     {
         IResponse<string> Login(string username,string password);
+        bool CheckLogin(string token);
+        IResponse<string> GetSerialKey();
+        IResponse<bool> UpdateSerialKey(string Key);
+        bool CheckKeygen();
     }
 }

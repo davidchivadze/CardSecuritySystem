@@ -102,3 +102,4 @@ C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\RestAPI
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\RestAPI\obj\Release\RestAPI.csproj.CopyComplete
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\RestAPI\obj\Release\RestAPI.dll
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\RestAPI\obj\Release\RestAPI.pdb
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\RestAPI\bin\jose-jwt.dll

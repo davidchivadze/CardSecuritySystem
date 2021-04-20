@@ -76,3 +76,5 @@ D:\Card\Business\obj\Debug\Business.csproj.CoreCompileInputs.cache
 D:\Card\Business\obj\Debug\Business.csproj.CopyComplete
 D:\Card\Business\obj\Debug\Business.dll
 D:\Card\Business\obj\Debug\Business.pdb
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Business\bin\Debug\Newtonsoft.Json.dll
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Business\bin\Debug\Newtonsoft.Json.xml

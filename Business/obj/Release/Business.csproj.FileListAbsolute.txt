@@ -25,3 +25,5 @@ C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Busines
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Business\obj\Release\Business.pdb
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Business\obj\Release\Interop.zkemkeeper.dll
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Business\obj\Release\Business.csproj.ResolveComReference.cache
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Business\bin\Release\Newtonsoft.Json.dll
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Business\bin\Release\Newtonsoft.Json.xml

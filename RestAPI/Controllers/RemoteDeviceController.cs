@@ -8,13 +8,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
 using System.Web.Http;
-using System.Web.Http.Cors;
-using System.Web.Mvc;
 using zkemkeeper;
 
 namespace RestAPI.Controllers
 {
-    [EnableCors(origins: "*", headers: "*", methods: "*")]
+  
+
     public class RemoteDeviceController : ApiController
     {
         private IDeviceService _deviceService;
@@ -34,6 +33,14 @@ namespace RestAPI.Controllers
         public IResponse<bool> AddDevice(AddDeviceRequest model)
         {
             return _deviceService.AddDevice(model);
+        }
+        public IResponse<bool> EditDevice(AddDeviceRequest model)
+        {
+            return _deviceService.EditDevice(model);
+        }
+        public IResponse<AddDeviceRequest> GetDeviceForEdit(int deviceID)
+        {
+            return _deviceService.GetDeviceForEdit(deviceID);
         }
         public IResponse<GetDeviceUserLogResponse> GetDeviceUserLogList()
         {
@@ -58,6 +65,10 @@ namespace RestAPI.Controllers
         public  Task<IResponse<bool>> UpdateUserListFromDevice()
         {
             return  _deviceService.UpdateUserListFromDevice();
+        }
+        public IResponse<DeviceUserListResponse> GetDeviceUserList(DeviceUserListRequest request)
+        {
+            return _deviceService.GetDeviceUserList(request);
         }
         public IResponse<bool> InsertUserToDevice(int UserID)
         {

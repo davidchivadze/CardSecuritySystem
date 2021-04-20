@@ -13,7 +13,7 @@ namespace Domain.Repository
         private readonly Data _database;
 
         #region variables For Lazey Loading
-
+        private IKeygenRepository _keygenRepository;
         private ICityRepository _cityRepository;
         private ICountryRepository _countryRepository;
         private ICurrencyRepository _currencyRepository;
@@ -33,6 +33,7 @@ namespace Domain.Repository
         private ISalaryRepository _salaryRepository;
         private IGenderRepository _genderRepository;
         private IBranchRepository _branchRepository;
+        private IUserRepository _userRepository;
 
         private IDeviceTypeRepository _deviceTypeRepository;
 
@@ -66,6 +67,14 @@ namespace Domain.Repository
         public IDeviceRegistratedUsersRepository DeviceRegistratedUsersRepository
         {
             get { return _deviceRegistratedUsersRepository = _deviceRegistratedUsersRepository ?? new DeviceRegistratedUsersRepository(_database); }
+        }
+        public IUserRepository UserRepository
+        {
+            get { return _userRepository = _userRepository ?? new UserRepository(_database); }
+        }
+        public IKeygenRepository KeygenRepository
+        {
+            get { return _keygenRepository = _keygenRepository ?? new KeygenRepository(_database); }
         }
         public IDeviceTypeRepository DeviceTypeRepository
         {

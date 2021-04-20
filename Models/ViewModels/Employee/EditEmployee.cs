@@ -94,6 +94,10 @@ namespace Models.ViewModels.Employee
         public TimeSpan StartTime { get; set; }
 
         public TimeSpan EndTime { get; set; }
+        public TimeSpan MinCheckInTime { get; set; }
+
+        public TimeSpan MaxCheckOutTime { get; set; }
+        public double BreakAmount { get; set; }
         public int WeekHouresAmount { get; set; }
         public int DaylyHouresAmount { get; set; }
 

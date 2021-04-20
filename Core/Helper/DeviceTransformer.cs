@@ -11,10 +11,30 @@ namespace Core.Helper
 {
     public static class DeviceTransformer
     {
+        public static AddDeviceRequest AsViewModelEdit(this Device model)
+        {
+            return new AddDeviceRequest()
+            {
+                ID = model.ID,
+                BranchID = model.BranchID,
+
+                DeviceLocationInBranchID = model.DeviceLocationInBranchID,
+                DeviceTypeID = model.DeviceTypeID,
+                IPAddress = model.IPAddress,
+
+                Name = model.Name,
+                NumberDevices = model.NumberDevices == 0 ? 1 : model.NumberDevices,
+                Password = model.Password,
+                Port = model.Port,
+                UserName = model.UserName
+
+            };
+        }
         public static Device AsDatabaseModel(this AddDeviceRequest model)
         {
             return new Device()
             {
+                ID = model.ID.HasValue ? model.ID.Value : 0,
                 BranchID = model.BranchID,
                 CreateDate = DateTime.Now,
                 DeviceLocationInBranchID = model.DeviceLocationInBranchID,
@@ -22,7 +42,7 @@ namespace Core.Helper
                 IPAddress = model.IPAddress,
                 IsActive = true,
                 Name = model.Name,
-                NumberDevices = model.NumberDevices==0?1:model.NumberDevices,
+                NumberDevices = model.NumberDevices == 0 ? 1 : model.NumberDevices,
                 Password = model.Password,
                 Port = model.Port,
                 UserName = model.UserName,
@@ -51,11 +71,12 @@ namespace Core.Helper
                 dwVerifyMode = model.dwVerifyMode,
                 IndRegID = model.IndRegID,
                 MachineNumber = model.MachineNumber,
-                IsActive=model.IsActive
+                IsActive = model.IsActive
             };
         }
         public static DeviceRegistratedUsers AsDatabaseModel(this Models.DeviceResponseModels.UserInfo model)
         {
+            try { 
             return new DeviceRegistratedUsers()
             {
                 Enabled = model.Enabled,
@@ -66,9 +87,13 @@ namespace Core.Helper
                 Password = model.Password,
                 Privelage = model.Privelage,
                 TmpData = model.TmpData,
-                UserDeviceID = int.Parse(model.EnrollNumber)
-               
+                UserDeviceID = model.EnrollNumber==""||String.IsNullOrEmpty(model.EnrollNumber)?0:int.Parse(model.EnrollNumber)
+
             };
+            }catch(Exception ex)
+            {
+                throw new Exception("მეპერს დაერხა");
+            }
         }
         public static GetDeviceListItem AsViewModel(this Device model)
         {
@@ -79,7 +104,25 @@ namespace Core.Helper
                 LastSyncDate = model.LastSyncDate,
                 Branch = model.Branch.BranchName,
                 LocationInBranch = model.DeviceLocationInBranch.Description,
-                State = model.IsActive == true ? 1 : 0
+                State = model.IsActive == true ? 1 : 0,
+                Name = model.Name
+            };
+        }
+        public static DeviceUserListItem AsViewModel(this DeviceRegistratedUsersToEmployee model)
+        {
+            return new DeviceUserListItem()
+            {
+                ID = model.ID,
+                TmpData = model.TmpData,
+                Enabled = model.Enabled,
+                FingerIndex = model.FingerIndex,
+                iFlag = model.iFlag,
+                IsRegistratedSystem = model.IsRegistratedSystem,
+                MachineNumber = model.MachineNumber,
+                Name = model.Name,
+                Password = model.Password,
+                Privelage = model.Privelage,
+                UserDeviceID = model.UserDeviceID
             };
         }
         public static GetDeviceUserLogItem AsViewModel(this DeviceAndDbUsersJoin model)
@@ -93,7 +136,7 @@ namespace Core.Helper
                 RecordTime = DateTime.Parse(model.RecordTime),
                 UserIDInDevice = model.UserIDInDevice,
                 VerifyMode = model.VerifyMode,
-            
+
             };
         }
     }

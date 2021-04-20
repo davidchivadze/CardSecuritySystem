@@ -42,9 +42,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntityModels\Keygen.cs" />
     <Compile Include="EntityModels\RemoteDeviceSyncLog.cs" />
+    <Compile Include="EntityModels\Users.cs" />
     <Compile Include="LinqJoinDatabaseModels\DeviceAndDbUsersJoin.cs" />
+    <Compile Include="LinqJoinDatabaseModels\DeviceRegistratedUsersToEmployee.cs" />
+    <Compile Include="Security\KeygenModel.cs" />
     <Compile Include="ViewModels\Device\DeleteDevice.cs" />
+    <Compile Include="ViewModels\Device\DeviceUserList.cs" />
     <Compile Include="ViewModels\Device\DeviceUserLog.cs" />
     <Compile Include="DeviceResponseModels\UserInfo.cs" />
     <Compile Include="EntityModels\BaseModel.cs" />
@@ -89,6 +94,7 @@
     <Compile Include="ViewModels\Employee\EditEmployee.cs" />
     <Compile Include="ViewModels\Employee\EmployeeDetailsViewModel.cs" />
     <Compile Include="ViewModels\Employee\EmployeePositionViewModel.cs" />
+    <Compile Include="ViewModels\Employee\GetEmployeeForEdit.cs" />
     <Compile Include="ViewModels\Employee\GetEmployeeHolidayList.cs" />
     <Compile Include="ViewModels\Employee\GetEmployeeList.cs" />
     <Compile Include="ViewModels\FineViewModel.cs" />

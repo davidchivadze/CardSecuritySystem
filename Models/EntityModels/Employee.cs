@@ -60,6 +60,8 @@ namespace Models
         public int ScheduleID { get; set; }
         [ForeignKey("Gender")]
         public int GenderID { get; set; }
+        public string Avatar { get; set; }
+        //public string AvatarFormat { get; set; }
         public Gender Gender { get; set; }
 
         public virtual EmployeeDetails EmployeeDetails { get; set; }

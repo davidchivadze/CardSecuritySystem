@@ -8,6 +8,8 @@ namespace Models.ViewModels
 {
     public class AddEmployeeRequestModel
     {
+        public string AvatarImage { get; set; }
+        public int? UserIdInDevice { get; set; }
         public string FirsName { get; set; }
 
         public string FirsName_ka { get; set; }
@@ -53,12 +55,14 @@ namespace Models.ViewModels
     }
     public class Forgiveness
     {
+        public int? ID { get; set; }
         public int ForgivenessTypeID { get; set; }
         public int Amount { get; set; }
         
     }
     public class EmployeeHolidays
     {
+        public int? ID { get; set; }
         public int HolidayTypeID { get; set; }
         public int AllWritten { get; set; }
         public int Left { get; set; }
@@ -70,23 +74,29 @@ namespace Models.ViewModels
     }
     public class Fine
     {
+        public int? ID { get; set; }
         public int FineTypeID { get; set; }
         public Decimal Amount { get; set; }
         public int CurrencyID { get; set; }
     }
     public class SalaryData
     {
+        public int? ID { get; set; }
         public decimal Amount { get; set; }
         public int CurrencyID { get; set; }
-        public bool IsHourly { get; set; }
+        public bool? IsHourly { get; set; }
         public int SalaryTypeID { get; set; }
     }
     public class ScheduleData
     {
+        public int? ID { get; set; }
         public int ScheduleTypeID { get; set; }
         public TimeSpan StartTime { get; set; }
 
         public TimeSpan EndTime { get; set; }
+        public TimeSpan MinCheckInTime { get; set; }
+        public TimeSpan MaxCheckOutTime { get; set; }
+        public double BreakAmount { get; set; }
         public int WeekHouresAmount { get; set; }
         public int DaylyHouresAmount { get; set; }
 
