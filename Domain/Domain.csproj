@@ -172,6 +172,14 @@
     <Compile Include="Migrations\202104191012567_ChangeDeviceRegistratedUsers.designer.cs">
       <DependentUpon>202104191012567_ChangeDeviceRegistratedUsers.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104221824513_EmployeeWorkingLogsAdd.cs" />
+    <Compile Include="Migrations\202104221824513_EmployeeWorkingLogsAdd.designer.cs">
+      <DependentUpon>202104221824513_EmployeeWorkingLogsAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104252007240_AddHolidayeReuest.cs" />
+    <Compile Include="Migrations\202104252007240_AddHolidayeReuest.designer.cs">
+      <DependentUpon>202104252007240_AddHolidayeReuest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\BaseRepository.cs" />
@@ -288,6 +296,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104191012567_ChangeDeviceRegistratedUsers.resx">
       <DependentUpon>202104191012567_ChangeDeviceRegistratedUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104221824513_EmployeeWorkingLogsAdd.resx">
+      <DependentUpon>202104221824513_EmployeeWorkingLogsAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104252007240_AddHolidayeReuest.resx">
+      <DependentUpon>202104252007240_AddHolidayeReuest.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -37,6 +37,10 @@ namespace Domain
         public virtual DbSet<DeviceType> DeviceTypes { get; set; }
         public virtual DbSet<Users> Users { get; set; }
         public virtual DbSet<Keygen> Keygens { get; set; }
+        public virtual DbSet<EmployeeWorkingLog> EmployeeWorkingLogs { get; set; }
+        public virtual DbSet<EmployeeHolidayRequest> EmployeeHolidayRequests { get; set; }
+        public virtual DbSet<GovernmentHolidays> GovernmentHolidays { get; set; }
+        public virtual DbSet<EmployeeWorkingLogTimeType> EmployeeWorkingLogTimeTypes { get; set; }
         public virtual DbSet<RemoteDeviceSyncLog> RemoteDeviceSyncLogs { get; set; }
         public virtual DbSet<DeviceLocationInBranch> DeviceLocationInBranches { get; set; }
         public virtual DbSet<DeviceUserLog> DeviceUserLogs { get; set; }

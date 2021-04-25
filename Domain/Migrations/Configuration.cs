@@ -8,9 +8,23 @@
 
     internal sealed class Configuration : DbMigrationsConfiguration<Domain.Data>
     {
+        private readonly bool _pendingMigrations;
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+
+            AutomaticMigrationsEnabled = true;
+            // Check if there are migrations pending to run, this can happen if database doesn't exists or if there was any
+            //  change in the schema
+            var migrator = new DbMigrator(this);
+            _pendingMigrations = migrator.GetPendingMigrations().Any();
+
+            // If there are pending migrations run migrator.Update() to create/update the database then run the Seed() method to populate
+            //  the data if necessary
+            if (_pendingMigrations)
+            {
+                migrator.Update();
+                this.Seed(new Domain.Data());
+            }
         }
 
         protected override void Seed(Domain.Data context)
@@ -99,6 +113,22 @@
                     UserName = "admin",
                     Password = HashGenerator.CreateMD5("admin")
                 });
+            }
+            if (context.EmployeeWorkingLogTimeTypes.Count() == 0)
+            {
+                context.EmployeeWorkingLogTimeTypes.Add(new Models.EntityModels.EmployeeWorkingLogTimeType()
+                {
+                    ID = 1,
+                    Description = "ნამუშევარი საათები"
+                });
+                context.SaveChanges();
+
+                context.EmployeeWorkingLogTimeTypes.Add(new Models.EntityModels.EmployeeWorkingLogTimeType()
+                {
+                    ID = 2,
+                    Description = "შესვენება"
+                });
+                context.SaveChanges();
             }
             //  This method will be called after migrating to the latest version.
 

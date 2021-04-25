@@ -16,7 +16,7 @@ namespace RestAPI
 
             // Web API routes
             var cors = new EnableCorsAttribute(
-            origins: "http://localhost:7788",
+            origins: "*",
             headers: "*",
             methods: "*");
            

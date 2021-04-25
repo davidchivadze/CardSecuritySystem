@@ -148,3 +148,5 @@ C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.addKeygen.resources
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.ChangeEmployeeScheduleData.resources
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.ChangeDeviceRegistratedUsers.resources
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.EmployeeWorkingLogsAdd.resources
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.AddHolidayeReuest.resources

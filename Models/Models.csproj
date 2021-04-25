@@ -42,6 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EntityModels\EmployeeHolidayRequest.cs" />
+    <Compile Include="EntityModels\EmployeeWorkingLog.cs" />
+    <Compile Include="EntityModels\EmployeeWorkingLogTimeType.cs" />
+    <Compile Include="EntityModels\GovernmentHolidays.cs" />
     <Compile Include="EntityModels\Keygen.cs" />
     <Compile Include="EntityModels\RemoteDeviceSyncLog.cs" />
     <Compile Include="EntityModels\Users.cs" />
