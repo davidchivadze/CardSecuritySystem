@@ -19,5 +19,14 @@ namespace Business.Interface
         IResponse<GetEmployeeHolidayListResponse> GetEmployeeHolidayList(GetEmployeeHolidayListRequest model);
         IResponse<GetEmployeeListResponse> GetEmployeeList();
         IResponse<bool> DeleteEmployee(int employeeID);
+        IResponse<GetGovernmentHolidayListResponse> GetGovernmentHolidayList();
+        IResponse<AddGovernmentResponse> AddGovernmentHoliday(AddGovernmentRequest model);
+        IResponse<EditGovernmentHolidayResponse> EditGovernmentHoliday(EditGovernmentHolidayRequest model);
+        IResponse<bool> DeleteGovernmentHoliday(int governmentHolidayID);
+        IResponse<GetEmployeeHolidayReqListResponse> GetEmployeeHolidayRequestList(GetEmployeeHolidayReqListRequest model);
+        IResponse<AddEmployeeHolidayReqResponse> AddEmployeeHolidayRequest(AddEmployeeHolidayReqRequest model);
+        IResponse<EditEmployeeHolidayReqResponse> EditEmployeeHolidayRequest(EditEmployeeHolidayReqRequest model);
+        IResponse<bool> DeleteEmployeeHolidayRequest(int holidayID);
+
     }
 }

@@ -23,6 +23,8 @@ namespace Domain.Repository
         private ICurrencyTypeRepository _currencyTypeRepository;
         private IDepartmentsRepository _departmentsRepository;
         private IEmployeeHolidayRepository _employeeHolidayRepository;
+        private IEmployeeHolidayRequestRepository _employeeHolidayRequestRepository;
+        private IGovernmentHolidaysRepository _governmetHolidaysRepository;
         private IEmployeeMobileNumbersRepository _employeeMobileNumbersRepository;
         private IEmployeePositionRepositoy _employeePositionRepositoy;
         private IEmployeeRepository _employeeRepository;
@@ -141,6 +143,10 @@ namespace Domain.Repository
         {
             get { return _employeeHolidayRepository = _employeeHolidayRepository ?? new EmployeeHolidayRepository(_database); }
         }
+        public IEmployeeHolidayRequestRepository EmployeeHolidayRequestRepository
+        {
+            get { return _employeeHolidayRequestRepository = _employeeHolidayRequestRepository ?? new EmployeeHolidayRequestRepository(_database); }
+        }
 
         public IEmployeePositionRepositoy EmployeePositionRepositoy
         {
@@ -175,6 +181,13 @@ namespace Domain.Repository
         {
             get { return _employeeListRepository = _employeeListRepository ?? new EmployeeListRepository(_database); }
         }
+
+        public IGovernmentHolidaysRepository GovernmentHolidaysRepository
+        {
+            get { return _governmetHolidaysRepository = _governmetHolidaysRepository ?? new GovernmentHolidaysRepository(_database); }
+        }
+
+
 
         #endregion
 

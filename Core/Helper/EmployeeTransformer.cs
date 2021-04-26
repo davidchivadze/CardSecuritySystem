@@ -30,6 +30,19 @@ namespace Core.Helper
                 EmployeeID = model.EmployeeID
             };
         }
+        public static GetEmployeeHolidayReqListItem AsViewModel(this EmployeeHolidayRequest model)
+        {
+            return new GetEmployeeHolidayReqListItem
+            {
+                ID = model.ID,
+                AmountWorkDays = model.AmountWorkDays,
+                FromDate = model.FromDate,
+                HolidayTypeID = model.HolidayTypeID,
+                RegistartionDate = model.RegistartionDate,
+                ToDate = model.ToDate,
+                EmployeeID = model.EmployeeID
+            };
+        }
         public static GetEmployeeListItem AsViewModel(this Employee model)
         {
             return new GetEmployeeListItem
@@ -93,6 +106,59 @@ namespace Core.Helper
 
             };
         }
+        public static GetGovernmentHolidayListItem AsViewModel(this GovernmentHolidays model)
+        {
+            return new GetGovernmentHolidayListItem()
+            {
+                ID = model.ID,
+                Description = model.Description,
+                HolidayDate = model.HolidayDate
+            };
+        }
+        public static GovernmentHolidays AsDatabaseModel(this AddGovernmentRequest model)
+        {
+            return new GovernmentHolidays()
+            {
+                Description=model.Description,
+                 HolidayDate=model.HolidayDate
+            };
+        }
+        public static GovernmentHolidays AsDatabaseModel(this EditGovernmentHolidayRequest model)
+        {
+            return new GovernmentHolidays()
+            {
+                ID=model.ID,
+                Description = model.Description,
+                HolidayDate = model.HolidayDate
+            };
+        }
+        public static EmployeeHolidayRequest AsDatabaseModel(this EditEmployeeHolidayReqRequest model)
+        {
+            return new EmployeeHolidayRequest()
+            {
+                ID = model.ID,
+                AmountWorkDays = model.AmountWorkDays,
+                EmployeeID = model.EmployeeID,
+                FromDate = model.FromDate,
+                ToDate = model.ToDate,
+                HolidayTypeID = model.HolidayTypeID,
+                RegistartionDate = model.RegistartionDate
+
+            };
+        }
+        public static EmployeeHolidayRequest AsDatabaseModel(this AddEmployeeHolidayReqRequest model)
+        {
+            return new EmployeeHolidayRequest()
+            {
+                AmountWorkDays = model.AmountWorkDays,
+                EmployeeID = model.EmployeeID,
+                FromDate = model.FromDate,
+                ToDate = model.ToDate,
+                HolidayTypeID = model.HolidayTypeID,
+                RegistartionDate = model.RegistartionDate
+            };
+        }
+
         public static GetEmployeeForEdit EditViewModel(this Employee model)
         {
             return new GetEmployeeForEdit()

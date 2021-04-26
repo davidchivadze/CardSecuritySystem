@@ -45,13 +45,11 @@ namespace Domain.Repository
                 result.IsActive = holiday.IsActive;
                 result.Left = holiday.Left;
                 result.LeftInYear = holiday.LeftInYear;
-                //result.Name = holiday.Name;
                 result.NumInYear = holiday.NumInYear;
                 result.Used = holiday.Used;
                 result.AllWritten = holiday.AllWritten;
                 result.DeactivateDate = holiday.DeactivateDate;
-                //result.Employee = holiday.Employee;
-                result.EmployeeID = result.EmployeeID;
+                result.EmployeeID = holiday.EmployeeID;
                 _database.Entry(result).State = System.Data.Entity.EntityState.Modified;
                 _database.SaveChanges();
             }

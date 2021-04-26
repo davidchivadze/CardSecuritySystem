@@ -24,6 +24,8 @@ namespace Domain.Interface
         IDepartmentsRepository DepartmentsRepository { get; }
         IEmployeeListRepository EmployeeListRepository { get; }
         IEmployeeHolidayRepository EmployeeHolidayRepository { get; }
+        IEmployeeHolidayRequestRepository EmployeeHolidayRequestRepository { get; }
+        IGovernmentHolidaysRepository GovernmentHolidaysRepository { get; }
         IEmployeeMobileNumbersRepository EmployeeMobileNumbersRepository { get; }
         IEmployeePositionRepositoy EmployeePositionRepositoy { get; }
         IEmployeeRepository EmployeeRepository { get; }

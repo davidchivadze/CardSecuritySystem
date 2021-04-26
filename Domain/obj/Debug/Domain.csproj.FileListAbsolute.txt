@@ -150,3 +150,10 @@ C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.ChangeDeviceRegistratedUsers.resources
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.EmployeeWorkingLogsAdd.resources
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.AddHolidayeReuest.resources
+D:\Card\Domain\obj\Debug\Domain.Migrations.AddAvatarImageToEmployee.resources
+D:\Card\Domain\obj\Debug\Domain.Migrations.AddUserToDb.resources
+D:\Card\Domain\obj\Debug\Domain.Migrations.addKeygen.resources
+D:\Card\Domain\obj\Debug\Domain.Migrations.ChangeEmployeeScheduleData.resources
+D:\Card\Domain\obj\Debug\Domain.Migrations.ChangeDeviceRegistratedUsers.resources
+D:\Card\Domain\obj\Debug\Domain.Migrations.EmployeeWorkingLogsAdd.resources
+D:\Card\Domain\obj\Debug\Domain.Migrations.AddHolidayeReuest.resources

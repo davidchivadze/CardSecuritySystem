@@ -112,5 +112,113 @@ namespace Business.Services
                 return Fail<bool>(ex.Message);
             }
         }
+
+        public IResponse<GetGovernmentHolidayListResponse> GetGovernmentHolidayList()
+        {
+            var result = UnitOfWork.GovernmentHolidaysRepository.GetGovernmentHolidays().Select(m => m.AsViewModel()).ToList();
+            return Ok<GetGovernmentHolidayListResponse>(new GetGovernmentHolidayListResponse()
+            {
+                GovernmentHolidayList = result
+            });
+        }
+
+        public IResponse<AddGovernmentResponse> AddGovernmentHoliday(AddGovernmentRequest model)
+        {
+            try
+            {
+                var result = UnitOfWork.GovernmentHolidaysRepository.AddGHoliday(model.AsDatabaseModel());
+                if (result != null)
+                {
+                    return Ok(new AddGovernmentResponse() { });
+                }
+                else
+                {
+                    return Fail<AddGovernmentResponse>("ვერ მოხერხდა სამთავრობო შვებულების დამატება");
+                }
+            }
+            catch (Exception ex)
+            {
+                return Fail<AddGovernmentResponse>(ex.Message);
+            }
+        }
+
+        public IResponse<EditGovernmentHolidayResponse> EditGovernmentHoliday(EditGovernmentHolidayRequest model)
+        {
+            try
+            {
+                var result = UnitOfWork.GovernmentHolidaysRepository.UpdateGHoliday(model.AsDatabaseModel());
+                return Ok(new EditGovernmentHolidayResponse() { });
+            }
+            catch (Exception ex)
+            {
+                return Fail<EditGovernmentHolidayResponse>(ex.Message + " ვერ მოხერხდა სახელმწიფო შვებულების რედაქტირება " + ex.InnerException.Message);
+            }
+        }
+
+        public IResponse<bool> DeleteGovernmentHoliday(int governmentHolidayID)
+        {
+            try
+            {
+                return Ok(UnitOfWork.GovernmentHolidaysRepository.Delete(governmentHolidayID));
+            }
+            catch (Exception ex)
+            {
+                return Fail<bool>(ex.Message);
+            }
+        }
+
+        public IResponse<GetEmployeeHolidayReqListResponse> GetEmployeeHolidayRequestList(GetEmployeeHolidayReqListRequest model)
+        {
+            var result = UnitOfWork.EmployeeHolidayRequestRepository.GetHolidayRequestByEmployee(model.EmployeeID).Select(m => m.AsViewModel()).ToList();
+            return Ok(new GetEmployeeHolidayReqListResponse()
+            {
+
+            });
+        }
+
+        public IResponse<AddEmployeeHolidayReqResponse> AddEmployeeHolidayRequest(AddEmployeeHolidayReqRequest model)
+        {
+            try
+            {
+                var result = UnitOfWork.EmployeeHolidayRequestRepository.AddHolidayRequest(model.AsDatabaseModel());
+                if (result != null)
+                {
+                    return Ok(new AddEmployeeHolidayReqResponse() { });
+                }
+                else
+                {
+                    return Fail<AddEmployeeHolidayReqResponse>("ვერ მოხერხდა შვებულების დამატება");
+                }
+            }
+            catch (Exception ex)
+            {
+                return Fail<AddEmployeeHolidayReqResponse>(ex.Message);
+            }
+        }
+
+        public IResponse<EditEmployeeHolidayReqResponse> EditEmployeeHolidayRequest(EditEmployeeHolidayReqRequest model)
+        {
+            try
+            {
+                var result = UnitOfWork.EmployeeHolidayRequestRepository.UpdateHolidayRequest(model.AsDatabaseModel());
+                return Ok(new EditEmployeeHolidayReqResponse() { });
+            }
+            catch (Exception ex)
+            {
+                return Fail<EditEmployeeHolidayReqResponse>(ex.Message + " ვერ მოხერხდა შვებულების რედაქტირება " + ex.InnerException.Message);
+            }
+        }
+
+        public IResponse<bool> DeleteEmployeeHolidayRequest(int holidayID)
+        {
+            try
+            {
+                return Ok(UnitOfWork.EmployeeHolidayRequestRepository.Delete(holidayID));
+            }
+            catch (Exception ex)
+            {
+                return Fail<bool>(ex.Message);
+            }
+        }
     }
 }
