@@ -47,3 +47,8 @@ C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Release\Domain.Migrations.addKeygen.resources
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Release\Domain.Migrations.ChangeEmployeeScheduleData.resources
 C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Release\Domain.Migrations.ChangeDeviceRegistratedUsers.resources
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Release\Domain.Migrations.EmployeeWorkingLogsAdd.resources
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Release\Domain.Migrations.AddHolidayeReuest.resources
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Release\Domain.Migrations.UpdateEmployeeModel.resources
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Release\Domain.Migrations.UpdateEmployeeModel1.resources
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Release\Domain.Migrations.UpdateEmployeeModel2.resources

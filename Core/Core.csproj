@@ -58,6 +58,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Encryption\HashGenerator.cs" />
+    <Compile Include="Enums\FineTypeEnum.cs" />
+    <Compile Include="Enums\ForgivenessTypeEnum.cs" />
+    <Compile Include="Enums\SalaryTypeEnum.cs" />
     <Compile Include="Helper\DeviceTransformer.cs" />
     <Compile Include="Helper\EmployeeTransformer.cs" />
     <Compile Include="Helper\ParametersTransformer.cs" />

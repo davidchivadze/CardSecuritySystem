@@ -68,7 +68,12 @@ namespace RestAPI.Authentification
                     try
                     {
                     if (!context.Request.RequestUri.AbsoluteUri.Contains("Auth/Login")) { 
-                        HashGenerator.DecryptString("gasagebi", authParameters);
+                        string decrypted=HashGenerator.DecryptString("gasagebi", authParameters);
+                        var datetimeNow = AuthService.ConvertToDatetime(long.Parse(decrypted.Split(',')[1]));
+                        if (AuthService.ConvertToDatetime(long.Parse(decrypted.Split(',')[1])) <= AuthService.ConvertToDatetime(long.Parse(AuthService.ConvertToTimestamp(DateTime.Now).ToString())))
+                        {
+                            throw new Exception("Old Token");
+                        }
                     }
                     GenericIdentity myIdentity = new GenericIdentity("MyUser");
                         String[] myStringArray = { "Manager", "Teller" };

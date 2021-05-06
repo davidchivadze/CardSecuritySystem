@@ -30,9 +30,9 @@ namespace Domain.Repository
             return true;
         }
 
-        public IEnumerable<EmployeeHolidayRequest> GetHolidayRequestByEmployee(int empID)
+        public IEnumerable<EmployeeHolidayRequest> GetHolidayRequestByEmployee(int? empID)
         {
-            var result = _database.EmployeeHolidayRequests.Where(s => s.EmployeeID == empID);
+            var result = _database.EmployeeHolidayRequests.Where(s => s.EmployeeID == (empID??s.EmployeeID));
             return result;
         }
 
@@ -41,9 +41,9 @@ namespace Domain.Repository
             var result = _database.EmployeeHolidayRequests.FirstOrDefault(h => h.ID == holiday.ID);
             if (result != null)
             {
-                result.ID = holiday.ID;
+                
                 result.EmployeeID = holiday.EmployeeID;
-                result.RegistartionDate = holiday.RegistartionDate;
+            
                 result.HolidayTypeID = holiday.HolidayTypeID;
                 result.FromDate = holiday.FromDate;
                 result.ToDate = holiday.ToDate;

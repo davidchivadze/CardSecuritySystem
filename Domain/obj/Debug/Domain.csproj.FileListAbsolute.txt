@@ -157,3 +157,6 @@ D:\Card\Domain\obj\Debug\Domain.Migrations.ChangeEmployeeScheduleData.resources
 D:\Card\Domain\obj\Debug\Domain.Migrations.ChangeDeviceRegistratedUsers.resources
 D:\Card\Domain\obj\Debug\Domain.Migrations.EmployeeWorkingLogsAdd.resources
 D:\Card\Domain\obj\Debug\Domain.Migrations.AddHolidayeReuest.resources
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.UpdateEmployeeModel.resources
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.UpdateEmployeeModel1.resources
+C:\Users\datoc\source\repos\ZKTECO\CardSecuritySystem\CardSecuritySystem\Domain\obj\Debug\Domain.Migrations.UpdateEmployeeModel2.resources

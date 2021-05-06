@@ -36,8 +36,8 @@ namespace Models
         [StringLength(250)]
         public string LastName_ru { get; set; }
 
-        [Required]
-        public DateTime DateOfBirth { get; set; }
+      
+        public DateTime? DateOfBirth { get; set; }
 
         [StringLength(250)]
         public string Address { get; set; }
@@ -57,9 +57,9 @@ namespace Models
         
 
         [ForeignKey("Schedule")]
-        public int ScheduleID { get; set; }
+        public int? ScheduleID { get; set; }
         [ForeignKey("Gender")]
-        public int GenderID { get; set; }
+        public int? GenderID { get; set; }
         public string Avatar { get; set; }
         //public string AvatarFormat { get; set; }
         public Gender Gender { get; set; }

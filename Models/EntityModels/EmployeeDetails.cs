@@ -13,26 +13,26 @@ namespace Models.EntityModels
         [Key]
         [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ID { get; set; }
+        public int? ID { get; set; }
 
         [ForeignKey("Employee")]
-        public int EmployeeID { get; set; }
+        public int? EmployeeID { get; set; }
 
         [ForeignKey("EmployeePosition")]
-        public int EmployeePositionID { get; set; }
+        public int? EmployeePositionID { get; set; }
 
         [ForeignKey("Salary")]
-        public int SalaryID { get; set; }
+        public int? SalaryID { get; set; }
 
         [ForeignKey("Branch")]
-        public int BranchID { get; set; }
+        public int? BranchID { get; set; }
 
         [ForeignKey("Department")]
-        public int DepartmentID { get; set; }
+        public int? DepartmentID { get; set; }
         [ForeignKey("Fine")]
-        public int FineID { get; set; }
+        public int? FineID { get; set; }
         [ForeignKey("Forgiveness")]
-        public int ForgivenessID { get; set; }
+        public int? ForgivenessID { get; set; }
         public virtual Fine Fine { get; set; }
         public virtual Forgiveness Forgiveness { get; set; }
         public virtual ICollection<Employee> Employee { get; set; }

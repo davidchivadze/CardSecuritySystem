@@ -24,7 +24,7 @@ namespace Models.ViewModels
 
         public string Country { get; set; }
 
-        public DateTime DateOfBirth { get; set; }
+        public System.Nullable<DateTime> DateOfBirth { get; set; }
 
         public string Address { get; set; }
 
@@ -35,15 +35,15 @@ namespace Models.ViewModels
         public string Email { get; set; }
 
         public bool IsActive { get; set; } = true;
-        public int EmployeePositionID { get; set; }
+        public int? EmployeePositionID { get; set; }
         public string DeviceCardID { get; set; }
 
-        public int  SalaryID { get; set; }
+        public int?  SalaryID { get; set; }
 
-        public int BranchID { get; set; }
+        public int? BranchID { get; set; }
 
-        public int DepartmentID { get; set; }
-        public int GenderID { get; set; }
+        public int? DepartmentID { get; set; }
+        public int? GenderID { get; set; }
         public string PersonalNumber { get; set; }
 
         public string[] MobileNumbers { get; set; }

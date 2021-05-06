@@ -14,7 +14,7 @@ using System.Web.Http.Cors;
 namespace RestAPI.Controllers
 {
 
-
+    [Authorize]
     public class EmployeeController : ApiController
     {
         private IEmployeeService _employeeService;
@@ -79,9 +79,9 @@ namespace RestAPI.Controllers
         {
             return _employeeService.DeleteGovernmentHoliday(governmentHolidayID);
         }
-        public IResponse<GetEmployeeHolidayReqListResponse> GetEmployeeHolidayRequestList(GetEmployeeHolidayReqListRequest model)
+        public IResponse<GetEmployeeHolidayReqListResponse> GetEmployeeHolidayRequestList(int? EmployeeID)
         {
-            return _employeeService.GetEmployeeHolidayRequestList(model);
+            return _employeeService.GetEmployeeHolidayRequestList(EmployeeID);
         }
         public IResponse<AddEmployeeHolidayReqResponse> AddEmployteeHolidayRequest(AddEmployeeHolidayReqRequest model)
         {
@@ -90,6 +90,21 @@ namespace RestAPI.Controllers
         public IResponse<EditEmployeeHolidayReqResponse> EditHolidayRequest(EditEmployeeHolidayReqRequest model)
         {
             return _employeeService.EditEmployeeHolidayRequest(model);
+        }
+        public IResponse<List<GetEmployeeModReportResponse>> GetEmployeeModReport(int month, int year, int? EmployeeID)
+        {
+            var generate = _employeeService.GenerateEmployeeModReportData(month, year);
+            if (generate.Ok) { 
+            return _employeeService.GetEmployeeModReport(month,year, EmployeeID);
+            }
+            else
+            {
+                return null;
+            }
+        }
+        public IResponse<GetEmployeeFullReportResponse> GetEmployeeFullReport(int month, int year, int? EmployeeID)
+        {
+            return _employeeService.GetEmployeeFullReport(month, year, EmployeeID);
         }
         public IResponse<bool> DeleteEmployeeHolidayRequest(int holidayID)
         {

@@ -25,7 +25,8 @@ namespace Business.Services
                     return Fail<string>("402");
                 }
                 var result = UnitOfWork.UserRepository.LoginUser(username, HashGenerator.CreateMD5(password));
-                return Ok(HashGenerator.EncryptString("gasagebi",username));
+                string cryptoString = username + "," + ConvertToTimestamp(DateTime.Now.AddHours(1));
+                return Ok(HashGenerator.EncryptString("gasagebi", cryptoString));
             }
             catch(Exception ex)
             {
@@ -40,20 +41,22 @@ namespace Business.Services
              DateFrom=ConvertToTimestamp(DateTime.Now),
              DateTo= ConvertToTimestamp(DateTime.Now.AddDays(15))
             };
+            string serialData = "Home," + ConvertToTimestamp(DateTime.Now) + "," + ConvertToTimestamp(DateTime.Now.AddDays(15));
             var serialized = JsonConvert.SerializeObject(KeygenObject);
-            var result = HashGenerator.EncryptString("GHNCOmpanyCool", serialized);
+            var result = HashGenerator.EncryptString("GHNCOmpanyCool", serialData);
             return Ok(result);
         }
         public IResponse<bool> UpdateSerialKey(string Key)
         {
             try {
                 var deserializedKey = HashGenerator.DecryptString("GHNCOmpanyCool", Key);
-            var serialKey = JsonConvert.DeserializeObject<KeygenModel>(deserializedKey);
+                //var serialKey = JsonConvert.DeserializeObject<KeygenModel>(deserializedKey);
+                var data=deserializedKey.Split(',');
             var result = UnitOfWork.KeygenRepository.UpdateKeygen(new Models.EntityModels.Keygen()
             {
-                Company = serialKey.Company,
-                DateFrom = ConvertToDatetime(serialKey.DateFrom),
-                DateTo = ConvertToDatetime(serialKey.DateTo),
+                Company = data[0],
+                DateFrom = ConvertToDatetime(long.Parse(data[1])),
+                DateTo = ConvertToDatetime(long.Parse(data[2])),
                 IsActive = true,
                 KeyGen = Key
             });
@@ -68,7 +71,7 @@ namespace Business.Services
 
         public static long ConvertToTimestamp(DateTime value)
         {
-            TimeZoneInfo NYTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time");
+            TimeZoneInfo NYTimeZone = TimeZoneInfo.Local;
             DateTime NyTime = TimeZoneInfo.ConvertTime(value, NYTimeZone);
             TimeZone localZone = TimeZone.CurrentTimeZone;
             System.Globalization.DaylightTime dst = localZone.GetDaylightChanges(NyTime.Year);
@@ -80,7 +83,7 @@ namespace Business.Services
         public static DateTime ConvertToDatetime(long unixTimeStamp)
         {
             // Unix timestamp is seconds past epoch
-            System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Utc);
+            System.DateTime dtDateTime = new DateTime(1970, 1, 1, 0, 0, 0, 0, System.DateTimeKind.Local);
             dtDateTime = dtDateTime.AddSeconds(unixTimeStamp).ToLocalTime();
             return dtDateTime;
         }
@@ -105,8 +108,10 @@ namespace Business.Services
                 return false;
             }
            
-            var serialKey = JsonConvert.DeserializeObject<KeygenModel>(HashGenerator.DecryptString("GHNCOmpanyCool",keyGen.KeyGen));
-                if (keyGen.DateFrom<=DateTime.Now&&keyGen.DateTo>=DateTime.Now
+            var serialKey = HashGenerator.DecryptString("GHNCOmpanyCool",keyGen.KeyGen).Split(',');
+                var DateFrom = ConvertToDatetime(long.Parse(serialKey[1]));
+                var DateTo = ConvertToDatetime(long.Parse(serialKey[2]));
+                if (DateFrom<=DateTime.Now&& DateTo>= DateTime.Now
                     )
                 {
                     return true;

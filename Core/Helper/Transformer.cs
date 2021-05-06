@@ -35,16 +35,16 @@ namespace Core.Helper
                 
                 EmployeeDetails = new EmployeeDetails()
                 {
-                    BranchID = model.BranchID,
-                    DepartmentID = model.DepartmentID,
-                    EmployeePositionID = model.EmployeePositionID,
-                    Salary = model.Salary.AsDatabaseModel(),
-                    Forgiveness = model.Forgiveness.AsDatabaseModel(),
-                    Fine = model.Fine.AsDatabaseModel()
+                    BranchID = model.BranchID==0?null:model.BranchID,
+                    DepartmentID = model.DepartmentID==0?null:model.DepartmentID,
+                    EmployeePositionID = model.EmployeePositionID==0?null:model.EmployeePositionID,
+                    Salary = model.Salary.SalaryTypeID!=0?model.Salary.AsDatabaseModel():null,
+                    Forgiveness = model.Forgiveness.ForgivenessTypeID!=0? model.Forgiveness.AsDatabaseModel():null,
+                    Fine = model.Fine.FineTypeID!=0?model.Fine.AsDatabaseModel():null
                 },
                // EmployeeMobileNumbers = model.MobileNumbers.Select(m => new EmployeeMobileNumbers() { PhoneNumber = m, IsActive = true }).ToList(),
                 Schedule = model.Schedule?.AsDatabaseModel(),
-                EmployeeHolidays=model.EmployeeHolidays.Select(m=>m.AsDatabaseModel()).ToList()
+                EmployeeHolidays=model.EmployeeHolidays.FirstOrDefault().HolidayTypeID!=0? model.EmployeeHolidays.Select(m=>m.AsDatabaseModel()).ToList():null
                 
             
             };

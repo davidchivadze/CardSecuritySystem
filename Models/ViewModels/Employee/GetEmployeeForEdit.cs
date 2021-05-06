@@ -10,7 +10,7 @@ namespace Models.ViewModels.Employee
     {
         public int ID { get; set; }
         public string AvatarImage { get; set; }
-        public int EmployeeDetailsID { get; set; }
+        public int? EmployeeDetailsID { get; set; }
         public string FirsName { get; set; }
         
         public string FirsName_ka { get; set; }
@@ -25,7 +25,7 @@ namespace Models.ViewModels.Employee
 
         public string Country { get; set; }
 
-        public DateTime DateOfBirth { get; set; }
+        public DateTime? DateOfBirth { get; set; }
 
         public string Address { get; set; }
 
@@ -36,16 +36,16 @@ namespace Models.ViewModels.Employee
         public string Email { get; set; }
 
         public bool IsActive { get; set; } = true;
-        public int EmployeePositionID { get; set; }
+        public int? EmployeePositionID { get; set; }
         public string DeviceCardID { get; set; }
 
         public int SalaryID { get; set; }
         public int? UserIDInDevice { get; set; }
 
-        public int BranchID { get; set; }
+        public int? BranchID { get; set; }
 
-        public int DepartmentID { get; set; }
-        public int GenderID { get; set; }
+        public int? DepartmentID { get; set; }
+        public int? GenderID { get; set; }
         public string PersonalNumber { get; set; }
 
         public string[] MobileNumbers { get; set; }

@@ -28,7 +28,7 @@ namespace Models.ViewModels.Employee
 
         public string Country { get; set; }
 
-        public DateTime DateOfBirth { get; set; }
+        public DateTime? DateOfBirth { get; set; }
 
         public string Address { get; set; }
 
@@ -50,9 +50,9 @@ namespace Models.ViewModels.Employee
         public string PersonalNumber { get; set; }
 
         public string[] MobileNumbers { get; set; }
-        public int Forgiveness { get; set; }
-        public Decimal Fine { get; set; }
-        public Decimal Salary { get; set; }
+        public int? Forgiveness { get; set; }
+        public Decimal? Fine { get; set; }
+        public Decimal? Salary { get; set; }
         //public ScheduleData Schedule { get; set; }
         //public List<EmployeeHolidays> EmployeeHolidays { get; set; }
     }

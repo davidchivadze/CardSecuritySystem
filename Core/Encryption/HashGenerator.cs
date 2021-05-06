@@ -37,7 +37,7 @@ namespace Core.Encryption
                 var key1 = Convert.FromBase64String("AAECAwQFBgcICQoLDA0ODw==");
                 aes.Key =key1;
                 aes.IV = iv;
-
+                aes.Padding = PaddingMode.PKCS7;
                 ICryptoTransform encryptor = aes.CreateEncryptor(aes.Key, aes.IV);
 
                 using (MemoryStream memoryStream = new MemoryStream())
@@ -67,8 +67,9 @@ namespace Core.Encryption
                 var key1 = Convert.FromBase64String("AAECAwQFBgcICQoLDA0ODw==");
                 aes.Key = key1;
                 aes.IV = iv;
+                aes.Padding = PaddingMode.PKCS7;
                 ICryptoTransform decryptor = aes.CreateDecryptor(aes.Key, aes.IV);
-
+               
                 using (MemoryStream memoryStream = new MemoryStream(buffer))
                 {
                     using (CryptoStream cryptoStream = new CryptoStream((Stream)memoryStream, decryptor, CryptoStreamMode.Read))

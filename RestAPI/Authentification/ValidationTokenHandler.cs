@@ -1,4 +1,5 @@
-﻿using Core.Encryption;
+﻿using Business.Services;
+using Core.Encryption;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
@@ -44,7 +45,8 @@ namespace JWT
             try
             {
                var username=HashGenerator.DecryptString("username", token);
-                if (username!=null)
+                var dateTo = AuthService.ConvertToDatetime(long.Parse(username.Split(',')[1]));
+                if (username!=null&&dateTo>=DateTime.Now)
                 {
                     GenericIdentity myIdentity = new GenericIdentity("MyUser");
                     String[] myStringArray = { "Manager", "Teller" };

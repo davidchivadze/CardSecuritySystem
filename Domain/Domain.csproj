@@ -182,6 +182,18 @@
     <Compile Include="Migrations\202104252007240_AddHolidayeReuest.designer.cs">
       <DependentUpon>202104252007240_AddHolidayeReuest.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105052118001_UpdateEmployeeModel.cs" />
+    <Compile Include="Migrations\202105052118001_UpdateEmployeeModel.designer.cs">
+      <DependentUpon>202105052118001_UpdateEmployeeModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105052142169_UpdateEmployeeModel1.cs" />
+    <Compile Include="Migrations\202105052142169_UpdateEmployeeModel1.designer.cs">
+      <DependentUpon>202105052142169_UpdateEmployeeModel1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105052150419_UpdateEmployeeModel2.cs" />
+    <Compile Include="Migrations\202105052150419_UpdateEmployeeModel2.designer.cs">
+      <DependentUpon>202105052150419_UpdateEmployeeModel2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\BaseRepository.cs" />
@@ -306,6 +318,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104252007240_AddHolidayeReuest.resx">
       <DependentUpon>202104252007240_AddHolidayeReuest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105052118001_UpdateEmployeeModel.resx">
+      <DependentUpon>202105052118001_UpdateEmployeeModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105052142169_UpdateEmployeeModel1.resx">
+      <DependentUpon>202105052142169_UpdateEmployeeModel1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105052150419_UpdateEmployeeModel2.resx">
+      <DependentUpon>202105052150419_UpdateEmployeeModel2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

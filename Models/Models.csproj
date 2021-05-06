@@ -48,6 +48,8 @@
     <Compile Include="EntityModels\GovernmentHolidays.cs" />
     <Compile Include="EntityModels\Keygen.cs" />
     <Compile Include="EntityModels\RemoteDeviceSyncLog.cs" />
+    <Compile Include="EntityModels\StoredProcedures\EmploeeFullReport.cs" />
+    <Compile Include="EntityModels\StoredProcedures\EmployeeMODReport.cs" />
     <Compile Include="EntityModels\Users.cs" />
     <Compile Include="LinqJoinDatabaseModels\DeviceAndDbUsersJoin.cs" />
     <Compile Include="LinqJoinDatabaseModels\DeviceRegistratedUsersToEmployee.cs" />
@@ -103,9 +105,11 @@
     <Compile Include="ViewModels\Employee\EmployeeDetailsViewModel.cs" />
     <Compile Include="ViewModels\Employee\EmployeePositionViewModel.cs" />
     <Compile Include="ViewModels\Employee\GetEmployeeForEdit.cs" />
+    <Compile Include="ViewModels\Employee\GetEmployeeFullReport.cs" />
     <Compile Include="ViewModels\Employee\GetEmployeeHolidayList.cs" />
     <Compile Include="ViewModels\Employee\GetEmployeeHolidayRequest.cs" />
     <Compile Include="ViewModels\Employee\GetEmployeeList.cs" />
+    <Compile Include="ViewModels\Employee\GetEmployeeModReportResponse.cs" />
     <Compile Include="ViewModels\Employee\GetGovernmentHolidays.cs" />
     <Compile Include="ViewModels\FineViewModel.cs" />
     <Compile Include="ViewModels\ForgivenessViewModel.cs" />

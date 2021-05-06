@@ -183,7 +183,8 @@ namespace Core.Helper
         {
             return new EmployeePosition()
             {
-                Description = model.Description
+                Description = model.Description,
+                IsActive=true
             };
         }
         public static EmployeePosition AsDatabaseModel(this EditEmployeePositionRequest model)
