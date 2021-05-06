@@ -42,5 +42,8 @@ namespace Business.Interface
         IResponse<AddBranchResponse> AddBranch(AddBranchRequest model);
         IResponse<EditBranchResponse> EditBranch(EditBranchRequest model);
         IResponse<GetHolidayTypesListResponse> GetHolidayTypeList();
+        IResponse<GetScheduleGeneratorResponse> GetScheduleGenerators();
+        IResponse<bool> EditScheduleGenerator(GetScheduleGeneratorItems model);
+        IResponse<bool> AddScheduleGenerator(AddScheduleGenerator model);
     }
 }

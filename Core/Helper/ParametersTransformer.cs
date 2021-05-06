@@ -23,10 +23,10 @@ namespace Core.Helper
             return new GetDepartmentsListItem()
             {
                 ID = model.ID,
-                IsActive=model.IsActive,
+                IsActive = model.IsActive,
                 Description = model.Description,
-                ParentID=model.ParentDepartment?.ID,
-                ParentDescription=model.ParentDepartment?.Description
+                ParentID = model.ParentDepartment?.ID,
+                ParentDescription = model.ParentDepartment?.Description
             };
         }
         public static GetBranchListItem AsViewModel(this Branch model)
@@ -34,13 +34,13 @@ namespace Core.Helper
             return new GetBranchListItem()
             {
                 ID = model.ID,
-                IsActive=model.IsActive,
+                IsActive = model.IsActive,
                 Description = model.BranchName,
-                Address=model.Address,
-                City=model.City.Description,
-                Country=model.Country.Description,
-                CityID=model.City.ID,
-                CountryID=model.Country.ID
+                Address = model.Address,
+                City = model.City.Description,
+                Country = model.Country.Description,
+                CityID = model.City.ID,
+                CountryID = model.Country.ID
             };
         }
 
@@ -50,7 +50,7 @@ namespace Core.Helper
             {
                 ID = model.ID,
                 Description = model.Description,
-                
+
             };
         }
         public static GetCountryListItem AsViewModel(this Country model)
@@ -99,7 +99,7 @@ namespace Core.Helper
             return new Departments()
             {
                 Description = model.Description,
-                ParentDepartmentID=model.ParentDepartmentID
+                ParentDepartmentID = model.ParentDepartmentID
             };
         }
         public static Departments AsDatabaseModel(this EditDepartmentRequest model)
@@ -109,7 +109,7 @@ namespace Core.Helper
                 Description = model.Description
                 ,
                 ID = model.ID,
-                ParentDepartmentID=model.ParentDepartmentID
+                ParentDepartmentID = model.ParentDepartmentID
             };
         }
         public static GetDeviceTypeListItem AsViewModel(this DeviceType model)
@@ -126,8 +126,8 @@ namespace Core.Helper
             {
                 ID = model.ID,
                 Description = model.Description,
-                BranchID=model.Branches.ID,
-                BranchName=model.Branches.BranchName
+                BranchID = model.Branches.ID,
+                BranchName = model.Branches.BranchName
 
             };
         }
@@ -184,7 +184,64 @@ namespace Core.Helper
             return new EmployeePosition()
             {
                 Description = model.Description,
-                IsActive=true
+                IsActive = true
+            };
+        }
+        public static GetScheduleGeneratorItems AsViewModel(this ScheduleGenerator model)
+        {
+            return new GetScheduleGeneratorItems()
+            {
+                ID = model.ID,
+                BreakAmount = model.BreakAmount,
+                DaylyHouresAmount = model.DaylyHouresAmount,
+                EndTime = model.EndTime,
+                MaxCheckOutTime = model.MaxCheckOutTime,
+                MinCheckInTime = model.MinCheckInTime,
+                Name = model.Name,
+                OnWorkingDaysOnly = model.OnWorkingDaysOnly,
+                OnWorkingHouresOnly = model.OnWorkingHouresOnly,
+                ScheduleTypeID = model.ScheduleTypeID,
+                ScheduleTypeName = model.ScheduleType.Description,
+                StartTime = model.StartTime,
+                WeekHouresAmount = model.WeekHouresAmount
+            };
+        }
+
+        public static ScheduleGenerator AsDatabaseModel(this GetScheduleGeneratorItems model)
+        {
+            return new ScheduleGenerator()
+            {
+                ID = model.ID.Value,
+                BreakAmount = model.BreakAmount,
+                DaylyHouresAmount = model.DaylyHouresAmount,
+                EndTime = model.EndTime,
+                MaxCheckOutTime = model.MaxCheckOutTime,
+                MinCheckInTime = model.MinCheckInTime,
+                Name = model.Name,
+                OnWorkingDaysOnly = model.OnWorkingDaysOnly,
+                OnWorkingHouresOnly = model.OnWorkingHouresOnly,
+                ScheduleTypeID = model.ScheduleTypeID,
+               
+                StartTime = model.StartTime,
+                WeekHouresAmount = model.WeekHouresAmount
+            };
+        }
+        public static ScheduleGenerator AsDatabaseModel(this AddScheduleGenerator model)
+        {
+            return new ScheduleGenerator()
+            {
+                BreakAmount = model.BreakAmount,
+                DaylyHouresAmount = model.DaylyHouresAmount,
+                EndTime = model.EndTime,
+                MaxCheckOutTime = model.MaxCheckOutTime,
+                MinCheckInTime = model.MinCheckInTime,
+                Name = model.Name,
+                OnWorkingDaysOnly = model.OnWorkingDaysOnly,
+                OnWorkingHouresOnly = model.OnWorkingHouresOnly,
+                ScheduleTypeID = 1,
+
+                StartTime = model.StartTime,
+                WeekHouresAmount = model.WeekHouresAmount
             };
         }
         public static EmployeePosition AsDatabaseModel(this EditEmployeePositionRequest model)
@@ -217,7 +274,7 @@ namespace Core.Helper
             return new DeviceLocationInBranch()
             {
                 Description = model.Description,
-                BranchID=model.BranchID
+                BranchID = model.BranchID
             };
         }
         public static DeviceLocationInBranch AsDatabaseModel(this EditDeviceLocationInBranchRequest model)
@@ -227,17 +284,17 @@ namespace Core.Helper
                 Description = model.Description
                 ,
                 ID = model.ID,
-                BranchID=model.BranchID
+                BranchID = model.BranchID
             };
         }
         public static Branch AsDatabaseModel(this AddBranchRequest model)
         {
             return new Branch()
             {
-                BranchName=model.BranchName,
-                Address=model.Address,
-                CityID=model.CityID,
-                CountryID=model.CountryID
+                BranchName = model.BranchName,
+                Address = model.Address,
+                CityID = model.CityID,
+                CountryID = model.CountryID
             };
         }
         public static Branch AsDatabaseModel(this EditBranchRequest model)
@@ -245,9 +302,9 @@ namespace Core.Helper
             return new Branch()
             {
                 Address = model.Address,
-                BranchName=model.BranchName,
-                CityID=model.CityID,
-                CountryID=model.CountryID,
+                BranchName = model.BranchName,
+                CityID = model.CityID,
+                CountryID = model.CountryID,
                 ID = model.ID
             };
         }

@@ -36,6 +36,7 @@ namespace Domain.Repository
         private IGenderRepository _genderRepository;
         private IBranchRepository _branchRepository;
         private IUserRepository _userRepository;
+        private IScheduleGeneratorRepository _scheduleGeneratorRepository;
 
         private IDeviceTypeRepository _deviceTypeRepository;
 
@@ -69,6 +70,10 @@ namespace Domain.Repository
         public IDeviceRegistratedUsersRepository DeviceRegistratedUsersRepository
         {
             get { return _deviceRegistratedUsersRepository = _deviceRegistratedUsersRepository ?? new DeviceRegistratedUsersRepository(_database); }
+        }
+        public IScheduleGeneratorRepository ScheduleGeneratorRepository
+        {
+            get { return _scheduleGeneratorRepository = _scheduleGeneratorRepository ?? new ScheduleGeneratorRepository(_database); }
         }
         public IUserRepository UserRepository
         {

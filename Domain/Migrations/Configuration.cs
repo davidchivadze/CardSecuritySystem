@@ -141,7 +141,7 @@
         private void SeedProcedures(Domain.Data context)
         {
             context.Database.ExecuteSqlCommand(@"
-CREATE PROCEDURE [dbo].[GenerateFullReport]
+CREATE OR ALTER PROCEDURE [dbo].[GenerateFullReport]
 	@StartDate DATE,
 	@EndDate DATE,
 	@EmployeeID INT =NULL
@@ -320,7 +320,7 @@ END
 
 ");
             context.Database.ExecuteSqlCommand(@"
-CREATE PROCEDURE [dbo].[GenerateMODReport]
+CREATE OR ALTER PROCEDURE [dbo].[GenerateMODReport]
 	@StartDate DATE,
 	@EndDate DATE,
 	@EmployeeID INT =NULL
@@ -395,7 +395,7 @@ END
 ");
             context.Database.ExecuteSqlCommand(@"
 
-CREATE PROCEDURE [dbo].[GenerateMODReportData]
+CREATE OR ALTER PROCEDURE [dbo].[GenerateMODReportData]
 	@StartDate DATE,
 	@EndDate DATE 
 AS
@@ -489,7 +489,7 @@ END
 ");
 			context.Database.ExecuteSqlCommand(@"
 
-CREATE PROCEDURE [dbo].[GetEmployeeLogDate]
+CREATE OR ALTER PROCEDURE [dbo].[GetEmployeeLogDate]
 	@StartDate DATE,
 	@EndDate DATE,
 	@EmployeeID INT

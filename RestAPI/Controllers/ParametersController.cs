@@ -72,6 +72,21 @@ namespace RestAPI.Controllers
         }
          
         [HttpGet]
+        public IResponse<GetScheduleGeneratorResponse> GetScheduleGenerators()
+        {
+            return _parametersService.GetScheduleGenerators();
+        }
+        [HttpPost]
+        public IResponse<bool> EditScheduleGenerator(GetScheduleGeneratorItems model)
+        {
+            return _parametersService.EditScheduleGenerator(model);
+        }
+        [HttpPost]
+        public IResponse<bool> AddScheduleGenerator(AddScheduleGenerator model)
+        {
+            return _parametersService.AddScheduleGenerator(model);
+        }
+        [HttpGet]
         public IResponse<bool> DeleteEmployeePosition(int employeePositionID)
         {
             return _parametersService.DeleteEmployeePosition(employeePositionID);

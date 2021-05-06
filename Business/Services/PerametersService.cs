@@ -419,5 +419,40 @@ namespace Business.Services
                 return Fail<bool>(ex.Message);
             }
         }
+
+        public IResponse<GetScheduleGeneratorResponse> GetScheduleGenerators()
+        {
+            try
+            {
+                var result = UnitOfWork.ScheduleGeneratorRepository.GetScheduleGenerators().Select(m => m.AsViewModel()).ToList();
+                return Ok(new GetScheduleGeneratorResponse() { ScheduleGeneratorItems = result });
+            }catch(Exception ex)
+            {
+                return Fail<GetScheduleGeneratorResponse>(ex.Message);
+            }
+        }
+        public IResponse<bool> EditScheduleGenerator(GetScheduleGeneratorItems model)
+        {
+            try
+            {
+                var result = UnitOfWork.ScheduleGeneratorRepository.EditScheduleGenerator(model.AsDatabaseModel());
+                return Ok<bool>(result);
+            }catch(Exception ex)
+            {
+                return Fail<bool>(ex.Message);
+            }
+        }
+
+        public IResponse<bool> AddScheduleGenerator(AddScheduleGenerator model)
+        {
+            try
+            {
+                var result = UnitOfWork.ScheduleGeneratorRepository.AddScheduleGenerator(model.AsDatabaseModel());
+                return Ok<bool>(result);
+            }catch(Exception ex)
+            {
+                return Fail<bool>(ex.Message);
+            }
+        }
     }
 }

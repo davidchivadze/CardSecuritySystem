@@ -16,6 +16,7 @@ namespace Domain
         public virtual DbSet<Branch> Branches { get; set; }
         public virtual DbSet<Employee> Employees { get; set; }
         //public virtual DbSet<EmployeeMODReport> EmployeeMODReports { get; set; }
+        public virtual DbSet<ScheduleGenerator> ScheduleGenerators { get; set; }
         public virtual DbSet<Currency> Currencies { get; set; }
         public virtual DbSet<HolidayType> HolidayTypes { get; set; }
         public virtual DbSet<Departments> Departments { get; set; }

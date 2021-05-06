@@ -142,6 +142,7 @@
     <Compile Include="ViewModels\Parameters\GetGenderList.cs" />
     <Compile Include="ViewModels\Parameters\GetHolidayTypesList.cs" />
     <Compile Include="ViewModels\Parameters\GetSalaryTypeList.cs" />
+    <Compile Include="ViewModels\Parameters\GetScheduleGenerator.cs" />
     <Compile Include="ViewModels\Parameters\Schedule.cs" />
     <Compile Include="ViewModels\SalaryViewModel.cs" />
   </ItemGroup>

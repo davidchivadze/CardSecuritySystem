@@ -29,6 +29,7 @@ namespace Domain.Interface
         IEmployeeMobileNumbersRepository EmployeeMobileNumbersRepository { get; }
         IEmployeePositionRepositoy EmployeePositionRepositoy { get; }
         IEmployeeRepository EmployeeRepository { get; }
+         IScheduleGeneratorRepository ScheduleGeneratorRepository { get; }
         IEmpoyeeDetaisRepository EmpoyeeDetaisRepository { get; }
         IKeygenRepository KeygenRepository { get; }
         IGenderRepository GenderRepository { get; }
